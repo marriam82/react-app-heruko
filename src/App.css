@@ -1,0 +1,133 @@
+#root{
+  overflow: hidden;
+}
+.color {
+  width:111%;
+  
+}
+.border{
+  border:1px solid black
+}
+input::placeholder{
+  padding-left:10px;
+
+}
+.offer{
+display:grid;
+grid-template-columns:7% 19% 19% 39% 6%;
+grid-template-rows:260px;   
+justify-content: center;
+position: relative;
+top:10%;
+justify-content: space-evenly;
+}
+.offert{
+  display:grid;
+  grid-template-columns:7% 19% 19% 18.5% 18.5% 5%;
+  grid-template-rows:260px;   
+  justify-content: center;
+  position: relative;
+  top:10%;
+  justify-content: space-evenly;
+  }
+@media (max-width:990px){
+.color{
+ width:15%;
+ font-size:16px;
+ height:8vh; 
+}
+#imgg{
+  height:8vh !important;
+  margin-left:-16% !important;
+}
+.font{
+  font-size:14px;
+}
+.badge{
+  margin-left:-5%
+}
+
+.fire{
+  margin-left: 20%;
+}
+.tost{
+  width:25%
+}
+.up{
+  margin-top:-100%;
+  margin-left:-8% ;
+}
+#no{
+ display: none;
+}
+#w{
+  width:120% !important
+}
+#inn{
+  width:67% !important;
+  margin-left: 20%;
+}
+#fle{
+  display: flex !important;
+  position: absolute;
+  left:83%
+}
+#car{
+
+  height:35vh !important;
+  position: relative;
+  left:31%;
+  width:80%
+}
+#carr{
+
+  height:35vh !important;
+}
+.exp{
+  font-size: 20px;
+  margin-left: 32%;
+}
+#all{
+  display: flex;
+ overflow-x: scroll;
+  font-size: 17px;
+  margin-left:31% ;
+  width: 100%;
+  margin-top: 3% !important;
+}
+#alll{
+  display: flex;
+align-items: center;
+justify-content: space-evenly;
+padding-top:12px ;
+height:45px !important;
+height:6vh !important;
+}
+.home{
+  display:none;
+}
+#cards{
+  position: relative;
+  left:30%
+}
+#card{
+  height:20vh !important;
+  width:80% !important
+}
+.l{
+  height:15vh !important;
+  margin-left: -20%;
+}
+.ll{
+  position: relative;
+  top:-13%
+}
+.ab{
+  position: absolute;
+  left:8%;
+  margin-top:-10% !important
+}
+.abc{
+  margin-top:-11% !important
+}
+}
