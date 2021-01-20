@@ -1,10 +1,11 @@
-import React, { Component,useState,useRef } from 'react'
+import React, { useState,useRef } from 'react'
 import {Navbar,Row,Col,Nav,Container,Image,Card,CardGroup,CardDeck,Accordion ,Button,Form,Overlay} from 'react-bootstrap'
 import logo from "../logo/logo.svg";
 import delivery from "../topbar/delivery address.svg";
 import deal from "../topbar/best deals.svg";
-import image from "../Components/unnamed.jpg";
-import img from "../Components/wuxga.png";
+import image from "../xadok/s.png";
+import img from "../xadok/pexels-photo-102104.jpeg"
+import img6  from "../xadok/01.png"
 import offe from "../ramez/offers.svg"
 import fruit from "../ramez/fruites-vegetables.svg"
 import diary from "../ramez/Diary & Eggs.svg"
@@ -29,6 +30,7 @@ import hair from "../ramez/Hair Care.svg"
 import Footer from "../Components/footer"
 import {Link} from 'react-router-dom';
 export default function OffersDark()  {
+  const [show,setShow] = useState(false)
 
   // const [show, setShow] = useState(false);
   // const target = useRef(null);
@@ -46,7 +48,10 @@ export default function OffersDark()  {
 <Nav className="flex-column"  style={{width:"100%",padding:"0",margin:"0"}}>
 <Nav.Link className="mt-2">
       <Accordion defaultActiveKey="0" style={{marginLeft:"-10px"}}>
-      <Accordion.Toggle className="p-3" variant="link" eventKey="0" style={{textAlign:"start",outline:"none",border:"none",fontWeight:"bold",color:"white",background:"#E3424B",borderRadius:"9px",width:"95%"}}>
+      <Accordion.Toggle className="p-3" variant="link" eventKey="0"
+       style={{textAlign:"start",outline:"none",border:"none",
+       fontWeight:"bold",color:"white",background:"#E3424B",
+       borderRadius:"9px",width:"85%"}}>
       <img style={{height:"3vh"}} src={offe}/>&nbsp; &nbsp; Offers
       </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
@@ -66,31 +71,31 @@ export default function OffersDark()  {
     </Accordion.Collapse >
     <Nav.Link  style={{color:"#223142",textDecoration:"none"}}>
       <Accordion.Toggle as={Button} variant="link" eventKey="1" style={{textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
-      <img style={{height:"3vh"}} src={fruit}/>&nbsp; &nbsp;Fruits & Vegetables
+      <img style={{height:"3vh"}} src={fruit}/>&nbsp; &nbsp;&nbsp;&nbsp;Fruits & Vegetables
       </Accordion.Toggle>
       </Nav.Link>
+      
 </Accordion>
 </Nav.Link>
-
-<Nav.Link   style={{color:"#223142",marginTop:"-7px"}}><img style={{height:"3vh"}} src={diary}/>&nbsp; &nbsp; Dairy & Eggs</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={drink}/>&nbsp; &nbsp;Drinks</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={meat}/>&nbsp; &nbsp;Meat, Fish & Chicken</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={frozen}/>&nbsp; &nbsp;Frozen</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={cans}/>&nbsp; &nbsp;Cans & jars</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={pack}/>&nbsp; &nbsp;Packet & Cereals</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={choco}/>&nbsp; &nbsp;Chocolate,Snacks & Backery</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={baby}/>&nbsp; &nbsp;Baby</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={diy}/>&nbsp; &nbsp;DIY & Household</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={appli}/>&nbsp; &nbsp;Home & Kichen Appliances</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={wellness}/>&nbsp; &nbsp;Wellnwss</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={school}/>&nbsp; &nbsp;Back to School</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={various}/>&nbsp; &nbsp;Varoius & fresh nuts</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={elect}/>&nbsp;&nbsp;Electronics</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={pet}/>&nbsp; &nbsp;Pet Supplies</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={toys}/>&nbsp; &nbsp;Toys</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={fashion}/>&nbsp; &nbsp;Fashion</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={decoration}/>&nbsp; &nbsp;Home Decor Furniture</Nav.Link>
-<Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={hair}/> &nbsp; &nbsp;Hair Care</Nav.Link>
+  <Nav.Link  style={{color:"#223142",marginTop:"-3%"}}><img style={{height:"3vh"}} src={diary}/><b className="ml-3" style={{fontWeight:"normal"}}> Dairy & Eggs</b></Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={drink}/><b className="ml-3" style={{fontWeight:"normal"}}>&nbsp;Drinks</b></Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={meat}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp;&nbsp;Meat, Fish & Chicken</b></Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={frozen}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp;&nbsp;Frozen</b></Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={cans}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp;&nbsp;&nbsp;Cans & jars</b></Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={pack}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp; Packet & Cereals</b></Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={choco}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp;&nbsp;Chocolate,Snacks & Backery</b></Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={baby}/>&nbsp;&nbsp;&nbsp;&nbsp;Baby</Nav.Link>
+  <Nav.Link className="mt-1 ml-1"style={{color:"#223142"}}><img style={{height:"3.1vh"}} src={diy}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DIY & Household</Nav.Link>
+  <Nav.Link className="mt-1 "  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={appli}/>&nbsp;&nbsp;&nbsp;&nbsp;Home & Kichen Appliances</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={wellness}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wellness</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={school}/>&nbsp; &nbsp;&nbsp; Back to School</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={various}/>&nbsp; &nbsp;&nbsp;Varoius & fresh nuts</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={elect}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electronics</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={pet}/>&nbsp; &nbsp;&nbsp;&nbsp;Pet Supplies</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={toys}/>&nbsp;&nbsp;&nbsp;&nbsp; Toys</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={fashion}/>&nbsp; &nbsp;&nbsp;&nbsp;Fashion</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={decoration}/>&nbsp; &nbsp;&nbsp;&nbsp;Home Decor Furniture</Nav.Link>
+  <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={hair}/> &nbsp; &nbsp;&nbsp;Hair Care</Nav.Link>
 
 
 
@@ -98,28 +103,57 @@ export default function OffersDark()  {
 </Nav>
 </Col>
 <Col sm={9}  >
-<Container fluid style={{marginLeft:"-65px"}}>
-<Navbar className="mt-2 " style={{width:"108%"}}>
-<Nav className="mr-4">
-<Nav.Link style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}}><img src={delivery}style={{height:"3vh"}} />&nbsp; &nbsp; Sen Francisain California &nbsp;<i class="fas fa-angle-down"></i> </Nav.Link>
-  <Nav.Link className="ml-4 pl-3"style={{color:"black",fontWeight:"normal",fontSize:"14px"}}><img src={deal}style={{height:"3vh"}} />&nbsp; &nbsp; Best deals &nbsp; <i class="fas fa-angle-down"></i></Nav.Link>
-  <button className="mt-2 ml-4 p-0" style={{background:"#E3424B",border:"none",color:"white",fontSize:"14px",height:"4vh",borderRadius:"9px"}}> &nbsp; EN  &nbsp; <i class="fas fa-angle-down"></i> &nbsp;</button>
-</Nav>
-<Form.Control type="text" placeholder="Search for anything..." style={{height:"7vh",borderRadius:"8px",width:"43%",fontSize:"14px",background:"#F6F6F6",outline:"none",border:"none"}} />
-<div>
-<Button className="ml-3"  style={{background:"#E3424B",border:"none",borderRadius:"10px",height:"7vh",}}><i class="fas fa-user"></i> </Button>
-<Button className="ml-2 " style={{background:"#E3424B",border:"none",borderRadius:"10px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
+<Container fluid style={{marginLeft:"-95px"}}>
+<Navbar className="mt-1 " style={{width:"115%"}}>
+   <Nav className="mr-4">
+   <Nav.Link style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no" className="no" ><img src={delivery}style={{height:"3vh"}} />&nbsp; &nbsp; Sen Francisain California &nbsp;<i class="fas fa-angle-down"></i> </Nav.Link>
+      <Nav.Link className="ml-4 pl-3"style={{color:"black",fontWeight:"normal",fontSize:"14px"}} id="no"><img src={deal}style={{height:"3vh"}} />&nbsp; &nbsp; Best deals &nbsp; <i class="fas fa-angle-down"></i></Nav.Link>
+      <button className="mt-2 ml-4 p-0" style={{background:"#E3424B",border:"none",
+      color:"white",fontSize:"13px",height:"3.1vh",borderRadius:"7px"}} id="no"> &nbsp; EN  &nbsp; <i class="fas fa-angle-down"></i> &nbsp;</button>
+    </Nav>
+    <div className="input-container">
+    <i class="fas fa-search icon"></i>
+    <input type="text" className="input-field inpu" placeholder="Search for anything... "   
+    style={{fontSize:"14px",background:"#F6F6F6",border:"none",outline:"none",padding:"13px",
+  boxSizing:"border-box"}}/>
+    </div>
+<div id="fle" >
+  <Button className="ml-3"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
+  <Button className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-
 </Navbar> 
-<div style={{height:"50vh"}}>
-<img
-  className="d-block "
-  src={image} style={{height:"47vh",width:"109%"}}
-/>
+
+<div
+      style={{backgroundSize:"100% 100%",
+      height:"47vh",width:"113%",
+      backgroundImage:`url(${image})`,
+      marginTop:"3%",display:"flex",justifyContent:"center",alignItems:"center"}}
+    >
+    <img src={img6} style={{width:"80px",
+      height:"80px",borderRadius:"100%"}}/>
+      </div>
+<div style={{background:"#F5F5F5",width:"113%",height:"300vh",paddingRight:"30px"}}>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 style={{paddingTop:"60px",fontWeight:"bold",fontSize:"30px"}} 
+className=" pl-4 ml-3">All Offers</h4>
+<div style={{display:"flex",height:"7vh",position:"relative",
+             marginTop:"5%",
+             width:"70%",justifyContent:"space-around"}}>{
+      show?<div style={{display:"flex",justifyContent:"space-between",width:"85%"}}>
+      <Button style={{borderRadius:"5px",boxShadow:"0 0 7px 0 silver",background:"white",color:"black",border:"none"}}><i class="fas fa-arrow-up"></i>&nbsp;Price Increasing</Button>
+      <Button style={{borderRadius:"5px",boxShadow:"0 0 7px 0 silver",background:"white",color:"black",border:"none"}}><i class="fas fa-arrow-down"></i>&nbsp;Price Descending</Button>
+      <Button style={{borderRadius:"5px",boxShadow:"0 0 7px 0 silver",background:"white",color:"black",border:"none"}}><i class="fas fa-star"></i>&nbsp;Best Seller</Button>
+      <Button style={{borderRadius:"5px",boxShadow:"0 0 7px 0 silver",background:"white",color:"black",border:"none"}}><i class="fas fa-info-circle"></i>&nbsp;&nbsp;The Newest</Button></div>:null
+      }
+      <Button onClick={()=>setShow(!show)}
+      style={{position:"absolute",right:"0",fontSize:"20px",
+      outline:"none",background:"#B6B6B6",border:"none",borderRadius:"7px",
+      height:"7vh",width:"6%"}}>
+     <i class="fas fa-sort-amount-up"></i>
+    </Button>
+      
 </div>
-<div style={{background:"#F5F5F5",width:"110%",height:"300vh",paddingRight:"30px"}}>
-<h4 style={{paddingTop:"60px"}} className=" pl-4 ml-2">All Offers</h4>
+</div>
 <CardDeck className="ml-3 mt-4 pt-4" >
 <Card style={{border:"0"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
