@@ -46,7 +46,7 @@ export default class sidebar extends Component {
   </Nav.Link>
   </Link>
   <Link to="/favorite">
-  <Nav.Link className="mt-2 font"  href="" style={{color:"black"}}>
+  <Nav.Link className="mt-2 font"  href="/favorite" style={{color:"black"}}>
   <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; 
   &nbsp; &nbsp; <span className="home">
      Favourite</span></Nav.Link></Link>

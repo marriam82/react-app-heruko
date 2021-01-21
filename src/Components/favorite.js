@@ -37,20 +37,23 @@ export default class Favorite extends Component {
             <Container  fluid>
   <Row className="grid">
     <Col sm={2} >
-        <Navbar.Brand href="#home" className=" pt-2" style={{width:"100%"}}>
+        <Navbar.Brand href="/" className=" pt-2" style={{width:"100%"}}>
           <img src={logo} id="imgg" style={{height:"10vh"}} />
           </Navbar.Brand>      
-        <Nav defaultActiveKey="/" className="flex-column" >
+        <Nav defaultActiveKey="" className="flex-column" >
 <Link to="/" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-3 color" href="#home" 
-  style={{color:"black",}}>
+  <Nav.Link className="mt-3 color" href="/" 
+  style={{color:"black",background:"transparent"}}>
 <i class="fas fa-home house" style={{fontSize:"19px"}}></i>
 &nbsp; &nbsp; <span className="home">Home</span></Nav.Link></Link>
-<Link to="/exploring" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-2 font" 
-  style={{borderRadius:"10px",color:"black",width:"112%"}}>  
+<Link to="/exploring" 
+style={{textDecoration:"none"}}>
+  <Nav.Link className="mt-2 font" href="/exploring" 
+  style={{borderRadius:"10px",
+  color:"black",width:"112%"}}>  
   <img style={{height:"3vh",marginLeft:"1px"}} 
-  src={explore}/>&nbsp; &nbsp; &nbsp;<span className="home">Explore</span>
+  src={explore}/>&nbsp; &nbsp; &nbsp;<span 
+  className="home">Explore</span>
   </Nav.Link>
   </Link>
   <Link to="/favorite" style={{textDecoration:"none"}}>
