@@ -37,20 +37,24 @@ export default function Sidebar() {
           </Navbar.Brand>      
         <Nav defaultActiveKey="/home" className="flex-column" >
   <Nav.Link className="mt-3 p-3 color" href="#home" style={{background:"#E3424B",borderRadius:"10px",color:"white",fontWeight:"bold",}}><i class="fas fa-home house" style={{fontSize:"19px"}}></i>&nbsp; &nbsp; <span className="home">Home</span></Nav.Link>
-  <Link to="/explore"  style={{outline:"none",listStyle:"none",textDecoration:"none"}}>
   <Nav.Link className="mt-2 font" href="#explore" style={{color:"black",}}>  
-  <img style={{height:"3vh",marginLeft:"1px"}} src={explore}/>&nbsp; &nbsp; &nbsp;<span className="home">Explore</span></Nav.Link></Link>
+  <img style={{height:"3vh",marginLeft:"1px"}} src={explore}/>&nbsp; &nbsp; 
+  &nbsp;<span className="home">Explore</span></Nav.Link>
   <Nav.Link className="mt-2 font"  href="#favorite" style={{color:"black"}}>
-  <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; &nbsp; &nbsp; <span className="home"> Favorite</span></Nav.Link>
+  <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; 
+  &nbsp; &nbsp; <span className="home"> Favourite</span></Nav.Link>
   <Nav.Link className="mt-2 font"  href="#orders" style={{color:"black"}}>
-  <img style={{height:"3vh",}} src={order}/>&nbsp; &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link>
+  <img style={{height:"3vh",}} src={order}/>&nbsp; &nbsp; &nbsp;<span 
+  className="home">Orders</span></Nav.Link>
   <Nav.Link className="mt-2 font" href="#messages" style={{color:"black"}}>
   <img style={{height:"2.5vh"}} src={message}/>&nbsp; &nbsp; &nbsp;<span className="home">Messages</span> &nbsp; &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge" style={{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge></Nav.Link>
-  <Nav.Link className="mt-2 set font" href="#settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+  <Nav.Link className="mt-2 set font" href="#settings" 
+  style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
 
 </Nav>
-<Toast style={{marginTop:"40px",background:"#F7F7F7",width:"105%",borderRadius:"15px",}} id="no" className="tost">
-  <Toast.Header style={{color:"black",border:"none",background:"#F7F7F7",}}>
+<Toast style={{marginTop:"40px",background:"#F7F7F7",width:"105%",
+borderRadius:"16px",}} id="no" className="tost">
+  <Toast.Header style={{color:"black",border:"none",background:"#F7F7F7",borderRadius:"16px"}}>
     <img src="holder.js/20x20?text=%20" className="rounded mr-2 ml-auto" alt="" style={{color:"black"}}/>
     </Toast.Header>
     <div style={{marginLeft:"26%"}}>
@@ -121,14 +125,15 @@ export default function Sidebar() {
 
 <h3 className="exp ml-4"style={{color:"black",fontWeight:"bold", marginTop:"25px"}}> Explore Catagories</h3>
 <div id="all " style={{marginTop:"30px",width:"100%",marginLeft:"22px"}}>
+<Link to='/' style={{textDecoration:"none"}}>
   <Button id="alll "style={{textAlign:"center",
   background:"#F6F6F6", border:"none",
    borderRadius:"9px",color:"black",paddingRight:"100px",
    fontSize:"17px",paddingTop:"5px",
    paddingBottom:"5px",height:"7.3vh",width:"15%"}}>
   <img src={all} style={{color:"black",height:"3vh"}}/>
-  &nbsp; <b style={{paddingTop:"20px",marginTop:"10px",fontWeight:"normal"}}>All</b></Button>
-
+  &nbsp; <b style={{paddingTop:"20px",marginTop:"10px",fontWeight:"normal"}}>
+    All</b></Button> </Link>
   <Button id="alll" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
@@ -152,7 +157,6 @@ export default function Sidebar() {
   borderRadius:"9px",width:"15.2%"}}><img src={ restaurants } 
   style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Restaurants</b></Button>
-  <Link to='/supermarket' style={{textDecoration:"none"}}>
   <Button id="alll" style={{background:" #E3424B",
   color:"white",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
@@ -160,7 +164,7 @@ export default function Sidebar() {
   borderRadius:"9px",width:"17%"}}><img src={sup} 
   style={{height:"3vh"}}/><b style={{marginLeft:"15px",
   paddingTop:"10px",marginTop:"10px",
-  fontWeight:"normal"}}>Supermarket</b></Button> </Link>
+  fontWeight:"normal"}}>Supermarket</b></Button>
     <Button id="alll" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
@@ -173,12 +177,14 @@ export default function Sidebar() {
   <div variant="top" id="card"
     style={{height:"30vh",borderRadius:"10px",width:"96%"
     ,background:`url(${img3})`,backgroundSize:"100% 100%"}}>
+  <Link to="/explore"  style={{textDecoration:"none"}}>
       <div style={{color:"black",marginLeft:"6%",marginTop:"5%"}}>
       <img src={img6} style={{width:"80px",
       height:"80px",borderRadius:"100%"}}/>
       <h5 style={{fontWeight:"bold",marginTop:"2px"}} >Ramez</h5>
       <p style={{fontSize:"15px",marginTop:"-10px"}}>SuperMarket</p>
     </div>
+    </Link>
     </div>
 </Card>
     </Col>

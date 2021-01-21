@@ -130,7 +130,8 @@ export default function Offers() {
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 style={{paddingTop:"60px",fontWeight:"bold",fontSize:"30px"}} 
 className=" pl-4 ml-3">Suggested Products</h4>
-<div style={{display:"flex",height:"7vh",position:"relative",
+<div style={{display:"flex",height:"7vh",
+            position:"relative",
              marginTop:"5%",
              width:"70%",justifyContent:"space-around"}}>{
       show?<div style={{display:"flex",justifyContent:"space-between",width:"85%"}}>

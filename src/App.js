@@ -7,7 +7,9 @@ import Dairy from "./Components/dairy";
 import Eggs from "./Components/eggs";
 import Reoffer from "./Components/reoffer";
 import Weekend from "./Components/weekend";
-import National from "./Components/nationalDay"
+import National from "./Components/nationalDay";
+import Exploring from "./Components/exploring";
+import Favorite from "./Components/favorite"
 import './App.css';
 import{BrowserRouter as Router,Route,Switch} from "react-router-dom"
 
@@ -30,6 +32,10 @@ export default class App extends Component {
      <Route path="/reoffer" exact component={Reoffer}/>
      <Route path="/weekendDayOffer" exact component={Weekend}/>
      <Route path="/nationalDayOffer" exact component={National}/>
+     <Route path="/exploring" exact component={Exploring}/>
+     <Route path="/favorite" exact component={Favorite}/>
+
+     
       </Switch>
                </Router>  
       </div>
