@@ -18,6 +18,8 @@ export default class Favorite extends Component {
     state={
         toggle:true,
         showMe:false,
+        toggle1:true,
+        showMe1:false
     }
     _onpress(){
         const newState = !this.state.toggle;
@@ -26,9 +28,18 @@ export default class Favorite extends Component {
 
         
     }
+    _onpress1(){
+      const newState1 = !this.state.toggle1;
+      this.setState({toggle1:newState1});
+      this.setState({showMe1:!this.state.showMe1})   
+  }
     render(){
         const {toggle} = this.state;
         const buttonBg = toggle?"whitesmoke":"#E3424B";
+        const {toggle1} = this.state;
+        const buttonBg1 = toggle1?"whitesmoke":"#E3424B";
+
+
         // const show =toggle?show:null;
        
 
@@ -62,8 +73,11 @@ style={{textDecoration:"none"}}>
   color:"white",fontWeight:"bold",width:"112%"}}>
   <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; &nbsp;
    &nbsp; <span className="home"> Favorite</span></Nav.Link></Link>
-  <Nav.Link className="mt-2 font"  href="#orders" style={{color:"black"}}>
-  <img style={{height:"3vh",}} src={order}/>&nbsp; &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link>
+   <Link to="/orders" style={{textDecoration:"none"}}>
+  <Nav.Link className="mt-2 font"  href="/orders" style={{color:"black"}}>
+  <img style={{height:"3vh",}} src={order}/>&nbsp; 
+  &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link>
+  </Link>
   <Nav.Link className="mt-2 font" href="#messages" style={{color:"black"}}>
   <img style={{height:"2.5vh"}} src={message}/>&nbsp; &nbsp; &nbsp;<span className="home">Messages</span> &nbsp; &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge" style={{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge></Nav.Link>
   <Nav.Link className="mt-2 set font" href="#settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
@@ -132,6 +146,14 @@ height:"8vh",width:"40%",}} >
 
     }
 </div>
+<div style={{position:"absolute",right:"1%",top:"15%",
+height:"8vh",width:"40%",}} >
+  {this.state.showMe1?<div>
+<Button className=" p-2" style={{background:"#919FB9",border:"none",borderRadius:"7px"}} >&nbsp;<i class="fas fa-trash"></i>&nbsp; &nbsp; Delete Selected &nbsp; &nbsp;</Button>
+<Button className="ml-3 p-2" style={{border:"none",background:"#E3424B",borderRadius:"7px"}}>&nbsp;<i class="fas fa-shopping-cart">&nbsp; &nbsp;</i> Add Selected to Cart &nbsp; &nbsp;</Button></div>:null
+
+    }
+</div>
 </div>
 <CardDeck className="ml-3 mt-4 pt-4" >
 <Card style={{border:"0",
@@ -152,7 +174,8 @@ position:"absolute",left:"11px",top:"11px"}}></div>
 </Card>
 <Card style={{border:"0",
 borderTopLeftRadius:"10px",borderTopRightRadius:"10px",position:"relative"}}>
-    <div id="circle"onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
+    <div id="circle"onClick={()=>this._onpress1()} 
+     style={{height:"20px",width:"20px",background:buttonBg1,borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
 <Card.Img variant="top" src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4 className="pt-4" style={{color:"#E3424B",textAlign:"center"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p className="" style={{color:"#223142",fontSize:"12px",

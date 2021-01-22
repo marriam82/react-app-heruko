@@ -9,7 +9,8 @@ import Reoffer from "./Components/reoffer";
 import Weekend from "./Components/weekend";
 import National from "./Components/nationalDay";
 import Exploring from "./Components/exploring";
-import Favorite from "./Components/favorite"
+import Favorite from "./Components/favorite";
+import Orders from "./Components/orders"
 import './App.css';
 import{BrowserRouter as Router,Route,Switch} from "react-router-dom"
 
@@ -34,6 +35,8 @@ export default class App extends Component {
      <Route path="/nationalDayOffer" exact component={National}/>
      <Route path="/exploring" exact component={Exploring}/>
      <Route path="/favorite" exact component={Favorite}/>
+     <Route path="/orders" exact component={Orders}/>
+
 
      
       </Switch>

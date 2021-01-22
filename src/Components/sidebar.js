@@ -45,14 +45,15 @@ export default class sidebar extends Component {
   src={explore}/>&nbsp; &nbsp; &nbsp;<span className="home">Explore</span>
   </Nav.Link>
   </Link>
-  <Link to="/favorite">
+  <Link to="/favorite" style={{textDecoration:"none"}}>
   <Nav.Link className="mt-2 font"  href="/favorite" style={{color:"black"}}>
   <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; 
   &nbsp; &nbsp; <span className="home">
      Favourite</span></Nav.Link></Link>
-  <Nav.Link className="mt-2 font"  href="#orders" style={{color:"black"}}>
+  <Link to="/orders" style={{textDecoration:"none"}}>
+  <Nav.Link className="mt-2 font"  href="/orders" style={{color:"black"}}>
   <img style={{height:"3vh",}} src={order}/>&nbsp; &nbsp; &nbsp;<span 
-  className="home">Orders</span></Nav.Link>
+  className="home">Orders</span></Nav.Link></Link>
   <Nav.Link className="mt-2 font" href="#messages" style={{color:"black"}}>
   <img style={{height:"2.5vh"}} src={message}/>&nbsp; &nbsp; &nbsp;<span className="home">Messages</span> &nbsp; &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge" style={{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge></Nav.Link>
   <Nav.Link className="mt-2 set font" href="#settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
