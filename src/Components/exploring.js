@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {} from 'react'
 import logo from "../logo/logo.svg";
 import explore from "../sidebarw/explore.svg"
 import order from "../logo/orders.svg";
@@ -10,9 +10,77 @@ import delivery from "../topbar/delivery address.svg";
 import img from "../xadok/pexels-photo-102104.jpeg"
 import deal from "../topbar/best deals.svg";
 import {Link} from 'react-router-dom';
-import {Navbar,Row,Col,Nav,Container,NavDropdown,Card,CardDeck,CardGroup,Badge,Toast,Button,Form,FormControl,Carousel} from 'react-bootstrap'
+import {Navbar,Row,Col,Nav,Container,Modal,Card,CardDeck,CardGroup,Badge,Toast,Button,Form,FormControl,Carousel} from 'react-bootstrap'
 import "../App.css";
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <div style={{display:"flex"}}>
+
+            <div>
+          <div style={{width:"250px",height:"250px",borderTopRightRadius:"15px",borderTopLeftRadius:"15px"
+          ,border:"1px solid silver",marginLeft:"5%",marginTop:"3%"}}>
+            <img src={img} style={{width:"100%",height:"100%",borderTopRightRadius:"15px",borderTopLeftRadius:"15px"}}/>
+          </div>
+
+          <div style={{marginLeft:"5%",display:"flex"}}>
+          <div style={{width:"66px",height:"62px",border:"1px solid silver",borderBottomLeftRadius:"10px"}}>
+            <img src={img}  style={{width:"100%",height:"100%",borderBottomLeftRadius:"10px"}}/>
+          </div>
+          <div style={{width:"66px",height:"62px",border:"1px solid silver",}}>
+            <img src={img}  style={{width:"100%",height:"100%",}}/>
+          </div>
+          <div style={{width:"66px",height:"62px",border:"1px solid silver",}}>
+            <img src={img}  style={{width:"100%",height:"100%",}}/>
+          </div>
+          <div style={{width:"65px",height:"62px",border:"1px solid silver",borderBottomRightRadius:"10px"}}>
+            <img src={img}  style={{width:"100%",height:"100%",borderBottomRightRadius:"10px"}}/>
+          </div>
+          </div>
+          </div>
+<div style={{marginLeft:"4%"}}>
+  <h5 className="mt-1" style={{width:"85%"}}>KRAFT CREAM CHEESE SPREAD ORIGINAL 230 GR</h5>
+  <h6 className="mt-4" style={{fontSize:"14px",fontWeight:"bold"}}>Categeory: <span style={{fontWeight:"lighter"}} > Supermarket</span></h6>
+  <h6 style={{fontSize:"14px",fontWeight:"bold"}}>Description: <span style={{fontWeight:"lighter"}}>Kraft Cream Cheese Spread <br></br>Original 3 X 230 gr</span></h6>
+  <del className="text-muted" style={{fontSize:"18px",fontWeight:"normal",marginTop:"-5%"}}>2.090</del>
+  <div style={{display:"flex",justifyContent:"space-between",width:"107%"}}>
+  <h3 style={{color:"#E3424B"}}>1.050<span style={{fontSize:"14px",color:"silver"}}>BHD</span></h3>
+  <div style={{width:"10%",marginLeft:"20%",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",
+  clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+  <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+  </div>
+
+  <p style={{fontSize:"12px",color:"silver"}}>physical product for the most accurate information and warnings. For additional
+     information contact the retailer. Actual weight may based on 
+     seasonality and other factors.Estimated price is approimate and provided only for refrence</p>
+     <Button><i class="fas fa-shopping-cart"></i> Add to Cart</Button>
+     <Button><i class="fas fa-heart"></i></Button>
+</div>
+
+
+          </div>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+       
+      </Modal.Body>
+      <Modal.Footer>
+       
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
 export default function Exploring() {
+  const [modalShow, setModalShow] = React.useState(false);
     return (
         <>
               <Container  fluid>
@@ -38,12 +106,22 @@ export default function Exploring() {
   <Nav.Link className="mt-2 font"  href="#favorite" style={{color:"black"}}>
   <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; &nbsp;
    &nbsp; <span className="home"> Favourite</span></Nav.Link></Link>
-  <Nav.Link className="mt-2 font"  href="#orders" style={{color:"black"}}>
-  <img style={{height:"3vh",}} src={order}/>&nbsp; &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link>
-  <Nav.Link className="mt-2 font" href="#messages" style={{color:"black"}}>
-  <img style={{height:"2.5vh"}} src={message}/>&nbsp; &nbsp; &nbsp;<span className="home">Messages</span> &nbsp; &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge" style={{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge></Nav.Link>
-  <Nav.Link className="mt-2 set font" href="#settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+   <Link to="/orders" style={{textDecoration:"none"}}>
+  <Nav.Link className="mt-2 font"  href="/orders" style={{color:"black"}}>
+  <img style={{height:"3vh",}} src={order}/>&nbsp;
+   &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link></Link>
+   <Link to="/messages" style={{textDecoration:"none"}}>
 
+  <Nav.Link className="mt-2 font" href="/messages" style={{color:"black"}}>
+  <img style={{height:"2.5vh"}} src={message}/>&nbsp; 
+  &nbsp; &nbsp;<span className="home">Messages</span> &nbsp;
+   &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge" style=
+   {{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge>
+   </Nav.Link></Link>
+  <Link to="/settings" style={{textDecoration:"none"}}>
+
+  <Nav.Link className="mt-2 set font" href="/settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+</Link>
 </Nav>
 <Toast style={{marginTop:"40px",background:"#F7F7F7",width:"105%",
 borderRadius:"16px",}} id="no" className="tost">
@@ -104,7 +182,8 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+ <div style={{width:"30%",marginTop:"-20px",
+ background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
      <p className="pt-1 pl-2" style={{}}>25%</p>
  </div>
  </div>
@@ -339,9 +418,14 @@ className=" pl-4 ml-3">Top Seller&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+<Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+<MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
 </Card>
 </CardDeck>
 

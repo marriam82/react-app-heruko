@@ -78,10 +78,20 @@ style={{textDecoration:"none"}}>
   <img style={{height:"3vh",}} src={order}/>&nbsp; 
   &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link>
   </Link>
-  <Nav.Link className="mt-2 font" href="#messages" style={{color:"black"}}>
-  <img style={{height:"2.5vh"}} src={message}/>&nbsp; &nbsp; &nbsp;<span className="home">Messages</span> &nbsp; &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge" style={{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge></Nav.Link>
-  <Nav.Link className="mt-2 set font" href="#settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+  
+  <Link to="/messages" style={{textDecoration:"none"}}>
+  <Nav.Link className="mt-2 font" href="/messages" style={{color:"black"}}>
+  <img style={{height:"2.5vh"}} src={message}/>&nbsp; &nbsp;
+   &nbsp;<span className="home">Messages</span> &nbsp; &nbsp; 
+   &nbsp; &nbsp;<Badge id="no" className="badge" style=
+   {{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge>
+   </Nav.Link>
+  
+   </Link>
+   <Link to="/settings" style={{textDecoration:"none"}}>
 
+  <Nav.Link className="mt-2 set font" href="/settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+</Link>
 </Nav>
 <Toast style={{marginTop:"40px",background:"#F7F7F7",width:"105%",
 borderRadius:"16px",}} id="no" className="tost">
