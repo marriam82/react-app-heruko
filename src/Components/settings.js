@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component ,useState} from 'react'
 import logo from "../logo/logo.svg";
 import explore from "../logo/explore.svg"
 import order from "../logo/orders.svg";
@@ -8,14 +8,194 @@ import message from "../logo/messages.svg";
 import Footer from "../Components/footer";
 import delivery from "../topbar/delivery address.svg";
 import deal from "../topbar/best deals.svg";
+import profile from "../xadok/download.png"
 import {Link} from 'react-router-dom';
-import {Navbar,Row,Col,Nav,Container,ProgressBar,Card,CardDeck,CardGroup,Badge,Toast,Button,Form,FormControl,Carousel} from 'react-bootstrap'
+import {Navbar,Row,Col,Nav,Container,Modal,Badge,Toast,Button,Form,FormControl,Carousel} from 'react-bootstrap'
 import "../App.css";
 
-export default class settings extends Component {
-    render() {
+export default function Settings() {
+  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
+
+
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handleClose1 = () => setShow1(false);
+  const handleShow1 = () => setShow1(true);
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
+  const handleClose3 = () => setShow3(false);
+  const handleShow3 = () => setShow3(true);
         return (
+
             <div>
+                 <Modal style={{border:"none",width:"300px",
+                 marginLeft:"40%"}} 
+        show={show} onHide={handleClose}>
+        <Modal.Header style={{border:"none"}} closeButton>
+          <Modal.Title style={{border:"none",}}>Personal information</Modal.Title>
+        </Modal.Header>
+        <p className="pl-4" style={{color:"silver",fontSize:"13px"}}>Profile Image</p>
+
+        <Modal.Body style={{border:"none"}}>
+          <div style={{display:"flex",alignItems:"center"}}>
+            <img src={profile} style={{borderRadius:"6px",width:"50px",height:"50px"}} />
+            <div className="ml-4" style={{display:"flex"}}>
+            <Button style={{background:"#E3424B",marginleft:"1%",
+            border:"1px solid #E3424B"}}>Upload</Button>
+            <Button style={{background:"#F6F6F6",color:"silver",
+            marginLeft:"5%",border:"none"}}>Delete</Button>
+            </div>
+          </div>
+        <p className="mt-4" style={{color:"silver",
+        fontSize:"13px"}}>Profile Details</p>
+
+        <div style={{display:"flex",height:"40px"}}>
+          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}>
+          <i class="fas fa-user"></i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",
+          fontWeight:"bold",marginLeft:"2%"}}>FULL NAME</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>Mark Clarke</p>
+<hr></hr>
+          </div>
+        
+        </div>
+        <div style={{display:"flex",height:"40px",marginTop:"13%"}}>
+          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}>
+            <i class="far fa-envelope"></i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",
+          fontWeight:"bold",marginLeft:"2%"}}>EMAIL Address</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>markclarke@gmail.com</p>
+<hr></hr>
+          </div>
+        
+        </div>
+        <div style={{display:"flex",height:"40px",marginTop:"13%"}}>
+          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}>
+          <i class="fas fa-phone"></i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",
+          marginLeft:"2%"}}>PHONE NUMBER</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>+1(234)5678900</p>
+          </div>
+<hr></hr>
+
+        </div>
+
+        </Modal.Body>
+        <Modal.Footer style={{border:"none"}}>
+      
+  <Button style={{marginTop:"8%",background:"#223142",border:"none",borderRadius:"7px"}} size="lg" block>
+    Update profile
+  </Button>
+        </Modal.Footer>
+      </Modal>
+
+
+
+      <Modal show={show1}  style={{border:"none",width:"340px",
+      borderRadius:"15px",marginLeft:"40%"}} onHide={handleClose1} animation={false} >
+       <Modal.Header style={{border:"none"}} closeButton>
+         <Modal.Title style={{border:"none"}}>Saved addresses</Modal.Title>
+       </Modal.Header>
+       <Modal.Body style={{border:"none"}}>
+        
+         <div className="p-2 mt-2 " style={{background:"#F6F6F6",borderRadius:"10px", justifyContent:"space-between"
+         ,width:"100%",display:"flex",height:"90px"}}>
+           <div><h6 className="pl-2">Home</h6>
+           <p className="pl-2" style={{fontSize:"15px"}}>Sn Francisco CA 94103 <br></br>94103</p>
+           </div>
+           <div style={{display:"flex",flexDirection:"column"}}>
+             <button style={{borderRadius:"5px",width:"30px",height:"32px",border:"none",
+             background:"silver",fontSize:"14px",color:"white"}}><i class="far fa-edit"></i></button>
+             <button style={{marginTop:"10%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
+             background:"silver",fontSize:"12px",color:"white"}}><i class="fas fa-redo"></i></button>
+
+           </div>
+         </div>
+         <div className="p-2 mt-2" style={{height:"90px",background:"#F6F6F6",borderRadius:"10px", justifyContent:"space-between"
+         ,width:"100%",display:"flex"}}>
+           <div><h6 className="pl-2">Office</h6>
+           <p className="pl-2" style={{fontSize:"15px"}}>Sn Francisco CA 94103 <br></br>94103</p>
+           </div>
+           <div style={{display:"flex",flexDirection:"column"}}>
+             <button style={{borderRadius:"5px",width:"30px",height:"32px",border:"none",
+             background:"silver",fontSize:"14px",color:"white"}}><i class="far fa-edit"></i></button>
+             <button style={{marginTop:"10%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
+             background:"silver",fontSize:"12px",color:"white"}}><i class="fas fa-redo"></i></button>
+
+           </div>
+         </div>
+       </Modal.Body>
+       <h6 className="pl-4 mt-4" style={{fontWeight:"bold"}}>+Add new addresses</h6>
+
+       <Modal.Footer style={{border:"none"}}>
+    <Button style={{background:"#223142",border:"none",borderRadius:"7px"}} size="lg" block>
+    Confirm
+  </Button>
+       </Modal.Footer>
+     </Modal>
+
+
+
+     <Modal show={show2}  style={{border:"none",width:"340px",
+      borderRadius:"15px",marginLeft:"40%"}} onHide={handleClose2} animation={false} >
+       <Modal.Header style={{border:"none"}} closeButton>
+         <Modal.Title style={{border:"none"}}>Marketing perferences</Modal.Title>
+       </Modal.Header>
+       <Modal.Body style={{border:"none"}}>
+        <div style={{display:"flex"}}>
+       <Form.Check aria-label="option 1" /> 
+       <h6 className="text-muted">Promotional emails</h6>
+       </div>
+       <div style={{display:"flex"}}>
+       <Form.Check aria-label="option 1" /> 
+       <h6 >Monthly newsletter</h6>
+       </div>
+
+         <div style={{display:"flex"}}>
+       <Form.Check aria-label="option 1" /> 
+       <h6 className="text-muted">Feedback collection</h6>
+       </div>
+       <div style={{display:"flex"}}>
+       <Form.Check aria-label="option 1" /> 
+       <h6 >Discount and offers</h6>
+       </div>
+       </Modal.Body>
+
+       <Modal.Footer style={{border:"none"}}>
+    <Button style={{background:"#223142",border:"none",borderRadius:"7px"}} size="lg" block>
+    Update perferences
+  </Button>
+       </Modal.Footer>
+     </Modal>
+
+
+
+     <Modal show={show3}  style={{border:"none",width:"340px",
+      borderRadius:"15px",marginLeft:"40%"}} onHide={handleClose3} animation={false} >
+       <Modal.Header style={{border:"none"}} closeButton>
+         <Modal.Title style={{border:"none"}}>Payment methods</Modal.Title>
+       </Modal.Header>
+       <Modal.Body style={{border:"none"}}>
+       <Button style={{background:"#E3424B",border:"none",borderRadius:"7px"}} size="lg" block>
+       <i class="far fa-address-card"></i>
+  </Button>
+  <div style={{display:"flex", alignItems:"center",justifyContent:"space-evenly",marginTop:"2%"}}>
+  <Button style={{width:"180px",border:"none",background:"silver",color:"gray"}}> <i class="fas fa-money-bill-wave"></i></Button>
+  <Button style={{width:"180px",border:"none",background:"silver",color:"gray"}}> <i class="fab fa-paypal"></i></Button>
+  </div>
+       </Modal.Body>
+
+       <Modal.Footer style={{border:"none"}}>
+    <Button style={{background:"#223142",border:"none",borderRadius:"7px"}} size="lg" block>
+    Update perferences
+  </Button>
+       </Modal.Footer>
+     </Modal>
+        
                   <Container  fluid>
   <Row className="grid">
     <Col sm={2} >
@@ -112,17 +292,19 @@ borderRadius:"16px",}} id="no" className="tost">
     <h6 style={{color:"lightgray",marginTop:"3%",marginLeft:"%"}}>General</h6>
     <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-user"></i> &nbsp; <b>Personal information</b></Button>
-    <Button  style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button onClick={handleShow} style={{color:"#223142",background:"none",border:"none"}}>
+      <i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
     <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
-    <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-bookmark"></i> &nbsp; <b>Saved addressess</b></Button>
-    <Button  style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}>
+      <i class="far fa-bookmark"></i> &nbsp; <b>Saved addressess</b></Button>
+    <Button onClick={handleShow1} style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
     <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-envelope"></i> &nbsp; <b>Marketing perferences</b></Button>
-    <Button  style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button onClick={handleShow2} style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
 
@@ -130,7 +312,7 @@ borderRadius:"16px",}} id="no" className="tost">
     <h6 style={{color:"lightgray",marginTop:"3%",marginLeft:"%"}}>Payments</h6>
     <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-address-card"></i>&nbsp; <b>Payment methods</b></Button>
-    <Button  style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button onClick={handleShow3} style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
     <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
@@ -165,5 +347,5 @@ borderRadius:"16px",}} id="no" className="tost">
 </div>   
             </div>
         )
-    }
+    
 }

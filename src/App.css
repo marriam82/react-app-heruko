@@ -213,14 +213,15 @@ justify-content: space-evenly;
 #fle{
   display: flex !important;
   position: absolute;
-  left:83%
+  left:83%;
 }
 #car{
 
   height:35vh !important;
   position: relative;
   left:31%;
-  width:80%
+  width:80%;
+  
 }
 #carr{
 

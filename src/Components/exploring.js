@@ -1,4 +1,4 @@
-import React, {} from 'react'
+import React, {useState} from 'react'
 import logo from "../logo/logo.svg";
 import explore from "../sidebarw/explore.svg"
 import order from "../logo/orders.svg";
@@ -13,6 +13,13 @@ import {Link} from 'react-router-dom';
 import {Navbar,Row,Col,Nav,Container,Modal,Card,CardDeck,CardGroup,Badge,Toast,Button,Form,FormControl,Carousel} from 'react-bootstrap'
 import "../App.css";
 function MyVerticallyCenteredModal(props) {
+  const [num ,setNum] = useState(1);
+  const plus = () => {
+    setNum(num + 1);
+  };
+  const minus = () => {
+    setNum(num - 1);
+  };
   return (
     <Modal
       {...props}
@@ -61,19 +68,312 @@ function MyVerticallyCenteredModal(props) {
   <p style={{fontSize:"12px",color:"silver"}}>physical product for the most accurate information and warnings. For additional
      information contact the retailer. Actual weight may based on 
      seasonality and other factors.Estimated price is approimate and provided only for refrence</p>
-     <Button><i class="fas fa-shopping-cart"></i> Add to Cart</Button>
-     <Button><i class="fas fa-heart"></i></Button>
+      <div style={{display:"flex",marginLeft:"30%"}}>
+       <Button style={{background:"#F6F6F6",
+       color:"black",
+       fontWeight:"bold",width:"40px",
+       height:"40px",fontSize:"20px",
+       textAlign:"center", display:"flex",alignItems:"center",
+       border:"none",borderTopLeftRadius:"12px",
+       borderBottomLeftRadius:"12px"}} onClick={minus}>-</Button>
+     <Button style={{border:"none",color:"black",background:"white"}}>{num}</Button>
+       <Button  style={{background:"#F6F6F6",color:"black",display:"flex",alignItems:"center",
+       fontWeight:"bold",width:"40px",height:"40px",fontSize:"20px",
+       textAlign:"center", 
+       border:"none",borderTopRightRadius:"12px",
+       borderBottomRightRadius:"12px"}} onClick={plus}>+</Button>
+        </div>
+     <Button style={{marginLeft:"60%",
+     position:"relative",marginTop:"-20%",
+     border:"none",background:"#FFDD73", color:"black"}}>
+       <i class="fas fa-shopping-cart"></i> &nbsp;
+        Add to Cart</Button>
+     <Button style={{border:"none",color:"#BDBDBD",
+     position:"absolute",marginTop:"-5%", marginLeft:"2%",
+     background:"#F6F6F6"}}>
+       <i class="fas fa-heart"></i></Button>
 </div>
 
 
           </div>
         </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-       
+      </Modal.Header > 
+      <Modal.Body style={{border:"none"}}>
+      <h4 className="pl-3">Alternative Products</h4>
+
+      <Carousel  style={{background:"#F6F6F6"}}>
+  <Carousel.Item style={{background:"#F6F6F6"}}>
+  <CardDeck className="ml-3 mt-4 pt-4" >
+
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",background:"#F6F6F6"}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",background:"#F6F6F6"}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+</CardDeck>
+  </Carousel.Item>
+  <Carousel.Item style={{background:"#F6F6F6"}}>
+  <CardDeck className="ml-3 mt-4 pt-4" style={{background:"#F6F6F6"}} >
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",background:"#F6F6F6"}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+</CardDeck>
+  </Carousel.Item>
+
+</Carousel>
+
+
+{/* =========================New ArivaL----------------------- */}
+
       </Modal.Body>
-      <Modal.Footer>
-       
+        <h4 className="pl-2">Similar Products</h4>
+      <Modal.Footer style={{border:"none"}}>
+    
+
+<Carousel  style={{background:"#F6F6F6"}}>
+<Carousel.Item style={{background:"#F6F6F6"}}>
+<CardDeck className="ml-3 mt-4 pt-4" >
+
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",background:"#F6F6F6"}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+</CardDeck>
+</Carousel.Item>
+<Carousel.Item style={{background:"#F6F6F6"}}>
+<CardDeck className="ml-3 mt-4 pt-4" style={{background:"#F6F6F6"}} >
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",background:"#F6F6F6"}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
+<Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted"><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+<p className="pt-1 pl-2" style={{}}>25%</p>
+</div>
+</div>
+<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+Milk & Hazelnut</p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+</CardDeck>
+</Carousel.Item>
+
+</Carousel>
       </Modal.Footer>
     </Modal>
   );
@@ -189,9 +489,11 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -204,9 +506,11 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -219,9 +523,11 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -234,9 +540,11 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -249,9 +557,11 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 </CardDeck>
 {/* =========================New ArivaL----------------------- */}
@@ -273,9 +583,11 @@ className=" pl-4 ml-3">New Arrival&nbsp;&nbsp;<span style={{color:"#FBDB73",font
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",borderBottomLeftRadius:"10px",borderBottomRightRadius:"10px"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -288,9 +600,11 @@ className=" pl-4 ml-3">New Arrival&nbsp;&nbsp;<span style={{color:"#FBDB73",font
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",borderBottomLeftRadius:"10px",borderBottomRightRadius:"10px"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -303,9 +617,11 @@ className=" pl-4 ml-3">New Arrival&nbsp;&nbsp;<span style={{color:"#FBDB73",font
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",borderBottomLeftRadius:"10px",borderBottomRightRadius:"10px"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -318,9 +634,11 @@ className=" pl-4 ml-3">New Arrival&nbsp;&nbsp;<span style={{color:"#FBDB73",font
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",borderBottomLeftRadius:"10px",borderBottomRightRadius:"10px"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -333,9 +651,11 @@ className=" pl-4 ml-3">New Arrival&nbsp;&nbsp;<span style={{color:"#FBDB73",font
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 </CardDeck>
 
@@ -358,9 +678,12 @@ className=" pl-4 ml-3">Top Seller&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -373,9 +696,11 @@ className=" pl-4 ml-3">Top Seller&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -388,9 +713,11 @@ className=" pl-4 ml-3">Top Seller&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -403,9 +730,11 @@ className=" pl-4 ml-3">Top Seller&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
  </div>
  <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+ <Card.Footer onClick={() => setModalShow(true)} style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
+
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
