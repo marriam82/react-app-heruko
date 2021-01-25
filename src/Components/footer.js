@@ -15,7 +15,7 @@ export default class footer extends Component {
             <Row>
               <Col xs={3}>
                   <img className="pl-4 l" src={logo} style={{height:"19vh",paddingTop:"40px"}}/>
-                  <h4 className="pl-4 pt-4 ll"style={{fontSize:"14px",fontWeight:"normal"
+                  <h4 className="pl-4 pt-4 ll "style={{fontSize:"14px",fontWeight:"normal"
                   ,marginTop:"15px"}}>
                 Welcome! This website is (quite<br id="no"></br> obviously) a small text generator.Its<br id="no"></br> fairly self explanatory</h4>
               </Col>

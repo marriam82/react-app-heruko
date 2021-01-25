@@ -76,7 +76,7 @@ export default function Sidebar() {
        textAlign:"center", display:"flex",alignItems:"center",
        border:"none",borderTopRightRadius:"12px",
        borderTopLeftRadius:"12px"}} >+</Button>
-     <Button style={{border:"none",color:"black",
+      <Button style={{border:"none",color:"black",
      background:"white"}}>1</Button>
        <Button  style={{background:"#F6F6F6",
        color:"gray",display:"flex",alignItems:"center",
@@ -229,13 +229,21 @@ background:"#F6F6F6",fontSize:"19px"}}>
    </>
   
             <Container  fluid>
-  <Row className="grid">
-    <Col sm={2} >
-        <Navbar.Brand href="#home" className=" pt-2" style={{width:"100%"}}>
-          <img src={logo} id="imgg" style={{height:"10vh"}} />
+  <Row id="grid">
+    <Col sm={2} lg={2}className="sidebar">
+        <Navbar.Brand href="/home" className=" pt-2" style={{width:"100%"}}>
+          <img src={logo} id="logo" style={{height:"10vh"}} />
           </Navbar.Brand>      
-        <Nav defaultActiveKey="/home" className="flex-column" >
-  <Nav.Link className="mt-3 p-3 color" href="/" style={{background:"#E3424B",borderRadius:"10px",color:"white",fontWeight:"bold",}}><i class="fas fa-home house" style={{fontSize:"19px"}}></i>&nbsp; &nbsp; <span className="home">Home</span></Nav.Link>
+      
+  <Nav defaultActiveKey="/home" className="flex-column" >
+  <Nav.Link className="mt-3 p-3 color" href="/" 
+  style={{background:"#E3424B",borderRadius:"10px",
+  color:"white",fontWeight:"bold",}}>
+    <i class="fas fa-home house"
+   style={{fontSize:"19px"}}></i>&nbsp; &nbsp; 
+   <span className="home">Home</span></Nav.Link>
+
+
   <Link to="/exploring" style={{textDecoration:"none"}}>
   <Nav.Link className="mt-2 font" href="/exploring" style={{color:"black",}}>  
   <img style={{height:"3vh",marginLeft:"1px"}} 
@@ -255,10 +263,11 @@ background:"#F6F6F6",fontSize:"19px"}}>
   <Link to="/messages" style={{textDecoration:"none"}}>
   <Nav.Link className="mt-2 font" href="/messages" 
   style={{color:"black"}}>
-  <img style={{height:"2.5vh"}} src={message}/>
+  <img style={{height:"2.5vh"}} src={message} className="m-b"/>
   &nbsp; &nbsp; &nbsp;<span className="home">Messages</span> 
-  &nbsp; &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge"
-   style={{background:"#E3424B",borderRadius:'100%',color:"white"}}>
+  &nbsp; &nbsp; &nbsp; &nbsp;<Badge  className="badge"
+   style={{background:"#E3424B",
+   borderRadius:'100%',color:"white"}}>
      2</Badge></Nav.Link>
      </Link>
   <Link to="/settings" style={{textDecoration:"none"}}>
@@ -287,9 +296,9 @@ borderRadius:"16px",}} id="no" className="tost">
     </Col>
    
     {/* ---------------------- */}
-    <Col sm={10} className="up" fluid>
+    <Col sm={10} lg={10} className="col-2-l" fluid>
          {/* <hr style={{width:"100%",transform:"rotate(-90deg)"}}></hr> */}
-   <Navbar className="mt-1 ">
+   <Navbar className="mt-1 b">
    <Nav className="mr-4">
    <Nav.Link  onClick={handleShow} style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no"
     className="no" ><img src={delivery}style={{height:"3vh"}} />&nbsp; &nbsp; Sen Francisain California &nbsp;
@@ -308,10 +317,12 @@ borderRadius:"16px",}} id="no" className="tost">
        </select>
        </label> 
     </Nav>
-    <div className="input-container">
+    <div className="input-container inpu" >
     <i class="fas fa-search icon"></i>
-    <input type="text" className="input-field inpu" placeholder="Search for anything... "   
-    style={{fontSize:"14px",background:"#F6F6F6",border:"none",outline:"none",padding:"13px",
+    <input type="text" className="input-field input-u" 
+    placeholder="Search for anything... "   
+    style={{fontSize:"14px",background:"#F6F6F6",border:"none",
+    outline:"none",padding:"13px",
   boxSizing:"border-box"}}/>
     </div>
 <div id="fle" >
@@ -332,10 +343,11 @@ borderRadius:"16px",}} id="no" className="tost">
       
     />
      <Carousel.Caption style={{position:"absolute",top:"9%",left:"3%",color:"black",textAlign:"left"}}>
-      <h2 style={{fontWeight:"bold",color:"#223142",fontSize:"40px"}}>Stay Home</h2>
-      <h2 style={{fontWeight:"bold",color:"#E3424B",fontSize:"40px",marginTop:"-10px"}}>Shop Online</h2>
-      <p style={{fontSize:"15px"}}>Finibus feugiat libero. Duis a ex nisl. Phasellus sodales justo eros.<br></br>
-      sagittis fermentum sapienn malesuada nec.In porta turpis ex,sed<br></br>
+      <h2 id="stay" style={{fontWeight:"bold",color:"#223142",fontSize:"40px"}}>Stay Home</h2>
+      <h2 id="stay" style={{fontWeight:"bold",color:"#E3424B",fontSize:"40px",marginTop:"-10px"}}>Shop Online</h2>
+      <p className="stay-p" style={{fontSize:"15px"}}>
+        Finibus feugiat libero. Duis a ex<span id="no" > nisl. Phasellus sodales justo eros.<br id="no"></br>sagittis
+       fermentum sapienn </span> malesuada nec.In porta turpis ex,sed<br id="no"></br>
       sollicitudin velit finibus id.
       </p>
     </Carousel.Caption>
@@ -346,18 +358,18 @@ borderRadius:"16px",}} id="no" className="tost">
       src={slider2} style={{height:"45vh",width:"101%"}}
     />
      <Carousel.Caption style={{position:"absolute",top:"9%",left:"3%",color:"black",textAlign:"left"}}>
-     <h2 style={{fontWeight:"bold",color:"#223142",fontSize:"40px"}}>Stay Home</h2>
-      <h2 style={{fontWeight:"bold",color:"#E3424B",fontSize:"40px",marginTop:"-10px"}}>Shop Online</h2>
-      <p style={{fontSize:"15px"}}>Finibus feugiat libero. Duis a ex nisl. Phasellus sodales justo eros.<br></br>
-      sagittis fermentum sapienn malesuada nec.In porta turpis ex,sed<br></br>
+     <h2 id="stay" style={{fontWeight:"bold",color:"#223142",fontSize:"40px"}}>Stay Home</h2>
+      <h2 id="stay" style={{fontWeight:"bold",color:"#E3424B",fontSize:"40px",marginTop:"-10px"}}>Shop Online</h2>
+      <p className="stay-p" style={{fontSize:"15px"}}>Finibus feugiat libero. Duis a ex<span id="no" >  nisl. Phasellus sodales justo eros.<br br id="no"></br>
+      sagittis fermentum sapienn</span> malesuada nec.In porta turpis ex,sed<br br id="no"></br>
       sollicitudin velit finibus id.
       </p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
 <h3 className="exp ml-4"style={{color:"black",fontWeight:"bold", marginTop:"25px"}}> Explore Catagories</h3>
-<div id="all " style={{marginTop:"30px",width:"100%",marginLeft:"22px"}}>
-  <Button id="alll active"style={{textAlign:"center",
+<div id="all" style={{marginTop:"30px",width:"100%",marginLeft:"22px"}}>
+  <Button id="alll "style={{textAlign:"center",
   background:"#E3424B",
   color:"white",
   border:"none",

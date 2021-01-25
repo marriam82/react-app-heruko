@@ -12,9 +12,6 @@
 .border{
   border:1px solid black
 }
-/* #circle:hover {
-  background:grey !important;
-} */
 .container{max-width:1170px; margin:auto; 
   height:160vh;
   border:"1px solid black"}
@@ -148,7 +145,6 @@ img{ max-width:100%;}
 }
 .input-field {
   width: 100%;
-  /* padding: 10px; */
   outline: none;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -171,66 +167,109 @@ justify-content: space-evenly;
   top:10%;
   justify-content: space-evenly;
   }
-@media (max-width:750px){
-  #imgg{
-    height:6.5vh !important;
-    margin-left:-21% !important;
-  }
-.color{
- width:14%;
- height:7.8vh; 
+@media (max-width:700px){
+#grid{
+  display: grid !important;
+  grid-template-columns: 19% 81% !important;
 }
-.house{
-  margin-left:1.4% ;
-  margin-top:-2%;
- font-size:20px;
+.sidebar{
+  border-right:2px solid whitesmoke
 }
-.font{
-  font-size:14px;
-}
-.badge{
-  margin-left:-5%
-}
-.up{
-  margin-top:-85%;
-  margin-left:-8% ;
-}
-.inpu{
-  width:55% !important;
-  position: relative;
-  left:26%
+.home{
+  display:none;
 }
 #no{
- display: none;
+  display: none;
+ }
+ .color{
+   width: 95% !important;
+   height:8vh;
 }
-#w{
-  width:120% !important
+.house{
+  font-size:22px !important
 }
-#inn{
-  width:67% !important;
-  margin-left: 20%;
+.font{
+ padding-right:4% !important;
+  height:6.5vh !important;
+}
+.m-b{
+  position: relative !important;
+}
+.badge{
+  position:absolute !important;
+  top:27%;
+  right:29%;
+  font-size:13px !important
+}
+.inpu{
+  width:100% !important;
+  position: relative;
+  right:10%;
+  border: 8px;
 }
 #fle{
   display: flex !important;
-  position: absolute;
-  left:83%;
 }
 #car{
 
-  height:35vh !important;
+  height:23vh !important;
   position: relative;
-  left:31%;
-  width:80%;
-  
+  bottom:1%;
+  right:3.5%;
+  width:106% !important;
+  border:none;
+  background:none
 }
 #carr{
-
-  height:35vh !important;
+  height:23vh !important;
+  position: relative;
+  bottom:1%;
+  border:none;
+  background:none
+}
+#stay{
+  font-size:20px !important;
+  margin-left:2%
+}
+.stay-p{
+  width:70%;
+  margin-left:2%;
+  margin-top:-3%;
 }
 .exp{
   font-size: 20px;
-  margin-left: 32%;
+ position: relative;
+ right:4%;
+ bottom:1%
 }
+#all{
+  display: flex !important;
+ overflow-x: scroll;
+  font-size: 17px;
+  /* border:1px solid black !important; */
+  margin-left:2% !important;
+  position:relative;
+  bottom:2%;
+  width:150% !important
+}
+#alll{
+  display: flex;
+align-items: center;
+justify-content: space-evenly;
+padding-top:12px ;
+height:40px !important;
+
+}
+#cards{
+  position: relative;
+  left:-5%
+}
+#card{
+  height:25vh !important;
+  /* width:73% !important */
+}
+  /* 
+
 #all{
   display: flex;
  overflow-x: scroll;
@@ -239,62 +278,35 @@ justify-content: space-evenly;
   width: 100%;
   margin-top: 3% !important;
 }
-#alll{
-  display: flex;
-align-items: center;
-justify-content: space-evenly;
-padding-top:12px ;
-height:45px !important;
-height:6vh !important;
-}
-.home{
-  display:none;
-}
-#cards{
-  position: relative;
-  left:30%
-}
-#card{
-  height:20vh !important;
-  width:73% !important
-}
-.l{
-  height:15vh !important;
-  margin-left: -20%;
-}
-.ll{
-  position: absolute;
-  top:40%;
-  left:-10%;
-  font-size:12px !important;
-  width:175%
-}
-.ab{
-  position: absolute;
-  left:15%;
-  margin-top:8% !important;
-}
-.f{
-  font-size:12px !important
-}
-.about{
-  font-size:17px
-}
+
+
+
+
+
+ */
 .footer{ 
   font-size:13px;
   height:9vh !important;
   padding-top:2%
 }
+.l{
+  height:14vh !important;
+  position: relative;
+  right:20%
 
-.abc{
-  margin-top:2% !important;
-  margin-left:2%;
 }
-.whatsapp{
-  display:flex;
-  justify-content:space-evenly;
-  font-size:14px;
-  align-items: center;
-};
+.ll{
+  width:200%; 
+  position: relative;
+  bottom:10%;
+  right:20%
+
+}
+.ab{
+  position: relative;
+  left:13%;
+  margin-top:6% !important
+
+}
 #tw{ margin-top: -14%;}
 }
