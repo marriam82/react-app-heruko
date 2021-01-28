@@ -36,7 +36,7 @@ export default class footer extends Component {
 
               </Col>
               <Col className="ab" style={{fontSize:"12px",fontWeight:"normal",marginTop:"15px"}}>
-              <h4 className="about f" style={{fontSize:"15px",fontWeight:"bold",marginTop:"40px"}}>About Us</h4>
+              <h4 className="about " style={{fontSize:"15px",fontWeight:"bold",marginTop:"40px"}}>About Us</h4>
               <h4 className="mt-2 about f" style={{fontSize:"13px",fontWeight:"normal"}}>Help</h4>
               <h4 className="about f" style={{fontSize:"13px",fontWeight:"normal",}}>Custom Service</h4>
               <h4 className="about f" style={{fontSize:"13px",fontWeight:"normal"}}>Contacts</h4>

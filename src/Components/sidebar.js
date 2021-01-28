@@ -1,9 +1,9 @@
-import React, { Component,useState } from 'react';
+import React, {useState } from 'react';
 import img6  from "../xadok/01.png"
 import img7 from "../xadok/03.png";
 import img8 from "../xadok/02.png";
 import img from "../xadok/pexels-photo-102104.jpeg"
-
+import master from "../xadok/master.png";
 import img3 from "../xadok/abstract-blur-supermarket-interior.jpg"
 import img4 from "../xadok/beauty-bag-with-facial-powders-eye-shadows-table_23-2148047054.jpg"
 import img5 from "../xadok/gamer-workspace_127657-18801.jpg"
@@ -32,6 +32,10 @@ export default function Sidebar() {
   const [show, setShow] = useState(false);
   const [show1,setShow1] = useState(false);
   const [show2,setShow2] = useState(false);
+  const [show3,setShow3] = useState(false);
+  const [show4,setShow4] = useState(false);
+
+
 
 
   const handleClose1 = () => setShow1(false);
@@ -40,19 +44,29 @@ export default function Sidebar() {
   const handleClose2 = () => setShow2(false);
   const handleShow2 = () => setShow2(true);
 
+  const handleClose3 = () => setShow3(false);
+  const handleShow3 = () => setShow3(true);
+
+  const handleClose4 = () => setShow4(false);
+  const handleShow4 = () => setShow4(true);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
     return (
 
         <>
-
-<Modal style={{border:"none",overflow:"visible"}} show={show2} onHide={handleClose2}>
+{/* -----------------Cart modal 1---------------------- */}
+<Modal style={{border:"none",marginLeft:"1%"}} show={show2} 
+onHide={handleClose2}>
         <Modal.Header style={{border:"none"}} closeButton>
-          <Modal.Title style={{border:"none"}}>My Cart <span style={{fontSize:"10px",fontWeight:"lighter"}}></span>(2 items)</Modal.Title>
+          <Modal.Title style={{border:"none"}}>My Cart 
+          <span style={{fontSize:"12px",}}> &nbsp;  (2 items)
+            </span></Modal.Title>
         </Modal.Header>
         <Modal.Body style={{border:"none"}}>
        
-        <h6 style={{color:"red",fontSize:"12px"}}>Deliver To </h6>
+        <h6 style={{color:"red",fontSize:"12px"}}>DELIVER TO </h6>
         <h6 style={{position:"relative"}} >300 Post Street San Francisco, CA 
         <span style={{color:"silver",position:"absolute",right:"0",marginTop:"-2%"}}><i class="fas fa-chevron-right"></i></span></h6>
 
@@ -120,73 +134,87 @@ background:"#F6F6F6",fontSize:"19px"}}>
         </Modal.Body>
         <Modal.Footer 
         style={{border:"none",}}>
-           <Button style={{marginTop:"8%",
+           <Button  onClick={handleShow4}  style={{marginTop:"8%",
            background:"#223142",border:"none",borderRadius:"7px"}} size="lg" block>
     Checkout <span style={{fontSize:"12px"}}>(0.835 BHD)</span>
   </Button>
         </Modal.Footer>
       </Modal>
-
+{/* ------------------------------------cart modal 1 end-------------------- */}
         <>
-        
-        <Modal style={{border:"none",width:"300px",marginLeft:"75%"}} 
+        {/* ------------------------ user --------------------------- */}
+        <Modal style={{border:"none",width:"420px",
+        height:"150vh",marginLeft:"69%",marginTop:"-2.3%"}} 
         show={show1} onHide={handleClose1}>
-        <Modal.Header style={{border:"none"}} closeButton>
-          <Modal.Title style={{border:"none"}}>Welcome!</Modal.Title>
+        <Modal.Header style={{border:"none", outline:"none"}} closeButton>
+          <Modal.Title className="mt-3" style={{border:"none",fontSize:"33px"}}>Welcome!</Modal.Title>
         </Modal.Header>
         <p className="pl-4" style={{color:"silver",fontSize:"13px"}}>Sign in to your account to continue</p>
 
         <Modal.Body style={{border:"none"}}>
-        <div style={{display:"flex",height:"40px"}}>
-          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}><i class="far fa-envelope"></i></Button>
+          <div className="mt-4" style={{display:"flex",height:"50px",width:"100%",}}>
+          <Button className="p-3" style={{borderRadius:"10px",
+          border:"none",background:"#F6F6F6",color:"black"}}>
+            <i class="far fa-envelope" style={{fontSize:"20px"}}>
+            </i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%"}}>EMAIL ADDRESS</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>markclarke@gmail.com</p>
-<hr></hr>
+          <hr style={{width:"180%"}}></hr>
           </div>
         
         </div>
-        <div style={{display:"flex",height:"40px",marginTop:"13%"}}>
-          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}>
-          <i class="fas fa-key"></i></Button>
+        <div style={{display:"flex",height:"50px",marginTop:"13%"}}>
+          <Button className="p-3" style={{borderRadius:"10px",border:"none",background:"#F6F6F6",color:"black"}}>
+          <i class="fas fa-key" style={{fontSize:"20px"}}></i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",
           marginLeft:"2%"}}>PASWORD</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>******</p>
+          <hr style={{width:"400%"}}></hr>
+         
           </div>
+
         </div>
 
         </Modal.Body>
-        <Modal.Footer style={{border:"none"}}>
-        <Button style={{background:"#E3424B",border:"none",borderRadius:"7px"}} size="lg" block>
+        <Modal.Footer className="mt-4" style={{border:"none"}}>
+        <Button className="p-3" style={{background:"#E3424B",border:"none",borderRadius:"7px",width:"80%",marginRight:"10%"}}  block>
     Sign in
   </Button>
-  <h6 style={{fontSize:"12px" ,position:"absolute",left:"35%",textAlign:"center"}}>Forgot password? </h6>
-  <Button style={{marginTop:"8%",background:"#223142",border:"none",borderRadius:"7px"}} size="lg" block>
+  <h6 style={{fontSize:"14px",position:"absolute",left:"35%",
+  textAlign:"center",marginTop:"-26%"}}>Forgot password? </h6>
+  <Button onClick={handleShow3}  className="p-3"  style={{marginTop:"18%",background:"gray",border:"none",borderRadius:"7px",width:"80%",marginRight:"10%"}}  block>
     Create an account
   </Button>
+  <Button c  style={{marginTop:"18%",background:"transparent",border:"none",borderRadius:"7px"}} size="lg" block>
+    Create an account
+  </Button>
+
+
         </Modal.Footer>
       </Modal>
         
         
-        
+        {/* ------------------- User end-------------------- */}
         </>
 
            <>
      
-
-     <Modal show={show}  style={{border:"none",width:"340px",borderRadius:"15px",marginLeft:"40%"}} onHide={handleClose} animation={false} >
-       <Modal.Header style={{border:"none"}} closeButton>
+{/* ------------------------location  ---------------------- */}
+     <Modal show={show}  style={{borderRadius:"1rem ",
+     width:"390px",marginLeft:"40%",background:"transparent",border:"none"}} onHide={handleClose} animation={false} >
+       <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none"}}>Delivery address</Modal.Title>
        </Modal.Header>
        <Modal.Body style={{border:"none"}}>
          <div className="p-2 pb-3" style={{background:"#FFDD72",borderRadius:"10px", justifyContent:"space-between"
          ,width:"100%",display:"flex"}}>
            <div><h6 className="pl-2">Current Location</h6>
-           <p className="pl-2" style={{fontSize:"15px"}}>2919 Avenue 29,Jurdab,Bahrain</p>
+           <p className="pl-2" style={{fontSize:"15px",marginTop:"-1%"}}>2919 Avenue 29,Jurdab,Bahrain</p>
            </div>
            <div style={{display:"flex",flexDirection:"column"}}>
              <button style={{borderRadius:"5px",width:"30px",height:"32px",border:"none",
              background:"#E3424B",fontSize:"14px",color:"white"}}><i class="far fa-edit"></i></button>
-             <button style={{marginTop:"10%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
+             <button style={{marginTop:"15%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
              background:"#E3424B",fontSize:"12px",color:"white"}}><i class="fas fa-redo"></i></button>
 
            </div>
@@ -194,26 +222,26 @@ background:"#F6F6F6",fontSize:"19px"}}>
          <div className="p-2 mt-2 " style={{background:"#F6F6F6",borderRadius:"10px", justifyContent:"space-between"
          ,width:"100%",display:"flex",height:"90px"}}>
            <div><h6 className="pl-2">Home</h6>
-           <p className="pl-2" style={{fontSize:"15px"}}>Sn Francisco CA 94103 <br></br>94103</p>
+           <p className="pl-2" style={{fontSize:"15px",marginTop:"-2%"}}>Sn Francisco CA 94103 <br></br>94103</p>
            </div>
            <div style={{display:"flex",flexDirection:"column"}}>
              <button style={{borderRadius:"5px",width:"30px",height:"32px",border:"none",
              background:"silver",fontSize:"14px",color:"white"}}><i class="far fa-edit"></i></button>
-             <button style={{marginTop:"10%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
-             background:"silver",fontSize:"12px",color:"white"}}><i class="fas fa-redo"></i></button>
+             <button style={{marginTop:"15%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
+             background:"silver",fontSize:"12px",color:"white"}}><i class="fas fa-trash"></i></button>
 
            </div>
          </div>
          <div className="p-2 mt-2" style={{height:"90px",background:"#F6F6F6",borderRadius:"10px", justifyContent:"space-between"
          ,width:"100%",display:"flex"}}>
            <div><h6 className="pl-2">Office</h6>
-           <p className="pl-2" style={{fontSize:"15px"}}>Sn Francisco CA 94103 <br></br>94103</p>
+           <p className="pl-2" style={{fontSize:"15px",marginTop:"-2%"}}>Sn Francisco CA 94103 <br></br>94103</p>
            </div>
            <div style={{display:"flex",flexDirection:"column"}}>
              <button style={{borderRadius:"5px",width:"30px",height:"32px",border:"none",
              background:"silver",fontSize:"14px",color:"white"}}><i class="far fa-edit"></i></button>
-             <button style={{marginTop:"10%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
-             background:"silver",fontSize:"12px",color:"white"}}><i class="fas fa-redo"></i></button>
+             <button style={{marginTop:"15%",borderRadius:"5px",width:"30px",height:"32px",border:"none",
+             background:"silver",fontSize:"12px",color:"white"}}><i class="fas fa-trash"></i></button>
 
            </div>
          </div>
@@ -226,13 +254,145 @@ background:"#F6F6F6",fontSize:"19px"}}>
   </Button>
        </Modal.Footer>
      </Modal>
+    {/* ------------------------- location end ------------------------ */}
    </>
+   <>
+   {/* ----------------------- user 2-------------------------- */}
+   <Modal style={{border:"none",width:"420px",
+        height:"150vh",marginLeft:"69%",marginTop:"-2.3%"}} 
+        show={show3} onHide={handleClose3}>
+        <Modal.Header style={{border:"none", outline:"none"}} closeButton>
+          <Modal.Title className="mt-3" style={{border:"none",fontSize:"33px"}}>Create an account!</Modal.Title>
+        </Modal.Header>
+        <p className="pl-4" style={{color:"silver",fontSize:"13px"}}>Please create an account to continue using our service</p>
+
+        <Modal.Body style={{border:"none"}}>
+        <div className="mt-4" style={{display:"flex",height:"50px",width:"100%",}}>
+          <Button className="p-3" style={{borderRadius:"10px",
+          border:"none",background:"#F6F6F6",color:"black"}}>
+            <i class="far fa-envelope" style={{fontSize:"20px"}}>
+            </i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%",width:"100%"}}>FULL NAME</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>Talal</p>
+          <hr style={{width:"300%"}}></hr>
+          </div>
+        
+        </div>
+          <div className="mt-4" style={{display:"flex",height:"50px",width:"100%",}}>
+          <Button className="p-3" style={{borderRadius:"10px",
+          border:"none",background:"#F6F6F6",color:"black"}}>
+            <i class="far fa-envelope" style={{fontSize:"20px"}}>
+            </i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%"}}>EMAIL ADDRESS</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>markclarke@gmail.com</p>
+          <hr style={{width:"180%"}}></hr>
+          </div>
+        
+        </div>
+        <div style={{display:"flex",height:"50px",marginTop:"13%"}}>
+          <Button className="p-3" style={{borderRadius:"10px",border:"none",background:"#F6F6F6",color:"black"}}>
+          <i class="fas fa-key" style={{fontSize:"20px"}}></i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",
+          marginLeft:"2%"}}>PASWORD</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>******</p>
+          <hr style={{width:"400%"}}></hr>
+         
+          </div>
+
+        </div>
+
+        </Modal.Body>
+        <Modal.Footer className="" style={{border:"none"}}>
+        <Button className="p-3"  style={{marginTop:"10%",background:"#E3424B",border:"none",borderRadius:"7px",width:"80%",marginRight:"10%"}}  block>
+    Create account
+  </Button>
+  <h6 style={{fontSize:"14px",position:"absolute",left:"24%",
+  textAlign:"center",marginTop:"15%"}}> Already have an account? <span style={{color:"#E3424B",fontWeight:"bold"}}>Sign In</span></h6>
+ 
+  <Button c  style={{marginTop:"18%",background:"transparent",border:"none",borderRadius:"7px"}} size="lg" block>
+    Create an account
+  </Button>
+
+
+        </Modal.Footer>
+      </Modal>
+   
+   
+   {/* ---------------------------user 2 end------------------ */}
+   </>
+   
+   <>
+{/* ------------------------- cart  2 ------------------------- */}
+<Modal style={{border:"none",height:"105vh",
+marginLeft:"1%",marginTop:"-2.2%"}} 
+show={show4} 
+onHide={handleClose4}>
+        <Modal.Header style={{border:"none"}} closeButton>
+        <div style={{width:"95%",height:"7vh",background:"#F6F6F6",
+        border:"none",display:"flex",justifyContent:"space-between",
+        borderRadius:"8px"}}>
+          <h6 style={{paddingTop:"2.5%",paddingLeft:"4%"}}>Scedule Delivery </h6>
+          <i class="fas fa-chevron-down" 
+          style={{color:"silver",marginRight:"4%",marginTop:"4%"}}></i>
+        </div>
+        </Modal.Header>
+        <Modal.Body style={{border:"none"}}>
+       
+        <h3 style={{}}>Payment methods </h3>
+        <Button className="p-3 text-start " style={{marginTop:"10%",display:"flex",width:"95%",background:"#E3424B",border:"none",borderRadius:"7px",
+       alignItems:"center" ,borderRadius:"7px"}}> &nbsp; &nbsp;&nbsp;&nbsp;
+        <i class="fas fa-money-bill-alt"></i> &nbsp; &nbsp;&nbsp; Cash on delivery
+        </Button>
+      
+        <Button className="p-3 text-start " style={{marginTop:"2.5%",
+        display:"flex",width:"95%",background:"#e6e3e3",border:"none",borderRadius:"7px",
+       alignItems:"center",color:"black" ,borderRadius:"7px"}}>&nbsp; &nbsp;&nbsp;&nbsp;
+       <i class="fas fa-id-card"></i>&nbsp; &nbsp; &nbsp;Benefit pay
+        </Button>
+
+        <Button className="p-3 text-start " style={{marginTop:"2.5%",
+        display:"flex",width:"95%",background:"#e6e3e3",border:"none",borderRadius:"7px",
+       alignItems:"center",color:"black" ,borderRadius:"7px" }}> &nbsp; &nbsp;&nbsp;&nbsp;
+      <i class="fas fa-id-card"></i> &nbsp; &nbsp;&nbsp; Card on delivery
+        </Button>
+         <h3 style={{marginTop:"13%",fontWeight:"bold",marginLeft:"2%"}}>  My Cart 
+          <span style={{fontSize:"14px",}}> &nbsp;  (2)
+            </span>
+            </h3> 
+           <div style={{marginTop:"7%",display:"flex",justifyContent:"space-evenly"}}>
+          <Button style=
+          {{border:"none",borderRadius:"12px",fontSize:"30px",width:"60px",marginTop:"12%",height:"10vh",background:"#e6e3e3"}}><i class="fas fa-plus"></i></Button>
+          <img src={master} style={{width:"160px",height:"200px",borderRadius:"12px"}}/>
+          < div style={{backgroundImage:`url(${master})`,
+          width:"160px",height:"200px",borderRadius:"12px",
+          backgroundSize:"100% 100%"}}>
+            <div style={{width:"100%",height:"100%",background:"white",opacity:"0.5"}}></div>
+          </div>
+           </div>
+        
+<h4 style={{fontWeight:"bold",marginLeft:"3%",marginTop:"6%",border:"none"}}>Notes</h4>
+<input  type="text" placeholder="Examples don't ring the best" className="not-input" 
+style={{outline:"none",border:"none",color:"whitesmoke",marginLeft:"7%",width:"90%",height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
+
+        </Modal.Body>
+        <Modal.Footer 
+        style={{border:"none",}}>
+           <Button style={{
+           background:"#223142",border:"none",borderRadius:"7px"}} size="lg" block>
+    Checkout <span style={{fontSize:"12px"}}>(0.835 BHD)</span>
+  </Button>
+        </Modal.Footer>
+      </Modal>
+      {/* ------------------------------- cart 2 end ------------------ */}
+</>
+      
   
             <Container  fluid>
   <Row id="grid">
     <Col sm={2} lg={2}className="sidebar">
-        <Navbar.Brand href="/home" className=" pt-2" style={{width:"100%"}}>
-          <img src={logo} id="logo" style={{height:"10vh"}} />
+        <Navbar.Brand href="/home" className=" pt-2 logo" 
+        style={{width:"100%"}}>
+          <img src={logo} className="logo-img"  style={{height:"10vh"}} />
           </Navbar.Brand>      
       
   <Nav defaultActiveKey="/home" className="flex-column" >
@@ -265,7 +425,7 @@ background:"#F6F6F6",fontSize:"19px"}}>
   style={{color:"black"}}>
   <img style={{height:"2.5vh"}} src={message} className="m-b"/>
   &nbsp; &nbsp; &nbsp;<span className="home">Messages</span> 
-  &nbsp; &nbsp; &nbsp; &nbsp;<Badge  className="badge"
+  &nbsp; &nbsp; &nbsp; &nbsp;<Badge  id="no" className="badge "
    style={{background:"#E3424B",
    borderRadius:'100%',color:"white"}}>
      2</Badge></Nav.Link>
@@ -300,7 +460,8 @@ borderRadius:"16px",}} id="no" className="tost">
          {/* <hr style={{width:"100%",transform:"rotate(-90deg)"}}></hr> */}
    <Navbar className="mt-1 b">
    <Nav className="mr-4">
-   <Nav.Link  onClick={handleShow} style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no"
+   <Nav.Link  onClick={handleShow} 
+   style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no"
     className="no" ><img src={delivery}style={{height:"3vh"}} />&nbsp; &nbsp; Sen Francisain California &nbsp;
     <i class="fas fa-angle-down"></i> </Nav.Link>
       <Nav.Link className="ml-4 pl-3"
@@ -308,9 +469,9 @@ borderRadius:"16px",}} id="no" className="tost">
       fontSize:"14px"}} id="no"><img src={deal}
       style={{height:"3vh"}} />&nbsp; &nbsp; Best deals &nbsp; <i class="fas fa-angle-down"></i></Nav.Link>
       <label for="EN" className="mt-2 ml-4 p-0" style={{background:"#E3424B",border:"none",
-      color:"white",fontSize:"13px",height:"3.1vh",borderRadius:"7px"}} 
+      color:"white",fontSize:"13px",borderRadius:"8px"}} 
       id="no"> 
-       <select id="EN" style={{ background:"#E3424B",color:"white",borderRadius:"3px",border:"3px solid #E3424B "}}>
+       <select id="EN" style={{ background:"#E3424B",height:"3vh",color:"white",borderRadius:"8px",border:"3px solid #E3424B "}}>
        <option value="EN">EN</option>
 
          <option value="ع">ع</option>
@@ -325,7 +486,7 @@ borderRadius:"16px",}} id="no" className="tost">
     outline:"none",padding:"13px",
   boxSizing:"border-box"}}/>
     </div>
-<div id="fle" >
+<div id="fle" className="ml-2">
   <Button onClick={handleShow1} className="ml-3"  
   style={{background:"#E3424B",paddingRight:"14px",
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
@@ -369,7 +530,7 @@ borderRadius:"16px",}} id="no" className="tost">
 </Carousel>
 <h3 className="exp ml-4"style={{color:"black",fontWeight:"bold", marginTop:"25px"}}> Explore Catagories</h3>
 <div id="all" style={{marginTop:"30px",width:"100%",marginLeft:"22px"}}>
-  <Button id="alll "style={{textAlign:"center",
+  <Button style={{textAlign:"center",
   background:"#E3424B",
   color:"white",
   border:"none",

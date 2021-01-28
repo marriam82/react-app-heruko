@@ -2,12 +2,17 @@
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
 }
+input[type="checkbox"]:checked {
+  background-color: red;
+  /* columns: #e6e3e3; */
+}
 .color {
   width:111%;
 }
 .active{
   background:#E3424B;
   color:white;
+  
 }
 .border{
   border:1px solid black
@@ -58,7 +63,7 @@ img{ max-width:100%;}
   padding: 0 0 0 10px;
   vertical-align: top;
   width: 92%;
-  background:white;
+  /* background:white; */
  }
  .received_withd_msg p {
   background: #ebebeb none 0 0;
@@ -82,6 +87,7 @@ img{ max-width:100%;}
   width: 47%;
   margin-left:3%;
   margin-top:2%;
+  height:160vh;
   background:#F6F6F6;
 }
 
@@ -108,11 +114,11 @@ img{ max-width:100%;}
 }
 
 .type_msg {border-top: 1px solid #c4c4c4;
+  top:25%;
   position: relative;}
 .msg_send_btn {
   background: #05728f none  0 0;
   border: medium none;
-  border-radius: 50%;
   color: #fff;
   cursor: pointer;
   font-size: 17px;
@@ -149,6 +155,12 @@ img{ max-width:100%;}
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
+.not-input::placeholder{
+padding-left:27px;
+font-size:12px;
+
+
+}
 .offer{
 display:grid;
 grid-template-columns:7% 19% 19% 39% 6%;
@@ -167,13 +179,44 @@ justify-content: space-evenly;
   top:10%;
   justify-content: space-evenly;
   }
-@media (max-width:700px){
+  /* @media (max-width:400px){
+    #logo{
+      height:10vh !important
+    }
+  .ll{
+    font-size:10px !important
+  
+  }
+  .f{
+    font-size:12px !important
+  }
+  .whatsapp{
+    font-size:13px !important
+    
+  }
+
+  .color{
+  
+    height:8vh;
+  }
+  } */
+@media screen and (max-width:400px){
+ .logo{
+   height:10vh !important;
+   width:140% !important;
+   margin-left:-1% !important   
+ }
+ .logo-img{
+   width:100% !important;
+   height:100% !important;
+   margin-left:-1% !important
+ }
 #grid{
   display: grid !important;
   grid-template-columns: 19% 81% !important;
 }
 .sidebar{
-  border-right:2px solid whitesmoke
+  /* border-right:2px solid whitesmoke */
 }
 .home{
   display:none;
@@ -181,8 +224,8 @@ justify-content: space-evenly;
 #no{
   display: none;
  }
- .color{
-   width: 95% !important;
+.color{
+   width: 130% !important;
    height:8vh;
 }
 .house{
@@ -197,18 +240,21 @@ justify-content: space-evenly;
 }
 .badge{
   position:absolute !important;
-  top:27%;
-  right:29%;
+  top:31%;
+  right:20%;
   font-size:13px !important
 }
 .inpu{
-  width:100% !important;
-  position: relative;
-  right:10%;
+  width:65% !important;
+  position: absolute;
+  left:0%;
   border: 8px;
 }
 #fle{
   display: flex !important;
+  position:relative;
+  left:55%;
+
 }
 #car{
 
@@ -225,39 +271,43 @@ justify-content: space-evenly;
   position: relative;
   bottom:1%;
   border:none;
-  background:none
+  background:none;
 }
 #stay{
   font-size:20px !important;
-  margin-left:2%
+  margin-left:5%;
+  margin-top:-3%;
+
 }
 .stay-p{
   width:70%;
-  margin-left:2%;
+  margin-left:5%;
   margin-top:-3%;
+  font-size:10px !important
 }
 .exp{
   font-size: 20px;
  position: relative;
  right:4%;
- bottom:1%
+ bottom:2%
 }
 #all{
-  display: flex !important;
- overflow-x: scroll;
-  font-size: 17px;
-  /* border:1px solid black !important; */
+ width:200% !important;
+  overflow-x: scroll;
+  border:1px solid black !important;
   margin-left:2% !important;
   position:relative;
-  bottom:2%;
-  width:150% !important
+  bottom:3%;
+  display: flex;
+
 }
 #alll{
-  display: flex;
+  /* display: flex;
 align-items: center;
 justify-content: space-evenly;
 padding-top:12px ;
-height:40px !important;
+height:40px !important; */
+width:100%
 
 }
 #cards{
@@ -265,26 +315,58 @@ height:40px !important;
   left:-5%
 }
 #card{
-  height:25vh !important;
-  /* width:73% !important */
+  height:22vh !important;
+ 
 }
-  /* 
-
-#all{
-  display: flex;
- overflow-x: scroll;
-  font-size: 17px;
-  margin-left:31% ;
-  width: 100%;
-  margin-top: 3% !important;
+ /* --------settings---------- */
+ .set{
+  width: 94% !important;
+  height:8vh;
+   }
+ .house-s{
+  font-size:25px !important;
+ }
+ .hs{
+   height:6vh;
+  margin-left:-5.2%
+ }
+ .set-m-1{
+   margin-left:12% !important;
+   margin-top:3% !important
+ }
+ .set-m-2{
+  margin-left:7% !important;
+  margin-top:5% !important;
 }
 
-
-
-
-
- */
-.footer{ 
+/* ------------exploring------------- */
+.bestdeal1{
+  height:320vh !important;
+  width:104% !important
+}
+ .p1{
+  height:30vh !important; 
+}
+.bestdealp{
+  position:relative;
+  left:4% 
+}
+.ptag{
+  font-size:16px
+}
+.pprice{
+  font-size:30px
+}
+.pdec{
+  font-size:17px !important
+}
+.pfooter{
+  font-size:19px !important;
+  position: relative;
+  left:20% !important
+}
+.footer
+{ 
   font-size:13px;
   height:9vh !important;
   padding-top:2%
@@ -292,21 +374,26 @@ height:40px !important;
 .l{
   height:14vh !important;
   position: relative;
-  right:20%
-
+  right:20%;
 }
 .ll{
   width:200%; 
   position: relative;
   bottom:10%;
-  right:20%
+  right:20%;
+  font-Size:10px !important
 
+}
+.abc{
+  font-size:12px
 }
 .ab{
   position: relative;
-  left:13%;
-  margin-top:6% !important
-
+  left:11%;
+  margin-top:6% !important;
+}
+.whatsapp{
+  font-size:12px
 }
 #tw{ margin-top: -14%;}
 }
