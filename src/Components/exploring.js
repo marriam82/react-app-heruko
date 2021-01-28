@@ -408,7 +408,7 @@ export default function Exploring() {
   const handleShow = () => setShow(true);
     return (
         <>
-         <Modal style={{border:"none",marginLeft:"1%"}} show={show2} 
+         <Modal style={{border:"none",marginLeft:"32.5%",marginTop:"-2.5%",height:"106vh"}} show={show2} 
       onHide={handleClose2}>
               <Modal.Header style={{border:"none"}} closeButton>
                 <Modal.Title style={{border:"none"}}>My Cart 
