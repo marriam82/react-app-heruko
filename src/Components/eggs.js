@@ -503,7 +503,7 @@ export default function Eggs()  {
 
 <div
       style={{backgroundSize:"100% 100%",
-      height:"47vh",width:"113%",
+      height:"41vh",width:"113%",
       backgroundImage:`url(${image})`,
       marginTop:"3%",display:"flex",justifyContent:"center",alignItems:"center"}}
     >

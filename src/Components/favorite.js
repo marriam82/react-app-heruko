@@ -166,61 +166,56 @@ height:"8vh",width:"40%",}} >
 </div>
 </div>
 <CardDeck className="ml-3 mt-4 pt-4" >
-<Card style={{border:"0",
-borderTopLeftRadius:"10px",borderTopRightRadius:"10px",position:"relative"}}>
+<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
    
 <div id="circle" onClick={()=>this._onpress()} 
 style={{height:"20px",width:"20px",borderRadius:"100%",
 backgroundColor:buttonBg,
 position:"absolute",left:"11px",top:"11px"}}></div>
 
-<Card.Img variant="top" src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<h4 className="pt-4" style={{color:"#E3424B",textAlign:"center"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <p className="" style={{color:"#223142",fontSize:"12px",
+<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <p className="" style={{color:"#223142",fontSize:"13px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card style={{border:"0",
-borderTopLeftRadius:"10px",borderTopRightRadius:"10px",position:"relative"}}>
+<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle"onClick={()=>this._onpress1()} 
      style={{height:"20px",width:"20px",background:buttonBg1,borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
-<Card.Img variant="top" src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<h4 className="pt-4" style={{color:"#E3424B",textAlign:"center"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <p className="" style={{color:"#223142",fontSize:"12px",
+<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<h4 className="" style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <p className="" style={{color:"#223142",fontSize:"13px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card style={{border:"0",
-borderTopLeftRadius:"10px",borderTopRightRadius:"10px",position:"relative"}}>
+<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle"onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
-<Card.Img variant="top" src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<h4 className="pt-4" style={{color:"#E3424B",textAlign:"center"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <p  style={{color:"#223142",fontSize:"12px",
+ fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+</Card>
+<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+    <div id="circle" onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
+<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p className="" style={{color:"#223142",fontSize:"12px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card style={{border:"0",
-borderTopLeftRadius:"10px",borderTopRightRadius:"10px",position:"relative"}}>
+<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle" onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
 <Card.Img variant="top" src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<h4 className="pt-4" style={{color:"#E3424B",textAlign:"center"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <p className="" style={{color:"#223142",fontSize:"12px",
- fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
-</Card.Footer>
-</Card>
-<Card style={{border:"0",
-borderTopLeftRadius:"10px",borderTopRightRadius:"10px",position:"relative"}}>
-    <div id="circle" onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
-<Card.Img variant="top" src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<h4 className="pt-4" style={{color:"#E3424B",textAlign:"center"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+<h4 className="" style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p className="" style={{color:"#223142",fontSize:"12px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>

@@ -163,7 +163,40 @@ img{ max-width:100%;}
   width: 46%;
   border-radius:6px
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 8px;
+}
+.grid-item {
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.size{
+  font-size: 14px;
+}
+.sized{
+  padding: 7px;
+  font-size: 16px;
+  background:#FFDD73
 
+}
+.bgd{
+  background:#FFDD73
+
+}
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  padding: 5px;
+}
+.grid-items {
+  padding: 5px;
+  font-size: 15px;
+  font-weight:bold;
+  text-align: start;
+}
 .input2-container {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -180,8 +213,6 @@ img{ max-width:100%;}
 .not-input::placeholder{
 padding-left:27px;
 font-size:14px;
-
-
 }
 .offer{
 display:grid;

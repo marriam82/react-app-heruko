@@ -55,6 +55,8 @@ export default function Sidebar() {
   const [show114,setShow114] = useState(false);
   const [show115,setShow115] = useState(false);
   const [show116,setShow116] = useState(false);
+  const [show117,setShow117] = useState(false);
+
 
 
 
@@ -109,6 +111,8 @@ export default function Sidebar() {
   const handleClose116 = () => setShow116(false);
   const handleShow116 = () => setShow116(true);
 
+  const handleClose117 = () => setShow117(false);
+  const handleShow117 = () => setShow117(true);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -258,27 +262,27 @@ background:"#F6F6F6",fontSize:"29px"}}>
 show={show4} 
 onHide={handleClose4}>
         <Modal.Header style={{border:"none"}} closeButton>
-        <Modal.Title style={{border:"none",paddingLeft:"22px"}}>Checkout</Modal.Title>
+        <Modal.Title style={{border:"none",paddingLeft:"22px",fontWeight:"bold"}}>Checkout</Modal.Title>
     
         </Modal.Header>
         <Modal.Body style={{border:"none"}}>
-          <h4 style={{paddingLeft:"22px",paddingTop:"14px"}}>Delivery Address</h4>
+          <h4 style={{paddingLeft:"22px",paddingTop:"14px",fontWeight:"bold"}}>Delivery Address</h4>
         <h6 style={{color:"red",fontSize:"12px",paddingLeft:"22px",paddingTop:"12px"}}>DELIVER TO </h6>
         <h6  onClick={handleShow}  style={{position:"relative",paddingLeft:"22px",
   cursor: "pointer"}} >300 Post Street San Francisco, CA 
         <span style={{color:"silver",position:"absolute",right:"5%",marginTop:"-2%",}}><i class="fas fa-chevron-right"></i></span></h6>
         <h4 style={{paddingLeft:"22px",fontWeight:"",paddingTop:"45px"}}>Delivery Time</h4>
-      <div style={{marginTop:"7%",marginLeft:"4%",width:"90%",
+      <div onClick={handleShow115} style={{marginTop:"7%",marginLeft:"4%",width:"90%",cursor:"pointer",
       height:"9vh",alignItems:"center",justifyContent:"space-evenly",borderRadius:"8px",background:"#F6F6F6",display:"flex"}}>
         <h5 style={{marginLeft:"-10%"}}>15</h5>
         <h5 style={{marginLeft:"8%"}} >December</h5>
         <h5  style={{paddingLeft:"5%"}} >2020</h5>
 
       </div>
-        <div style={{width:"90%",height:"8vh",background:"#F6F6F6",marginTop:"3%",marginLeft:"4%",
+        <div onClick={handleShow117} style={{width:"90%",height:"8vh",background:"#F6F6F6",marginTop:"3%",marginLeft:"4%",
         border:"none",display:"flex",justifyContent:"space-between",
         borderRadius:"8px"}}>
-          <h6 style={{paddingTop:"4%",paddingLeft:"8%"}}>Schedule </h6>
+          <h6 style={{paddingTop:"4%",paddingLeft:"8%"}}>Schedule Delivery </h6>
           <i class="fas fa-chevron-down" 
           style={{color:"silver",marginRight:"4%",marginTop:"4%"}}></i>
         </div>
@@ -330,6 +334,73 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
   </Button>
 <Modal.Footer style={{color:"white",border:"none"}}>n nf mv</Modal.Footer>
       </Modal>
+
+
+
+                    {/* -----------------------SELECT DATE------------------------ */}
+
+     <Modal show={show115} className="c" style={{borderRadius:"30px ",marginTop:"5.2%", width:"370px",marginLeft:"33.7%",background:"transparent",border:"none"}} onHide={handleClose115} animation={false} >
+       <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
+         <Modal.Title style={{border:"none",padding:"10px",fontWeight:"bold",paddingLeft:"13px"}}>Select Date</Modal.Title>
+       </Modal.Header>
+       <Modal.Body style={{border:"none",marginTop:"-30px",padding:"5px"}}>
+       <div class="grid-container">
+  <div class="grid-item">13</div>
+  <div class="grid-item size">June</div>
+  <div class="grid-item bgd">2020</div>  
+  <div class="grid-item">14</div>
+  <div class="grid-item size">July</div>
+  <div class="grid-item">2021</div> 
+  <div class="grid-item sized">15</div>
+  <div class="grid-item size">August</div>
+  <div class="grid-item">2022</div>  
+  <div class="grid-item">16</div>
+  <div class="grid-item size">September</div>
+  <div class="grid-item">2023</div>  
+  <div class="grid-item">17</div>  
+  <div class="grid-item size">October</div>
+  <div class="grid-item">2024</div>
+  <div class="grid-item">18</div>
+  <div class="grid-item size">November</div>
+  <div class="grid-item">2025</div> 
+  <div class="grid-item">18</div>
+  <div class="grid-item size bgd">December</div>
+  <div class="grid-item">2026</div> 
+</div>
+       </Modal.Body>
+
+     </Modal>
+
+
+     <Modal show={show117} className="c" style={{borderRadius:"30px ",marginTop:"5.5%",
+     width:"370px",marginLeft:"33.7%",background:"transparent",border:"none"}} onHide={handleClose117} animation={false} >
+       <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
+         <Modal.Title style={{border:"none",padding:"10px",fontWeight:"bold",paddingLeft:"13px"}}>Select Date</Modal.Title>
+       </Modal.Header>
+       <Modal.Body style={{border:"none",marginTop:"-30px"}}>
+       <div class="grid-container2">
+  <div class="grid-items">Fast Delivery</div>
+  <div class="grid-items ">1.000 BHD</div>
+  <div class="grid-items ">12:00 PM-02:00 PM</div>  
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items ">02:00 PM-04:00 PM</div>
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items">04:00 PM-06:00 PM</div> 
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items">06:00 PM-8:00 PM</div>  
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items ">08:00 PM-10:00 PM</div>
+  <div class="grid-items">0.600 BHD</div> 
+  <div class="grid-items">10:00 PM -12:00 PM</div>  
+  <div class="grid-items">0.600 BHD</div>
+
+  
+</div>
+       </Modal.Body>
+
+     </Modal>
+
+
       {/* ------------------------------- cart 2 end ------------------ */}
 </>
 

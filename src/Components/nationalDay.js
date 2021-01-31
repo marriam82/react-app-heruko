@@ -103,7 +103,7 @@ export default function NationalDayOffer() {
 
     <div
       style={{backgroundSize:"100% 100%",
-      height:"47vh",width:"113%",
+      height:"38vh",width:"113%",
       backgroundImage:`url(${image})`,
       marginTop:"3.5%",display:"flex",justifyContent:"center",alignItems:"center"}}
     >
