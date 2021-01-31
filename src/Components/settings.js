@@ -825,54 +825,54 @@ borderRadius:"16px",}} id="no" className="tost">
 <h4 style={{fontWeight:"bold",color:"#223142",marginTop:"5%",marginLeft:"3%"}}>Settings</h4>
 <div style={{marginLeft:"3%"}}>
     <h6 style={{color:"lightgray",marginTop:"3%",marginLeft:"%"}}>General</h6>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div onClick={handleShow} style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-user"></i> &nbsp; <b>Personal information</b></Button>
-    <Button onClick={handleShow} style={{color:"#223142",background:"none",border:"none"}}>
+    <Button  style={{color:"#223142",background:"none",border:"none"}}>
       <i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div  onClick={handleShow1} style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}>
       <i class="far fa-bookmark"></i> &nbsp; <b>Saved addressess</b></Button>
-    <Button onClick={handleShow1} style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div onClick={handleShow2} style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-envelope"></i> &nbsp; <b>Marketing perferences</b></Button>
-    <Button onClick={handleShow2} style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button  style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
 
 
     <h6 style={{color:"lightgray",marginTop:"3%",marginLeft:"%"}}>Payments</h6>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div onClick={handleShow3}  style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-address-card"></i>&nbsp; <b>Payment methods</b></Button>
-    <Button onClick={handleShow3} style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div onClick={handleShow4} style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="fas fa-credit-card"></i> &nbsp; <b>My cards</b></Button>
-    <Button onClick={handleShow4} style={{color:"#223142",background:"none",border:"none"}}>
+    <Button  style={{color:"#223142",background:"none",border:"none"}}>
       <i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
 
     <h6 style={{color:"lightgray",marginTop:"3%",marginLeft:"%"}}>Others</h6>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div onClick={handleShow5}  style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}>
        <i class="far fa-question-circle"></i> &nbsp; <b>Support</b></Button>
-    <Button   onClick={handleShow5}  style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button    style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div  onClick={handleShow6} style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="fas fa-user-plus"></i>&nbsp; <b>Invite a friend</b></Button>
-    <Button  onClick={handleShow6} style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
+    <Button  style={{color:"#223142",background:"none",border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>
-    <div style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
+    <div onClick={handleShow7} style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
     <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}>
       <i class="far fa-money-bill-alt"></i> &nbsp; <b>Discounts</b></Button>
-    <Button onClick={handleShow7} style={{color:"#223142",background:"none",
+    <Button  style={{color:"#223142",background:"none",
     border:"none"}}><i class="fas fa-chevron-right"></i></Button>
     </div>
     <hr style={{marginTop:"-1px"}}></hr>

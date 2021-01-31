@@ -22,6 +22,13 @@ export default function Orders() {
   const [show4,setShow4] = useState(false);
 
 
+// ----------------delete------------
+const [show6,setShow6] = useState(true);
+const [show7,setShow7] = useState(true);
+
+// --------------------------
+
+
 
 
   const handleClose1 = () => setShow1(false);
@@ -495,7 +502,8 @@ className=" pl-4 ml-3">Upcoming Orders</h4>
 {/* ----------------CARD NUMBER ONE--------------------- */}
 <CardDeck style={{width:"70%",marginLeft:"2%",background:"#F6F6F6"}}>
 
-
+{
+             show6?
 <Card className="" style={{marginLeft:"3%",marginTop:"4%",
 width:"35%",height:"42vh",border:"none",borderRadius:"12px"}}>
 
@@ -514,28 +522,27 @@ marginLeft:"1%",marginTop:"-3%", fontSize:"12px"}}>
 Estimated Arrival</b> </Button>
 </div>
 <h3  style={{fontWeight:"bold",marginLeft:"15%",marginTop:"-5%"}}>35 min</h3>
-
   </Card.Header>
   <div style={{width:"100%",display:"flex",justifyContent:"space-evenly"}}>
   <ProgressBar variant="danger" now={100} style={{width:"12%",height:"0.9vh"}}/>
   <ProgressBar variant="danger" now={100} style={{width:"18%",height:"0.9vh"}}/>
   <ProgressBar variant="danger" now={60} style={{width:"60%",height:"0.9vh"}}/>
   </div>
-
   <Card.Body className="mt-4">
-
     <Button style={{width:"48%",border:"none",height:"7vh",
     borderRadius:"8px",background:"#223142"}} >Details</Button>
-    <Button className="ml-2" style={{width:"48%"
+
+    <Button onClick={() => setShow6(false)} className="ml-2" style={{width:"48%"
     ,color:"#223142",fontWeight:"bold",
     border:"none",height:"7vh",borderRadius:"8px",
     background:"#FCDE70"}} >Cancel</Button>
+    
   </Card.Body>
-
-
 </Card>
-
-
+:null
+}
+{
+  show7?
 <Card className="" style={{marginLeft:"3%",marginTop:"4%",
 width:"35%",height:"42vh",border:"none",borderRadius:"12px"}}>
 
@@ -567,7 +574,7 @@ Estimated Arrival</b> </Button>
 
     <Button style={{width:"48%",border:"none",height:"7vh",
     borderRadius:"8px",background:"#223142"}} >Details</Button>
-    <Button className="ml-2" style={{width:"48%"
+    <Button onClick={() => setShow7(false)}  className="ml-2" style={{width:"48%"
     ,color:"#223142",fontWeight:"bold",
     border:"none",height:"7vh",borderRadius:"8px",
     background:"#FCDE70"}} >Cancel</Button>
@@ -575,7 +582,8 @@ Estimated Arrival</b> </Button>
 
 
 </Card>
-
+:null
+}
 
 </CardDeck>
 
