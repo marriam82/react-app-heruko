@@ -56,6 +56,8 @@ export default function Sidebar() {
   const [show115,setShow115] = useState(false);
   const [show116,setShow116] = useState(false);
   const [show117,setShow117] = useState(false);
+  const [show118,setShow118] = useState(false);
+
 
 
 
@@ -114,8 +116,13 @@ export default function Sidebar() {
   const handleClose117 = () => setShow117(false);
   const handleShow117 = () => setShow117(true);
 
+  const handleClose118 = () => setShow118(false);
+  const handleShow118 = () => setShow118(true);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+
 
     return (
 
@@ -432,20 +439,16 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
           marginLeft:"2%"}}>PASWORD</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>******</p>
           <hr style={{width:"400%"}}></hr>
-         
           </div>
-
         </div>
-
-
         </Modal.Body>
         <Modal.Footer className="mt-4" style={{border:"none"}}>
         <Button  onClick={handleShow5}  className="p-3" style={{background:"#E3424B",border:"none",
         borderRadius:"7px",width:"82%",marginRight:"10%"}}  block>
     Sign in
   </Button>
-  <h6 style={{fontSize:"14px",position:"absolute",left:"35%",
-  textAlign:"center",marginTop:"-26%"}}>Forgot password? </h6>
+  <h6 onClick={handleShow118} style={{fontSize:"14px",position:"absolute",left:"35%",
+  textAlign:"center",marginTop:"-26%",cursor:"pointer"}}>Forgot password? </h6>
   <Button onClick={handleShow3}  className="p-3"  style={{marginTop:"18%",
   background:"gray",border:"none",borderRadius:"7px",width:"82%",marginRight:"10%"}}  block>
     Create an account
@@ -932,49 +935,51 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
         height:"150vh",marginLeft:"69%",marginTop:"-2.3%"}} 
         show={show3} onHide={handleClose3}>
         <Modal.Header style={{border:"none", outline:"none"}} closeButton>
-          <Modal.Title className="mt-3" style={{border:"none",fontSize:"33px"}}>Create an account!</Modal.Title>
+          <Modal.Title className="mt-3 pl-4" style={{border:"none",fontSize:"33px"}}>Create an account!</Modal.Title>
         </Modal.Header>
-        <p className="pl-4" style={{color:"silver",fontSize:"13px"}}>Please create an account to continue using our service</p>
+        <p className="pl-4 ml-4" style={{color:"silver",fontSize:"13px"}}>Please create an account to continue using our service</p>
 
         <Modal.Body style={{border:"none"}}>
-        <div className="mt-4" style={{display:"flex",height:"50px",width:"100%",}}>
+        <div className="mt-4 ml-4" style={{display:"flex",height:"50px",width:"100%",}}>
           <Button className="p-3" style={{borderRadius:"10px",
           border:"none",background:"#F6F6F6",color:"black"}}>
-            <i class="far fa-envelope" style={{fontSize:"20px"}}>
-            </i></Button>
+          <i class="far fa-user" style={{fontSize:"20px"}}></i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%",width:"100%"}}>FULL NAME</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>Talal</p>
           <hr style={{width:"300%"}}></hr>
           </div>
         
         </div>
-          <div className="mt-4" style={{display:"flex",height:"50px",width:"100%",}}>
+          <div className=" ml-4" style={{marginTop:"10%",display:"flex",height:"50px",width:"100%",}}>
           <Button className="p-3" style={{borderRadius:"10px",
           border:"none",background:"#F6F6F6",color:"black"}}>
             <i class="far fa-envelope" style={{fontSize:"20px"}}>
             </i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%"}}>EMAIL ADDRESS</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>markclarke@gmail.com</p>
-          <hr style={{width:"180%"}}></hr>
+          <hr style={{width:"150%"}}></hr>
           </div>
         
         </div>
-        <div style={{display:"flex",height:"50px",marginTop:"13%"}}>
+        <div className="ml-4"style={{display:"flex",height:"50px",marginTop:"11%"}}>
           <Button className="p-3" style={{borderRadius:"10px",border:"none",background:"#F6F6F6",color:"black"}}>
           <i class="fas fa-key" style={{fontSize:"20px"}}></i></Button>
-          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",
-          marginLeft:"2%"}}>PASWORD</h6>
+          <div className="ml-4"><h6 style={{fontSize:"11px",fontWeight:"bold",
+        }}>PASWORD</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>******</p>
           <hr style={{width:"400%"}}></hr>   
           </div>
         </div>
         </Modal.Body>
         <Modal.Footer className="" style={{border:"none"}}>
-        <Button className="p-3"  style={{marginTop:"10%",background:"#E3424B",border:"none",borderRadius:"7px",width:"80%",marginRight:"10%"}}  block>
+        <Button className="p-3"  
+        style={{marginTop:"10%",background:"#E3424B",border:
+        "none",borderRadius:"7px",width:"80%",marginRight:"10%"}} 
+         block>
     Create account
   </Button>
   <h6 style={{fontSize:"14px",position:"absolute",left:"24%",
-  textAlign:"center",marginTop:"15%"}}> Already have an account? <span style={{color:"#E3424B",fontWeight:"bold"}}>Sign In</span></h6>
+  textAlign:"center",marginTop:"15%"}}> Already have an account? <span onClick={handleClose3} style={{color:"#E3424B",fontWeight:"bold",cursor:"pointer"}}>Sign In</span></h6>
  
   <Button  style={{marginTop:"18%",background:"transparent",border:"none",borderRadius:"7px"}} size="lg" block>
     Create an account
@@ -1014,7 +1019,34 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
        
       </Modal>
-   
+
+      <Modal style={{border:"none",width:"330px",marginLeft:"40%",marginTop:"7%"}} 
+        show={show118} onHide={handleClose118}>
+        <Modal.Header style={{border:"none", outline:"none"}} closeButton>
+          <Modal.Title className="mt-3" style={{border:"none",fontSize:"25px",paddingLeft:"25.5px"}}>Fogot password?</Modal.Title>
+        </Modal.Header>
+        <p className="pl-4 ml-3" style={{color:"silver",fontSize:"12px"}}>Please enter your email address to continue</p>
+
+        <Modal.Body style={{border:"none"}}>
+        <div className="mt-2 ml-4" style={{display:"flex",height:"50px",width:"90%",}}>
+          <Button className="p-3" style={{borderRadius:"10px",
+          border:"none",background:"#F6F6F6",color:"black"}}>
+            <i class="far fa-envelope" style={{fontSize:"19px"}}>
+            </i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%"}}>EMAIL ADDRESS</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>markclarke@gmail.com</p>
+          <hr style={{width:"150%"}}></hr>
+          </div>
+        
+        </div>
+        </Modal.Body>
+        <Modal.Footer className="mt-4" style={{border:"none"}}>
+        <Button  onClick={handleClose118}  className="p-3" style={{background:"#192531",border:"none",
+        borderRadius:"7px",width:"82%",marginRight:"10%"}}  block>
+    Continue
+  </Button>
+        </Modal.Footer>
+      </Modal>   
    {/* ---------------------------user 2 end------------------ */}
    </>
 

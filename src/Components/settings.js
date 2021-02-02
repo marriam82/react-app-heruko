@@ -331,30 +331,31 @@ export default function Settings() {
          
          
          {/* ---------------------------user 2 end------------------ */}
+         {/* --------------------Setting Modals--------------------- */}
 
-                 <Modal className="set-m-1" style={{border:"none",width:"350px",
-                 marginLeft:"40%"}} 
+                 <Modal className="set-m-1" style={{border:"none",width:"350px",height:"120vh",
+                 marginLeft:"40%",marginTop:"-2%"}} 
         show={show} onHide={handleClose}>
         <Modal.Header style={{border:"none"}} closeButton>
-          <Modal.Title style={{border:"none",}}>Personal information</Modal.Title>
+          <Modal.Title style={{border:"none",marginTop:"4%",fontWeight:"bold"}}>Personal information</Modal.Title>
         </Modal.Header>
-        <p className="pl-4" style={{color:"silver",fontSize:"13px"}}>Profile Image</p>
+        <p className="pl-4 mt-2" style={{color:"silver",fontSize:"14px"}}>Profile Image</p>
 
         <Modal.Body style={{border:"none"}}>
           <div style={{display:"flex",alignItems:"center"}}>
             <img src={profile} style={{borderRadius:"6px",width:"50px",height:"50px"}} />
             <div className="ml-4" style={{display:"flex"}}>
-            <Button style={{background:"#E3424B",marginleft:"1%",
+            <Button style={{background:"#E3424B",marginleft:"1%",width:"110px",
             border:"1px solid #E3424B"}}>Upload</Button>
-            <Button style={{background:"#F6F6F6",color:"silver",
+            <Button style={{background:"#F6F6F6",color:"silver",width:"110px",
             marginLeft:"5%",border:"none"}}>Delete</Button>
             </div>
           </div>
-        <p className="mt-4" style={{color:"silver",
+        <p className="mt-4 pt-4" style={{color:"silver",
         fontSize:"13px"}}>Profile Details</p>
 
-        <div style={{display:"flex",height:"40px"}}>
-          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}>
+        <div style={{display:"flex",height:"40px",marginTop:"12%"}}>
+          <Button style={{border:"none",background:"#F6F6F6",color:"#223142",borderRadius:"6px"}}>
           <i class="fas fa-user"></i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",
           fontWeight:"bold",marginLeft:"2%"}}>FULL NAME</h6>
@@ -363,8 +364,8 @@ export default function Settings() {
           </div>
         
         </div>
-        <div style={{display:"flex",height:"40px",marginTop:"13%"}}>
-          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}>
+        <div style={{display:"flex",height:"40px",marginTop:"16%"}}>
+          <Button style={{border:"none",background:"#F6F6F6",color:"#223142",borderRadius:"6px"}}>
             <i class="far fa-envelope"></i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",
           fontWeight:"bold",marginLeft:"2%"}}>EMAIL Address</h6>
@@ -373,8 +374,8 @@ export default function Settings() {
           </div>
         
         </div>
-        <div style={{display:"flex",height:"40px",marginTop:"13%"}}>
-          <Button style={{border:"none",background:"#F6F6F6",color:"black"}}>
+        <div style={{display:"flex",height:"40px",marginTop:"16%"}}>
+          <Button style={{border:"none",background:"#F6F6F6",color:"#223142",borderRadius:"6px"}}>
           <i class="fas fa-phone"></i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",
           marginLeft:"2%"}}>PHONE NUMBER</h6>
@@ -387,10 +388,11 @@ export default function Settings() {
         </Modal.Body>
         <Modal.Footer style={{border:"none"}}>
       
-  <Button className="p-3" style={{marginTop:"5%",background:"#223142",
+  <Button onClick={handleClose} className="p-3" style={{marginTop:"5%",background:"#223142",
   border:"none",borderRadius:"7px"}}  block>
     Update profile
   </Button>
+
         </Modal.Footer>
       </Modal>
 

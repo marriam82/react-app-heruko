@@ -3,7 +3,9 @@
   outline:0;
   font-family: 'Roboto', sans-serif;
 }
-
+.hidescroll::-webkit-scrollbar{
+width:0px !important
+}
 #edit-address{
 position: static !important;
 height:80vh !important;
