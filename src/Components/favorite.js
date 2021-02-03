@@ -136,8 +136,10 @@ borderRadius:"16px",}} id="no" className="tost">
     </div>
 <div id="fle" >
   <Button className="ml-3"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
-  <Button className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
+  <Button className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",position:"relative"}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
+<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1.5%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+
 </Navbar> 
 {/* ----------------------------------Fav----------------- */}
 

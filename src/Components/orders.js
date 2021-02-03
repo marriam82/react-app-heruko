@@ -1108,22 +1108,62 @@ Distance</b> </Button>
        </Modal.Footer>
      </Modal>
 {/* ---------------------------------------PREVIOUS ORDER DETAILS----------------------------- */}
-<Modal style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"100vh"}} show={show120} 
+<Modal style={{border:"none",marginLeft:"63.9%",width:"510px",
+marginTop:"-2.5%",height:"120vh"}} show={show120} 
 onHide={handleClose120}>
         <Modal.Header style={{border:"none"}} closeButton>
-          <Modal.Title style={{border:"none",fontWeight:"bold",paddingLeft:"22px"}}>My cart 
-          <span style={{fontSize:"18px",fontWeight:"normal"}}>&nbsp;(2 items)
-            </span></Modal.Title>
+          <Modal.Title style={{border:"none",fontWeight:"bold",
+          fontSize:"14px",
+          paddingLeft:"22px",paddingTop:"15px"}}>300 Post Street San Francisco,CA
+         </Modal.Title>
+      
         </Modal.Header>
         <Modal.Body style={{border:"none"}}>
-       
-       
+        <h3 style={{fontWeight:"bold",
+          paddingLeft:"22px",paddingTop:"5px"}}>Ramez Shopping</h3>
+       <div style={{display:"flex",alignItems:"center",marginLeft:"5%",marginTop:"9%"}}>
+         <Button style={{border:"none",background:"#F6F6F6",fontSize:"13px",fontWeight:"bold",color:"grey"}}>1</Button>
+          <h6 style={{fontSize:"14px",marginLeft:"4%"}}>ALMARAI DBLE CHOCOLATE MILK SH</h6>  
+          <p style={{color:"silver",paddingTop:"4%",paddingLeft:"50px",fontSize:"21px"}}>1.500 <span style={{fontSize:"13px"}}>BHD</span></p>
+       </div>
+       <div style={{display:"flex",alignItems:"center",marginLeft:"5%"}}>
+         <Button style={{border:"none",background:"#F6F6F6",fontSize:"13px",fontWeight:"bold",color:"grey"}}>1</Button>
+          <h6 style={{fontSize:"14px",marginLeft:"4%"}}>NIDO MILK POWDER POUCH 2.25KG</h6>  
+          <p style={{color:"silver",marginTop:"-2%",paddingLeft:"57px",fontSize:"21px"}}>2.000 <span style={{fontSize:"13px"}}>BHD</span></p>
+       </div>
+       <div style={{width:"90%",marginTop:"7%",display:"flex",alignItems:"center",justifyContent:"space-between",marginLeft:"5%"}}>
+  <h4 style={{fontWeight:"bold"}}>Subtotal </h4>
+  <p style={{color:"silver",fontSize:"21px"}}>3.500
+   <span style={{fontSize:"13px"}}>BHD</span></p>
+</div>
+<div style={{width:"90%",marginTop:"1%",display:"flex",alignItems:"center",justifyContent:"space-between",marginLeft:"5%"}}>
+  <h4 style={{fontWeight:"bold"}}>Delivery fee</h4>
+  <p style={{color:"silver",fontSize:"21px"}}>0.600 
+   <span style={{fontSize:"13px"}}>BHD</span></p>
 
+</div>
+<div style={{width:"90%",marginTop:"1%",display:"flex",alignItems:"center",justifyContent:"space-between",marginLeft:"5%"}}>
+  <h4 style={{fontWeight:"bold"}}>Total </h4>
+  <p style={{color:"#E3424B",fontSize:"22px",fontWeight:"bold"}}>4.100
+   <span style={{fontSize:"13px",color:"black",fontWeight:"lighter"}}>BHD</span></p>
 
+</div>
+<div style={{width:"90%",marginTop:"1%",display:"flex",alignItems:"center",justifyContent:"space-between",marginLeft:"5%"}}>
+  <h4 style={{fontWeight:"bold"}}>Credit card</h4>
+  <div style={{display:"flex",marginTop:"2%"}}>
+    <div style={{width:"15px",height:"15px",borderRadius:"100%",background:"silver"}}></div>
+    <div style={{width:"15px",height:"15px",marginLeft:"2px",borderRadius:"100%",background:"silver"}}></div>
+    <div style={{width:"15px",height:"15px",marginLeft:"2px",borderRadius:"100%",background:"silver"}}></div>
+    <div style={{width:"15px",height:"15px",marginLeft:"2px",borderRadius:"100%",background:"silver"}}></div>
+    <p style={{color:"silver",fontSize:"16px",marginTop:"-5px"}}>1211</p>
+    </div>
 
+</div>
+         <Button style={{marginTop:"8%",width:"80px",marginLeft:"5%",height:"8vh",fontSize:"20px",border:"none",borderRadius:"7px",background:"#F6D56E",color:"black"}}><i class="far fa-comment-alt"></i></Button>
+         <Button style={{marginTop:"8%",width:"310px",height:"8vh",marginLeft:"5%",border:"none",background:"#223142",borderRadius:"8px"}}>Place new order</Button>
         </Modal.Body>
-        <Modal.Footer >
-
+        <Modal.Footer style={{border:"none"}}>
+        
         </Modal.Footer>
       </Modal>
 
@@ -1238,9 +1278,11 @@ borderRadius:"16px",}} id="no" className="tost">
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
 
   <Button onClick={handleShow2} className="ml-2"  
-  style={{background:"#E3424B",border:"none",borderRadius:"7px"
+  style={{background:"#E3424B",border:"none",borderRadius:"7px",position:"relative"
   ,height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
+<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+
 </Navbar> 
 
 
@@ -1351,27 +1393,6 @@ Estimated Arrival</b> </Button>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h4 style={{paddingTop:"60px",
 fontWeight:"bold",fontSize:"25px"}} 
 className=" pl-4 ml-3">Previous orders</h4> 
@@ -1397,12 +1418,13 @@ width:"35%",background:"#F6F6F6",border:"none",borderRadius:"6px"}}>
 
 
   <Card.Body>
-    <Card.Title style={{fontSize:"15px"}}><Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> &nbsp; ALMARAI DBLE CHOCOLATE MILK SH</Card.Title>
+    <Card.Title style={{fontSize:"15px"}}>
+      <Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> &nbsp;ALMARAI DBLE CHOCOLATE MILK SH</Card.Title>
     <Card.Title style={{fontSize:"15px"}}><Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> &nbsp; NIDO MILK POWDER POUCH 2.25KG</Card.Title>   
     <Card.Text style={{visibility:"invisible",color:"#F6F6F6"}}>
       With supporting text below as a natural lead-in to additional content.
     </Card.Text>
-    <Button style={{width:"48%",border:"none",height:"7vh",
+    <Button onClick={handleShow120}   style={{width:"48%",border:"none",height:"7vh",
     borderRadius:"8px",background:"#223142"}} >Details</Button>
     <Button onClick={handleShow2}  className="ml-2" style={{width:"48%",border:"none",height:"7vh",borderRadius:"8px",background:"#E3424B"}} >Repeat Order</Button>
   </Card.Body>
@@ -1422,7 +1444,8 @@ width:"35%",background:"#F6F6F6",border:"none",borderRadius:"6px"}}>
 <Button style={{color:"pink",background:"#FDDDDF",fontSize:"12px",fontWeight:"bold",border:"none"}}>Canceled</Button></div>
 <div style={{display:"flex"}}>
 <Button style={{border:"none", background:"none",marginLeft:"-5%", fontSize:"13px"}}>&nbsp;&nbsp;<i class="far fa-calendar"style={{color:"#B2B2B2"}}></i> &nbsp;<b style={{color:"#E0E0E0",fontWeight:"normal"}}>August 28,2020</b> </Button>
-    <Button style={{border:"none", background:"none", fontSize:"13px"}}> <i class="far fa-clock" style={{color:"#B2B2B2",}}></i> &nbsp; <b style={{fontWeight:"normal",color:"#E0E0E0"}}> 12:06 AM</b></Button>
+    <Button style={{border:"none", background:"none", fontSize:"13px"}}> <i class="far fa-clock" style={{color:"#B2B2B2",}}></i>
+     &nbsp; <b style={{fontWeight:"normal",color:"#E0E0E0"}}> 12:06 AM</b></Button>
 </div>
   </Card.Header>
 
@@ -1436,7 +1459,7 @@ width:"35%",background:"#F6F6F6",border:"none",borderRadius:"6px"}}>
     <Card.Text style={{visibility:"invisible",color:"#F6F6F6"}}>
       With supporting text below as a natural lead-in to additional content.
     </Card.Text>
-    <Button style={{width:"48%",border:"none",height:"7vh",
+    <Button onClick={handleShow120}   style={{width:"48%",border:"none",height:"7vh",
     borderRadius:"8px",background:"#223142"}} >Details</Button>
     <Button onClick={handleShow2}  className="ml-2" style={{width:"48%",border:"none",height:"7vh",borderRadius:"8px",background:"#E3424B"}} >Repeat Order</Button>
   </Card.Body>

@@ -25,7 +25,7 @@ import sup from "../black/supermarket.svg";
 import taxi from "../category/delivery taxi.svg";
 import Footer from "../Components/footer"
 import {Link} from 'react-router-dom';
-import {Navbar,Row,Col,Nav,Container,NavDropdown,Card,CardGroup,Badge,Toast,Button,Modal,Alert,Carousel,Accordion} from 'react-bootstrap'
+import {Navbar,Row,Col,Nav,Container,Card,CardGroup,Badge,Toast,Button,Modal,Alert,Carousel,Accordion} from 'react-bootstrap'
 import "../App.css";
 
 export default function Sidebar() {
@@ -1043,10 +1043,14 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
         <Modal.Footer className="mt-4" style={{border:"none"}}>
         <Button  onClick={handleClose118}  className="p-3" style={{background:"#192531",border:"none",
         borderRadius:"7px",width:"82%",marginRight:"10%"}}  block>
-    Continue
-  </Button>
+         Continue
+          </Button>
         </Modal.Footer>
       </Modal>   
+
+
+
+      
    {/* ---------------------------user 2 end------------------ */}
    </>
 
@@ -1157,7 +1161,8 @@ borderRadius:"16px",}} id="no" className="tost">
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
 
-  <Button onClick={handleShow2} className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}>
+  <Button onClick={handleShow2} className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",
+  height:"7vh",}}>
     <i class="fas fa-shopping-cart"></i> </Button>
 </div>
 <Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>

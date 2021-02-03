@@ -27,11 +27,13 @@ function MyVerticallyCenteredModal(props) {
       }
   };
   return (
+ 
     <Modal className="hidescroll"
       {...props}
       size="xl" 
       aria-labelledby="contained-modal-title-vcenter"
- 
+      centered
+
       style ={{height:"90vh",width:"70%",marginLeft:"15%",overflow:"auto"}}
     >
       <Modal.Header closeButton>
@@ -403,7 +405,7 @@ export default function Exploring() {
     else{
     }
   };
-  const [show, setShow] = useState(false);
+  const [show, setShow]  = useState(false);
   const [show1,setShow1] = useState(false);
   const [show2,setShow2] = useState(false);
   const [show3,setShow3] = useState(false);
@@ -418,6 +420,10 @@ export default function Exploring() {
   const [show114,setShow114] = useState(false);
   const [show115,setShow115] = useState(false);
   const [show116,setShow116] = useState(false);
+  const [show117,setShow117] = useState(false);
+  const [show118,setShow118] = useState(false);
+
+
 
 
 
@@ -429,55 +435,61 @@ export default function Exploring() {
 
 
 
-const handleClose1 = () => setShow1(false);
-const handleShow1 = () => setShow1(true);
+  const handleClose1 = () => setShow1(false);
+  const handleShow1 = () => setShow1(true);
 
-const handleClose2 = () => setShow2(false);
-const handleShow2 = () => setShow2(true);
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
-const handleClose3 = () => setShow3(false);
-const handleShow3 = () => setShow3(true);
+  const handleClose3 = () => setShow3(false);
+  const handleShow3 = () => setShow3(true);
 
-const handleClose4 = () => setShow4(false);
-const handleShow4 = () => setShow4(true);
+  const handleClose4 = () => setShow4(false);
+  const handleShow4 = () => setShow4(true);
 
-const handleClose5 = () => setShow5(false);
-const handleShow5 = () => setShow5(true);
+  const handleClose5 = () => setShow5(false);
+  const handleShow5 = () => setShow5(true);
 
-const handleClose8 = () => setShow8(false);
-const handleShow8 = () => setShow8(true);
+  const handleClose8 = () => setShow8(false);
+  const handleShow8 = () => setShow8(true);
 
-const handleClose9 = () => setShow9(false);
-const handleShow9 = () => setShow9(true);
+  const handleClose9 = () => setShow9(false);
+  const handleShow9 = () => setShow9(true);
 
-const handleClose10 = () => setShow10(false);
-const handleShow10 = () => setShow10(true);
+  const handleClose10 = () => setShow10(false);
+  const handleShow10 = () => setShow10(true);
+  
+  const handleClose111 = () => setShow111(false);
+  const handleShow111 = () => setShow111(true);
 
-const handleClose111 = () => setShow111(false);
-const handleShow111 = () => setShow111(true);
+  const handleClose112 = () => setShow112(false);
+  const handleShow112 = () => setShow112(true);
 
-const handleClose112 = () => setShow112(false);
-const handleShow112 = () => setShow112(true);
+  const handleClose113 = () => setShow113(false);
+  const handleShow113 = () => setShow113(true);
 
-const handleClose113 = () => setShow113(false);
-const handleShow113 = () => setShow113(true);
+  const handleClose114 = () => setShow114(false);
+  const handleShow114 = () => setShow114(true);
 
-const handleClose114 = () => setShow114(false);
-const handleShow114 = () => setShow114(true);
-
-const handleClose115 = () => setShow115(false);
-const handleShow115 = () => setShow115(true); 
-
-
-const handleClose116 = () => setShow116(false);
-const handleShow116 = () => setShow116(true);
+  const handleClose115 = () => setShow115(false);
+  const handleShow115 = () => setShow115(true); 
 
 
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
+  const handleClose116 = () => setShow116(false);
+  const handleShow116 = () => setShow116(true);
+
+  const handleClose117 = () => setShow117(false);
+  const handleShow117 = () => setShow117(true);
+
+  const handleClose118 = () => setShow118(false);
+  const handleShow118 = () => setShow118(true);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
     return (
         <>
-   {/* -----------------Cart modal 1---------------------- */}
+  {/* -----------------Cart modal 1---------------------- */}
 <Modal style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}} show={show2} 
 onHide={handleClose2}>
         <Modal.Header style={{border:"none"}} closeButton>
@@ -593,7 +605,7 @@ background:"#F6F6F6",fontSize:"29px"}}>
   </Button>
        </Modal.Footer>
      </Modal>
-      
+
         {/* ---------------------CHECKOUT PROMO------------------ */}
         <Modal show={show116} style={{borderRadius:"30px ",marginTop:"9.8%",
      width:"410px",marginLeft:"28.7%",background:"transparent",border:"none"}} onHide={handleClose116} animation={false} >
@@ -612,33 +624,32 @@ background:"#F6F6F6",fontSize:"29px"}}>
        </Modal.Footer>
      </Modal>
            
-
 {/* ------------------------- cart  2 ------------------------- */}
 <Modal style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}}
 show={show4} 
 onHide={handleClose4}>
         <Modal.Header style={{border:"none"}} closeButton>
-        <Modal.Title style={{border:"none",paddingLeft:"22px"}}>Checkout</Modal.Title>
+        <Modal.Title style={{border:"none",paddingLeft:"22px",fontWeight:"bold"}}>Checkout</Modal.Title>
     
         </Modal.Header>
         <Modal.Body style={{border:"none"}}>
-          <h4 style={{paddingLeft:"22px",paddingTop:"14px"}}>Delivery Address</h4>
+          <h4 style={{paddingLeft:"22px",paddingTop:"14px",fontWeight:"bold"}}>Delivery Address</h4>
         <h6 style={{color:"red",fontSize:"12px",paddingLeft:"22px",paddingTop:"12px"}}>DELIVER TO </h6>
         <h6  onClick={handleShow}  style={{position:"relative",paddingLeft:"22px",
   cursor: "pointer"}} >300 Post Street San Francisco, CA 
         <span style={{color:"silver",position:"absolute",right:"5%",marginTop:"-2%",}}><i class="fas fa-chevron-right"></i></span></h6>
         <h4 style={{paddingLeft:"22px",fontWeight:"",paddingTop:"45px"}}>Delivery Time</h4>
-      <div style={{marginTop:"7%",marginLeft:"4%",width:"90%",
+      <div onClick={handleShow115} style={{marginTop:"7%",marginLeft:"4%",width:"90%",cursor:"pointer",
       height:"9vh",alignItems:"center",justifyContent:"space-evenly",borderRadius:"8px",background:"#F6F6F6",display:"flex"}}>
         <h5 style={{marginLeft:"-10%"}}>15</h5>
         <h5 style={{marginLeft:"8%"}} >December</h5>
         <h5  style={{paddingLeft:"5%"}} >2020</h5>
 
       </div>
-        <div style={{width:"90%",height:"8vh",background:"#F6F6F6",marginTop:"3%",marginLeft:"4%",
+        <div onClick={handleShow117} style={{width:"90%",height:"8vh",background:"#F6F6F6",marginTop:"3%",marginLeft:"4%",
         border:"none",display:"flex",justifyContent:"space-between",
         borderRadius:"8px"}}>
-          <h6 style={{paddingTop:"4%",paddingLeft:"8%"}}>Schedule </h6>
+          <h6 style={{paddingTop:"4%",paddingLeft:"8%"}}>Schedule Delivery </h6>
           <i class="fas fa-chevron-down" 
           style={{color:"silver",marginRight:"4%",marginTop:"4%"}}></i>
         </div>
@@ -690,6 +701,73 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
   </Button>
 <Modal.Footer style={{color:"white",border:"none"}}>n nf mv</Modal.Footer>
       </Modal>
+
+
+
+                    {/* -----------------------SELECT DATE------------------------ */}
+
+     <Modal show={show115} className="c" style={{borderRadius:"30px ",marginTop:"5.2%", width:"370px",marginLeft:"33.7%",background:"transparent",border:"none"}} onHide={handleClose115} animation={false} >
+       <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
+         <Modal.Title style={{border:"none",padding:"10px",fontWeight:"bold",paddingLeft:"13px"}}>Select Date</Modal.Title>
+       </Modal.Header>
+       <Modal.Body style={{border:"none",marginTop:"-30px",padding:"5px"}}>
+       <div class="grid-container">
+  <div class="grid-item">13</div>
+  <div class="grid-item size">June</div>
+  <div class="grid-item bgd">2020</div>  
+  <div class="grid-item">14</div>
+  <div class="grid-item size">July</div>
+  <div class="grid-item">2021</div> 
+  <div class="grid-item sized">15</div>
+  <div class="grid-item size">August</div>
+  <div class="grid-item">2022</div>  
+  <div class="grid-item">16</div>
+  <div class="grid-item size">September</div>
+  <div class="grid-item">2023</div>  
+  <div class="grid-item">17</div>  
+  <div class="grid-item size">October</div>
+  <div class="grid-item">2024</div>
+  <div class="grid-item">18</div>
+  <div class="grid-item size">November</div>
+  <div class="grid-item">2025</div> 
+  <div class="grid-item">18</div>
+  <div class="grid-item size bgd">December</div>
+  <div class="grid-item">2026</div> 
+</div>
+       </Modal.Body>
+
+     </Modal>
+
+
+     <Modal show={show117} className="c" style={{borderRadius:"30px ",marginTop:"5.5%",
+     width:"370px",marginLeft:"33.7%",background:"transparent",border:"none"}} onHide={handleClose117} animation={false} >
+       <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
+         <Modal.Title style={{border:"none",padding:"10px",fontWeight:"bold",paddingLeft:"13px"}}>Select Date</Modal.Title>
+       </Modal.Header>
+       <Modal.Body style={{border:"none",marginTop:"-30px"}}>
+       <div class="grid-container2">
+  <div class="grid-items">Fast Delivery</div>
+  <div class="grid-items ">1.000 BHD</div>
+  <div class="grid-items ">12:00 PM-02:00 PM</div>  
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items ">02:00 PM-04:00 PM</div>
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items">04:00 PM-06:00 PM</div> 
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items">06:00 PM-8:00 PM</div>  
+  <div class="grid-items">0.600 BHD</div>
+  <div class="grid-items ">08:00 PM-10:00 PM</div>
+  <div class="grid-items">0.600 BHD</div> 
+  <div class="grid-items">10:00 PM -12:00 PM</div>  
+  <div class="grid-items">0.600 BHD</div>
+
+  
+</div>
+       </Modal.Body>
+
+     </Modal>
+
+
       {/* ------------------------------- cart 2 end ------------------ */}
 
         {/* ------------------------ user --------------------------- */}
@@ -720,20 +798,16 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
           marginLeft:"2%"}}>PASWORD</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>******</p>
           <hr style={{width:"400%"}}></hr>
-         
           </div>
-
         </div>
-
-
         </Modal.Body>
         <Modal.Footer className="mt-4" style={{border:"none"}}>
         <Button  onClick={handleShow5}  className="p-3" style={{background:"#E3424B",border:"none",
         borderRadius:"7px",width:"82%",marginRight:"10%"}}  block>
     Sign in
   </Button>
-  <h6 style={{fontSize:"14px",position:"absolute",left:"35%",
-  textAlign:"center",marginTop:"-26%"}}>Forgot password? </h6>
+  <h6 onClick={handleShow118} style={{fontSize:"14px",position:"absolute",left:"35%",
+  textAlign:"center",marginTop:"-26%",cursor:"pointer"}}>Forgot password? </h6>
   <Button onClick={handleShow3}  className="p-3"  style={{marginTop:"18%",
   background:"gray",border:"none",borderRadius:"7px",width:"82%",marginRight:"10%"}}  block>
     Create an account
@@ -747,9 +821,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
       </Modal>
         
         
-        {/* ------------------- User end-------------------- */}
-     
-     
+        {/* ------------------- User end-------------------- */}     
 {/* ------------------------location  ---------------------- */}
 <Modal show={show} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose} animation={false} >
@@ -1211,55 +1283,57 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
      </Modal>
 
     {/* ------------------------- location end ------------------------ */}
-  
+
    {/* ----------------------- user 2-------------------------- */}
    <Modal style={{border:"none",width:"420px",
         height:"150vh",marginLeft:"69%",marginTop:"-2.3%"}} 
         show={show3} onHide={handleClose3}>
         <Modal.Header style={{border:"none", outline:"none"}} closeButton>
-          <Modal.Title className="mt-3" style={{border:"none",fontSize:"33px"}}>Create an account!</Modal.Title>
+          <Modal.Title className="mt-3 pl-4" style={{border:"none",fontSize:"33px"}}>Create an account!</Modal.Title>
         </Modal.Header>
-        <p className="pl-4" style={{color:"silver",fontSize:"13px"}}>Please create an account to continue using our service</p>
+        <p className="pl-4 ml-4" style={{color:"silver",fontSize:"13px"}}>Please create an account to continue using our service</p>
 
         <Modal.Body style={{border:"none"}}>
-        <div className="mt-4" style={{display:"flex",height:"50px",width:"100%",}}>
+        <div className="mt-4 ml-4" style={{display:"flex",height:"50px",width:"100%",}}>
           <Button className="p-3" style={{borderRadius:"10px",
           border:"none",background:"#F6F6F6",color:"black"}}>
-            <i class="far fa-envelope" style={{fontSize:"20px"}}>
-            </i></Button>
+          <i class="far fa-user" style={{fontSize:"20px"}}></i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%",width:"100%"}}>FULL NAME</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>Talal</p>
           <hr style={{width:"300%"}}></hr>
           </div>
         
         </div>
-          <div className="mt-4" style={{display:"flex",height:"50px",width:"100%",}}>
+          <div className=" ml-4" style={{marginTop:"10%",display:"flex",height:"50px",width:"100%",}}>
           <Button className="p-3" style={{borderRadius:"10px",
           border:"none",background:"#F6F6F6",color:"black"}}>
             <i class="far fa-envelope" style={{fontSize:"20px"}}>
             </i></Button>
           <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%"}}>EMAIL ADDRESS</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>markclarke@gmail.com</p>
-          <hr style={{width:"180%"}}></hr>
+          <hr style={{width:"150%"}}></hr>
           </div>
         
         </div>
-        <div style={{display:"flex",height:"50px",marginTop:"13%"}}>
+        <div className="ml-4"style={{display:"flex",height:"50px",marginTop:"11%"}}>
           <Button className="p-3" style={{borderRadius:"10px",border:"none",background:"#F6F6F6",color:"black"}}>
           <i class="fas fa-key" style={{fontSize:"20px"}}></i></Button>
-          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",
-          marginLeft:"2%"}}>PASWORD</h6>
+          <div className="ml-4"><h6 style={{fontSize:"11px",fontWeight:"bold",
+        }}>PASWORD</h6>
           <p style={{fontWeight:"10px",color:"silver"}}>******</p>
           <hr style={{width:"400%"}}></hr>   
           </div>
         </div>
         </Modal.Body>
         <Modal.Footer className="" style={{border:"none"}}>
-        <Button className="p-3"  style={{marginTop:"10%",background:"#E3424B",border:"none",borderRadius:"7px",width:"80%",marginRight:"10%"}}  block>
+        <Button className="p-3"  
+        style={{marginTop:"10%",background:"#E3424B",border:
+        "none",borderRadius:"7px",width:"80%",marginRight:"10%"}} 
+         block>
     Create account
   </Button>
   <h6 style={{fontSize:"14px",position:"absolute",left:"24%",
-  textAlign:"center",marginTop:"15%"}}> Already have an account? <span style={{color:"#E3424B",fontWeight:"bold"}}>Sign In</span></h6>
+  textAlign:"center",marginTop:"15%"}}> Already have an account? <span onClick={handleClose3} style={{color:"#E3424B",fontWeight:"bold",cursor:"pointer"}}>Sign In</span></h6>
  
   <Button  style={{marginTop:"18%",background:"transparent",border:"none",borderRadius:"7px"}} size="lg" block>
     Create an account
@@ -1299,8 +1373,38 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
        
       </Modal>
-   
-   {/* ---------------------------user 2 end------------------ */}
+
+      <Modal style={{border:"none",width:"330px",marginLeft:"40%",marginTop:"7%"}} 
+        show={show118} onHide={handleClose118}>
+        <Modal.Header style={{border:"none", outline:"none"}} closeButton>
+          <Modal.Title className="mt-3" style={{border:"none",fontSize:"25px",paddingLeft:"25.5px"}}>Fogot password?</Modal.Title>
+        </Modal.Header>
+        <p className="pl-4 ml-3" style={{color:"silver",fontSize:"12px"}}>Please enter your email address to continue</p>
+
+        <Modal.Body style={{border:"none"}}>
+        <div className="mt-2 ml-4" style={{display:"flex",height:"50px",width:"90%",}}>
+          <Button className="p-3" style={{borderRadius:"10px",
+          border:"none",background:"#F6F6F6",color:"black"}}>
+            <i class="far fa-envelope" style={{fontSize:"19px"}}>
+            </i></Button>
+          <div className="ml-3"><h6 style={{fontSize:"11px",fontWeight:"bold",marginLeft:"2%"}}>EMAIL ADDRESS</h6>
+          <p style={{fontWeight:"10px",color:"silver"}}>markclarke@gmail.com</p>
+          <hr style={{width:"150%"}}></hr>
+          </div>
+        
+        </div>
+        </Modal.Body>
+        <Modal.Footer className="mt-4" style={{border:"none"}}>
+        <Button  onClick={handleClose118}  className="p-3" style={{background:"#192531",border:"none",
+        borderRadius:"7px",width:"82%",marginRight:"10%"}}  block>
+         Continue
+          </Button>
+        </Modal.Footer>
+      </Modal>   
+
+
+
+      
 
               <Container  fluid>
   <Row id="grid">
@@ -1399,8 +1503,10 @@ borderRadius:"16px",}} id="no" className="tost">
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
 
-  <Button onClick={handleShow2} className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
+  <Button onClick={handleShow2} className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
+<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+
 </Navbar> 
 {/* ============ */}
 <div className="bestdeal1" style={{background:"#F5F5F5",width:"100%",height:"80vh",
@@ -1412,7 +1518,7 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
 <CardDeck className="ml-3 mt-4 pt-4" >
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -1425,43 +1531,21 @@ height:"47vh"}}>
  <p className=" pdec" style={{color:"#223142",fontSize:"14px"
  ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
+ <Card.Footer onClick={() => setModalShow(true)}  
  style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
   ,fontSize:"16px"}}> &nbsp; &nbsp;
     <i class="fas fa-shopping-cart"></i> 
     &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
-
+<MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
 </Card>
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
-<div style={{display:"flex",justifyContent:"space-between"}}>
-<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <div style={{width:"30%",marginTop:"-20px",
- background:"#E3424B",fontSize:"12px",textAlign:"center",
- height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
- </div>
- </div>
- <p className=" pdec" style={{color:"#223142",fontSize:"14px"
- ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
- Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
- style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
-  ,fontSize:"16px"}}> &nbsp; &nbsp;
-    <i class="fas fa-shopping-cart"></i> 
-    &nbsp; &nbsp;Add to cart</small>
-</Card.Footer>
-
-</Card>
-
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img  onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -1484,9 +1568,9 @@ height:"47vh"}}>
 
 </Card>
 
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+<Card   className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img onClick={() => setModalShow(true)} variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -1509,9 +1593,34 @@ height:"47vh"}}>
 
 </Card>
 
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+<Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",
+ background:"#E3424B",fontSize:"12px",textAlign:"center",
+ height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className=" pdec" style={{color:"#223142",fontSize:"14px"
+ ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+ <Card.Footer onClick={() => setModalShow(true)} 
+ style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
+  ,fontSize:"16px"}}> &nbsp; &nbsp;
+    <i class="fas fa-shopping-cart"></i> 
+    &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+
+</Card>
+
+<Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+height:"47vh"}}>
+<Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -1548,7 +1657,79 @@ className=" pl-4 ml-3">New Arrival&nbsp;&nbsp;<span style={{color:"#FBDB73",font
 <CardDeck className="ml-3 mt-4 pt-4" >
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",
+ background:"#E3424B",fontSize:"12px",textAlign:"center",
+ height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className=" pdec" style={{color:"#223142",fontSize:"14px"
+ ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+ <Card.Footer onClick={() => setModalShow(true)} 
+ style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
+  ,fontSize:"16px"}}> &nbsp; &nbsp;
+    <i class="fas fa-shopping-cart"></i> 
+    &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+
+</Card>
+<Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+height:"47vh"}}>
+<Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",
+ background:"#E3424B",fontSize:"12px",textAlign:"center",
+ height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className=" pdec" style={{color:"#223142",fontSize:"14px"
+ ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+ <Card.Footer onClick={() => setModalShow(true)} 
+ style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
+  ,fontSize:"16px"}}> &nbsp; &nbsp;
+    <i class="fas fa-shopping-cart"></i> 
+    &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+
+</Card>
+<Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+height:"47vh"}}>
+<Card.Img onClick={() => setModalShow(true)} variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
+<div style={{display:"flex",justifyContent:"space-between"}}>
+<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
+ <div style={{width:"30%",marginTop:"-20px",
+ background:"#E3424B",fontSize:"12px",textAlign:"center",
+ height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className=" pdec" style={{color:"#223142",fontSize:"14px"
+ ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
+ <Card.Footer onClick={() => setModalShow(true)} 
+ style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
+  ,fontSize:"16px"}}> &nbsp; &nbsp;
+    <i class="fas fa-shopping-cart"></i> 
+    &nbsp; &nbsp;Add to cart</small>
+</Card.Footer>
+
+</Card>
+<Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+height:"47vh"}}>
+<Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -1572,79 +1753,7 @@ height:"47vh"}}>
 </Card>
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
-<div style={{display:"flex",justifyContent:"space-between"}}>
-<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <div style={{width:"30%",marginTop:"-20px",
- background:"#E3424B",fontSize:"12px",textAlign:"center",
- height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
- </div>
- </div>
- <p className=" pdec" style={{color:"#223142",fontSize:"14px"
- ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
- Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
- style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
-  ,fontSize:"16px"}}> &nbsp; &nbsp;
-    <i class="fas fa-shopping-cart"></i> 
-    &nbsp; &nbsp;Add to cart</small>
-</Card.Footer>
-
-</Card>
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
-<div style={{display:"flex",justifyContent:"space-between"}}>
-<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <div style={{width:"30%",marginTop:"-20px",
- background:"#E3424B",fontSize:"12px",textAlign:"center",
- height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
- </div>
- </div>
- <p className=" pdec" style={{color:"#223142",fontSize:"14px"
- ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
- Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
- style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
-  ,fontSize:"16px"}}> &nbsp; &nbsp;
-    <i class="fas fa-shopping-cart"></i> 
-    &nbsp; &nbsp;Add to cart</small>
-</Card.Footer>
-
-</Card>
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
-<p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
-<div style={{display:"flex",justifyContent:"space-between"}}>
-<h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
- <div style={{width:"30%",marginTop:"-20px",
- background:"#E3424B",fontSize:"12px",textAlign:"center",
- height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
- </div>
- </div>
- <p className=" pdec" style={{color:"#223142",fontSize:"14px"
- ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
- Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
- style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
-  ,fontSize:"16px"}}> &nbsp; &nbsp;
-    <i class="fas fa-shopping-cart"></i> 
-    &nbsp; &nbsp;Add to cart</small>
-</Card.Footer>
-
-</Card>
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
-<Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img  onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -1677,7 +1786,7 @@ className=" pl-4 ml-3">Top Seller&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
 </div>
 <CardDeck className="ml-3 mt-4 pt-4" >
 
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+<Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
@@ -1692,7 +1801,7 @@ height:"47vh"}}>
  <p className=" pdec" style={{color:"#223142",fontSize:"14px"
  ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
+ <Card.Footer 
  style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
   ,fontSize:"16px"}}> &nbsp; &nbsp;
@@ -1701,7 +1810,7 @@ height:"47vh"}}>
 </Card.Footer>
 
 </Card>
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+<Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
@@ -1716,7 +1825,7 @@ height:"47vh"}}>
  <p className=" pdec" style={{color:"#223142",fontSize:"14px"
  ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
+ <Card.Footer 
  style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
   ,fontSize:"16px"}}> &nbsp; &nbsp;
@@ -1725,7 +1834,7 @@ height:"47vh"}}>
 </Card.Footer>
 
 </Card>
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+<Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
@@ -1740,7 +1849,7 @@ height:"47vh"}}>
  <p className=" pdec" style={{color:"#223142",fontSize:"14px"
  ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
+ <Card.Footer 
  style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
   ,fontSize:"16px"}}> &nbsp; &nbsp;
@@ -1749,7 +1858,7 @@ height:"47vh"}}>
 </Card.Footer>
 
 </Card>
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+<Card onClick={() => setModalShow(true)} className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
@@ -1764,7 +1873,7 @@ height:"47vh"}}>
  <p className=" pdec" style={{color:"#223142",fontSize:"14px"
  ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
+ <Card.Footer  
  style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
   ,fontSize:"16px"}}> &nbsp; &nbsp;
@@ -1773,7 +1882,7 @@ height:"47vh"}}>
 </Card.Footer>
 
 </Card>
-<Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
+<Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
@@ -1788,17 +1897,15 @@ height:"47vh"}}>
  <p className=" pdec" style={{color:"#223142",fontSize:"14px"
  ,fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
  Milk & Hazelnut</p>
- <Card.Footer onClick={() => setModalShow(true)} 
+ <Card.Footer 
  style={{border:"0",borderBottomLeftRadius:"10px",marginTop:"-10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
   <small  className="pfooter"  style={{background:"#FBDB73",cursor:"pointer"
   ,fontSize:"16px"}}> &nbsp; &nbsp;
     <i class="fas fa-shopping-cart"></i> 
     &nbsp; &nbsp;Add to cart</small>
+
 </Card.Footer>
-<MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+
 </Card>
 
 </CardDeck>
