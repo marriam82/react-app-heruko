@@ -14,7 +14,9 @@ export default class footer extends Component {
             <Container style={{background:"#223142",color:"white"}} fluid>
             <Row>
               <Col xs={3}>
-                  <img className="pl-4 l" src={logo} style={{height:"19vh",paddingTop:"40px"}}/>
+                <div className="l"  style= {{width:"125px",height:"120px",paddingTop:"40px"}}>
+                  <img className="pl-4 " src={logo} style={{width:"100%",height:"100%"}}/>
+                  </div>
                   <h4 className="pl-4 pt-4 ll "style={{fontSize:"14px",fontWeight:"normal"
                   ,marginTop:"15px"}}>
                 Welcome! This website is (quite<br id="no"></br> obviously) a small text generator.Its<br id="no"></br> fairly self explanatory</h4>
@@ -43,7 +45,8 @@ export default class footer extends Component {
               </Col>
               <Col className="abc" style={{marginTop:"15px"}}>
               <h4 style={{fontSize:"15px",fontWeight:"bold",marginTop:"40px"}}>Contacts:</h4>
-             <div className="whatsapp"><img src={facebook}className="mt-2" /> +97333505995</div><br></br>
+             <div className="whatsapp">
+               <img src={facebook}className="mt-2" /> +97333505995</div><br></br>
               <img id="tw"src={whatsapp} style={{marginTop:"-10%"}}/>
               <img className=" ml-2" src={twitter} style={{marginTop:"-10%"}}/>
               <img className=" ml-2 " src={insta} style={{marginTop:"-10%"}}/>

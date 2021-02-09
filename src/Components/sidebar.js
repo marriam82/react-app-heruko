@@ -1,4 +1,5 @@
 import React, {useState } from 'react';
+import DrawerToggleButton from "./SideDrawer/DrawerToggleButton";
 import img6  from "../xadok/01.png"
 import img7 from "../xadok/03.png";
 import img8 from "../xadok/02.png";
@@ -57,7 +58,8 @@ export default function Sidebar() {
   const [show116,setShow116] = useState(false);
   const [show117,setShow117] = useState(false);
   const [show118,setShow118] = useState(false);
-
+  const [shownav,setShownav] = useState(false);
+  
 
 
 
@@ -128,7 +130,7 @@ export default function Sidebar() {
 
         <>
 {/* -----------------Cart modal 1---------------------- */}
-<Modal style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}} show={show2} 
+<Modal className="cart  art" style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}} show={show2} 
 onHide={handleClose2}>
         <Modal.Header style={{border:"none"}} closeButton>
           <Modal.Title style={{border:"none",fontWeight:"bold",paddingLeft:"22px"}}>My cart 
@@ -138,19 +140,22 @@ onHide={handleClose2}>
         <Modal.Body style={{border:"none"}}>
        
         <h6 style={{color:"red",fontSize:"12px",fontWeight:"bold",paddingLeft:"22px"}}>DELIVER TO </h6>
-        <h6  onClick={handleShow}  style={{position:"relative",paddingLeft:"22px",
-  cursor: "pointer"}} >300 Post Street San Francisco, CA 
+        <h6 className="post" onClick={handleShow} 
+         style={{position:"relative",paddingLeft:"22px",
+         cursor: "pointer"}} >300 Post Street San Francisco, CA 
         <span style={{color:"silver",position:"absolute",right:"0",marginTop:"-2%"}}><i class="fas fa-chevron-right"></i></span></h6>
 
-        <h3 className="mt-3 pt-4" style={{paddingLeft:"21px",fontWeight:"bold"}}>Items</h3>
+        <h3 className="mt-3 pt-4" 
+         style={{paddingLeft:"21px",fontWeight:"bold"}}>Items</h3>
         <div style={{marginTop:"8%",display:"flex",alignItems:"center",
           justifyContent:"space-between" ,
 
         width:"100%",height:"26vh",borderTop:"1px solid silver",
         borderBottom:"1px solid silver"}}>
           <div style={{width:"70px",height:"70px"}}
-          ><img src={img} style={{width:"100%",height:"100%",marginLeft:"40%"}}/></div>
-          <div><h5 style={{marginTop:"-8%"}}>DIGESTIVE CHOCO 200 G</h5>
+          ><img   className="item-img"src={img} style={{width:"100%",height:"100%"
+          ,marginLeft:"40%"}}/></div>
+          <div><h5  className="item"style={{marginTop:"-8%"}}>DIGESTIVE CHOCO 200 G</h5>
           <h4 style={{marginTop:"10%",color:"silver"}}className="">0.835 <span style={{fontSize:"12px"}}>
             BHD</span></h4>
           </div>
@@ -177,9 +182,11 @@ onHide={handleClose2}>
        borderBottomLeftRadius:"12px",zIndex:"1"}} >-</Button>
           </div>
         </div>
-      <h6 style={{fontSize:"20px",position:"absolute",left:"5%",paddingLeft:"22px",paddingTop:"70px",color:"black"}}>+ Add more items</h6>
+      <h6   className="item-add"style={{fontSize:"20px",position:"absolute",
+      left:"5%",paddingLeft:"22px",paddingTop:"70px",color:"black"}
+      }>+ Add more items</h6>
         
-        <div 
+        <div  className="item-addb"
 style={{
 display:"flex",alignItems:"center",marginTop:"29%",marginLeft:"7%",
 justifyContent:""}}>
@@ -205,7 +212,9 @@ background:"#F6F6F6",fontSize:"29px"}}>
               <h6 style={{fontWeight:"bold",}}>Promo code</h6>
               <h6>HXFWO</h6>
             </div>
-            <Button onClick={handleShow114} style={{background:"#223142",border:"none",marginLeft:"30%",
+            <Button className="item-plus" 
+            onClick={handleShow114} style={{background:"#223142",
+            border:"none",marginLeft:"30%",
             height:"50px",width:"50px",fontSize:"25px"}} ><i class="fas fa-plus"></i></Button>
           </div>
         </Modal.Body>
@@ -223,7 +232,8 @@ background:"#F6F6F6",fontSize:"29px"}}>
 
 {/* ---------------------------------PROMO CODE--------------------------- */}
 
-<Modal show={show114} className="c" style={{borderRadius:"30px ",marginTop:"9.8%",
+<Modal show={show114} className="promo"
+ style={{borderRadius:"30px ",marginTop:"9.8%",
      width:"350px",marginLeft:"28.7%",background:"transparent",border:"none"}} onHide={handleClose114} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px",fontWeight:"bold",paddingLeft:"13px"}}>Enter promo code</Modal.Title>
@@ -246,14 +256,15 @@ background:"#F6F6F6",fontSize:"29px"}}>
         <>
 
         {/* ---------------------CHECKOUT PROMO------------------ */}
-        <Modal show={show116} style={{borderRadius:"30px ",marginTop:"9.8%",
+        <Modal className="your"  show={show116} style={{borderRadius:"30px ",marginTop:"9.8%",
      width:"410px",marginLeft:"28.7%",background:"transparent",border:"none"}} onHide={handleClose116} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
         <img src={logo} style={{width:"90px",height:"60px",marginLeft:"37%",marginTop:"20px",padding:"5px"}}/>
        </Modal.Header>
 
        <Modal.Body style={{border:"none"}}>
-         <p style={{textAlign:"center",fontSize:"20px",marginTop:"-20px",fontSize:"18px",padding:"10px"}} 
+         <p style={{textAlign:"center",fontSize:"20px",
+         marginTop:"-20px",fontSize:"18px",padding:"10px"}} 
          >your order has been confirmed,<br></br>Thankyou for choosing us.</p>
     
        </Modal.Body>
@@ -265,7 +276,7 @@ background:"#F6F6F6",fontSize:"29px"}}>
            
    <>
 {/* ------------------------- cart  2 ------------------------- */}
-<Modal style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}}
+<Modal className="cart" style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}}
 show={show4} 
 onHide={handleClose4}>
         <Modal.Header style={{border:"none"}} closeButton>
@@ -275,29 +286,30 @@ onHide={handleClose4}>
         <Modal.Body style={{border:"none"}}>
           <h4 style={{paddingLeft:"22px",paddingTop:"14px",fontWeight:"bold"}}>Delivery Address</h4>
         <h6 style={{color:"red",fontSize:"12px",paddingLeft:"22px",paddingTop:"12px"}}>DELIVER TO </h6>
-        <h6  onClick={handleShow}  style={{position:"relative",paddingLeft:"22px",
+        <h6 className="post" onClick={handleShow}  style={{position:"relative",paddingLeft:"22px",
   cursor: "pointer"}} >300 Post Street San Francisco, CA 
         <span style={{color:"silver",position:"absolute",right:"5%",marginTop:"-2%",}}><i class="fas fa-chevron-right"></i></span></h6>
-        <h4 style={{paddingLeft:"22px",fontWeight:"",paddingTop:"45px"}}>Delivery Time</h4>
+        <h4 className="checkoutde"style={{paddingLeft:"22px",fontWeight:"",paddingTop:"45px"}}>Delivery Time</h4>
       <div onClick={handleShow115} style={{marginTop:"7%",marginLeft:"4%",width:"90%",cursor:"pointer",
       height:"9vh",alignItems:"center",justifyContent:"space-evenly",borderRadius:"8px",background:"#F6F6F6",display:"flex"}}>
-        <h5 style={{marginLeft:"-10%"}}>15</h5>
+        <h5 className="fifteen" style={{marginLeft:"-10%"}}>15</h5>
         <h5 style={{marginLeft:"8%"}} >December</h5>
         <h5  style={{paddingLeft:"5%"}} >2020</h5>
-
       </div>
         <div onClick={handleShow117} style={{width:"90%",height:"8vh",background:"#F6F6F6",marginTop:"3%",marginLeft:"4%",
         border:"none",display:"flex",justifyContent:"space-between",
         borderRadius:"8px"}}>
-          <h6 style={{paddingTop:"4%",paddingLeft:"8%"}}>Schedule Delivery </h6>
-          <i class="fas fa-chevron-down" 
-          style={{color:"silver",marginRight:"4%",marginTop:"4%"}}></i>
+          <h6 className="schedule" style={{paddingTop:"4%",paddingLeft:"8%"}}>Schedule Delivery </h6>
+          <i class="fas fa-chevron-down schedulei" 
+          style={{color:"silver",marginRight:"4%",marginTop:"4%"}}>
+          </i>
         </div>
 
-        <h4 style={{paddingLeft:"22px",paddingTop:"74px"}}>Payment methods </h4>
+        <h4 className="payment" style={{paddingLeft:"22px",
+        paddingTop:"74px"}}>Payment methods </h4>
         <Button className="p-3 text-start ml-3" style={{marginTop:"7%",
         display:"flex",width:"90%",background:"#E3424B",border:"none",borderRadius:"10px",
-       alignItems:"center" ,fontWeight:"normal"}}> &nbsp; &nbsp;&nbsp;&nbsp;
+       alignItems:"center",fontWeight:"normal"}}> &nbsp; &nbsp;&nbsp;&nbsp;
         <i style={{fontSize:"27px"}}class="fas fa-money-bill-alt"></i> &nbsp; &nbsp;&nbsp; Cash on delivery
         </Button>
       
@@ -316,11 +328,15 @@ onHide={handleClose4}>
           <span style={{fontSize:"14px",}}> &nbsp;  (2)
             </span>
             </h3> 
-           <div style={{marginTop:"7%",display:"flex",justifyContent:"space-evenly",width:"90%",marginLeft:"3.8%"}}>
-          <Button style=
+           <div  
+           style={{marginTop:"7%",display:"flex",
+           justifyContent:"space-evenly",width:"90%",
+           marginLeft:"3.8%"}}>
+          <Button  style=
           {{border:"none",color:"black",borderRadius:"12px",fontSize:"30px",width:"60px",marginTop:"12%",height:"10vh",background:"#e6e3e3"}}><i class="fas fa-plus"></i></Button>
-          <img src={master} style={{width:"155px",height:"200px",borderRadius:"12px"}}/>
-          < div style={{backgroundImage:`url(${master})`,
+          <img className="mastercard" src={master} 
+          style={{width:"155px",height:"200px",borderRadius:"12px"}}/>
+          < div className="mastercard"  style={{backgroundImage:`url(${master})`,
           width:"155px",height:"200px",borderRadius:"12px",
           backgroundSize:"100% 100%"}}>
             <div style={{width:"100%",height:"100%",background:"white",opacity:"0.5"}}></div>
@@ -346,7 +362,9 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
 
                     {/* -----------------------SELECT DATE------------------------ */}
 
-     <Modal show={show115} className="c" style={{borderRadius:"30px ",marginTop:"5.2%", width:"370px",marginLeft:"33.7%",background:"transparent",border:"none"}} onHide={handleClose115} animation={false} >
+     <Modal  show={show115} className="c selectdate"
+      style={{borderRadius:"30px ",marginTop:"5.2%", 
+      width:"370px",marginLeft:"33.7%",background:"transparent",border:"none"}} onHide={handleClose115} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px",fontWeight:"bold",paddingLeft:"13px"}}>Select Date</Modal.Title>
        </Modal.Header>
@@ -379,7 +397,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
      </Modal>
 
 
-     <Modal show={show117} className="c" style={{borderRadius:"30px ",marginTop:"5.5%",
+     <Modal show={show117} className="c selectdate" style={{borderRadius:"30px ",marginTop:"5.5%",
      width:"370px",marginLeft:"33.7%",background:"transparent",border:"none"}} onHide={handleClose117} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px",fontWeight:"bold",paddingLeft:"13px"}}>Select Date</Modal.Title>
@@ -412,7 +430,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
 </>
 
         {/* ------------------------ user --------------------------- */}
-        <Modal style={{border:"none",width:"420px",
+        <Modal className="welcome" style={{border:"none",width:"420px",
         height:"150vh",marginLeft:"69%",marginTop:"-2.3%"}} 
         show={show1} onHide={handleClose1}>
         <Modal.Header style={{border:"none", outline:"none"}} closeButton>
@@ -931,13 +949,16 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
    </>
    <>
    {/* ----------------------- user 2-------------------------- */}
-   <Modal style={{border:"none",width:"420px",
+   <Modal className="welcome" style={{border:"none",width:"420px",
         height:"150vh",marginLeft:"69%",marginTop:"-2.3%"}} 
         show={show3} onHide={handleClose3}>
-        <Modal.Header style={{border:"none", outline:"none"}} closeButton>
+        <Modal.Header style={{border:"none", outline:"none"}} 
+        closeButton>
           <Modal.Title className="mt-3 pl-4" style={{border:"none",fontSize:"33px"}}>Create an account!</Modal.Title>
         </Modal.Header>
-        <p className="pl-4 ml-4" style={{color:"silver",fontSize:"13px"}}>Please create an account to continue using our service</p>
+        <p  className="pl-4 ml-4 createp" style={{color:"silver",
+        fontSize:"13px"}}>
+          Please create an account to continue using our service</p>
 
         <Modal.Body style={{border:"none"}}>
         <div className="mt-4 ml-4" style={{display:"flex",height:"50px",width:"100%",}}>
@@ -990,7 +1011,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </Modal>
 
 
-      <Modal style={{border:"none",width:"420px",
+      <Modal className="welcome" style={{border:"none",width:"420px",
         height:"150vh",marginLeft:"69%",marginTop:"-2.3%"}} 
         show={show5} onHide={handleClose5}>
         <Modal.Header style={{border:"none", outline:"none"}} closeButton>
@@ -1020,10 +1041,10 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
        
       </Modal>
 
-      <Modal style={{border:"none",width:"330px",marginLeft:"40%",marginTop:"7%"}} 
+      <Modal className="forgot" style={{border:"none",width:"330px",marginLeft:"40%",marginTop:"7%"}} 
         show={show118} onHide={handleClose118}>
         <Modal.Header style={{border:"none", outline:"none"}} closeButton>
-          <Modal.Title className="mt-3" style={{border:"none",fontSize:"25px",paddingLeft:"25.5px"}}>Fogot password?</Modal.Title>
+          <Modal.Title className="mt-3" style={{border:"none",fontSize:"25px",paddingLeft:"25.5px"}}>Forgot password?</Modal.Title>
         </Modal.Header>
         <p className="pl-4 ml-3" style={{color:"silver",fontSize:"12px"}}>Please enter your email address to continue</p>
 
@@ -1059,12 +1080,14 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
             <Container  fluid>
   <Row id="grid">
     <Col sm={2} lg={2}className="sidebar">
+      <div>
+        <DrawerToggleButton />
+      </div>
         <Navbar.Brand href="/home" className=" pt-2 logo" 
         style={{width:"100%"}}>
           <img src={logo} className="logo-img"  style={{height:"10vh"}} />
           </Navbar.Brand>      
-      
-  <Nav defaultActiveKey="/home" className="flex-column" >
+  <Nav defaultActiveKey="/" className="flex-column" >
   <Nav.Link className="mt-3 p-3 color" href="/" 
   style={{background:"#E3424B",borderRadius:"10px",
   color:"white",fontWeight:"bold",}}>
@@ -1133,6 +1156,7 @@ borderRadius:"16px",}} id="no" className="tost">
    style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no"
     className="no" ><img src={delivery}style={{height:"3vh"}} />&nbsp; &nbsp; Sen Francisain California &nbsp;
     <i class="fas fa-angle-down"></i> </Nav.Link>
+  
       <Nav.Link className="ml-4 pl-3"
       style={{color:"black",fontWeight:"normal",
       fontSize:"14px"}} id="no"><img src={deal}
@@ -1156,7 +1180,7 @@ borderRadius:"16px",}} id="no" className="tost">
   boxSizing:"border-box"}}/>
     </div>
 <div id="fle" className="ml-2">
-  <Button onClick={handleShow1} className="ml-3"  
+  <Button onClick={handleShow1} className="ml-3 bdg"  
   style={{background:"#E3424B",paddingRight:"14px",
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
@@ -1165,7 +1189,10 @@ borderRadius:"16px",}} id="no" className="tost">
   height:"7vh",}}>
     <i class="fas fa-shopping-cart"></i> </Button>
 </div>
-<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge variant="light" className="badge1" 
+style={{borderRadius:"12px",position:"absolute",right:"1%"
+,padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",
+fontSize:"12px"}}>2</Badge>
 </Navbar> 
 {/* ============ */}
   <Carousel className="over mt-4" id="car"style={{height:"45vh",width:"101%"}}>
@@ -1202,15 +1229,15 @@ borderRadius:"16px",}} id="no" className="tost">
 </Carousel>
 <h3 className="exp ml-4"style={{color:"black",fontWeight:"bold", marginTop:"25px"}}> Explore Catagories</h3>
 <div id="all" style={{marginTop:"30px",width:"100%",marginLeft:"22px"}}>
-  <Button style={{textAlign:"center",
+  <Button id="alll" style={{textAlign:"center",
   background:"#E3424B",
   color:"white",
   border:"none",
    borderRadius:"9px",color:"white",paddingRight:"100px",
    fontSize:"17px",paddingTop:"5px",
    paddingBottom:"5px",height:"7.3vh",width:"15%"}}>
-  <img src={all} style={{color:"white",height:"3vh"}}/>
-  &nbsp; <b style={{paddingTop:"20px",marginTop:"10px"}}>All</b></Button>
+  <img className="buttona" src={all} style={{color:"white",height:"3vh"}}/>
+  &nbsp; <b className="allt"style={{paddingTop:"20px",marginTop:"10px"}}>All</b></Button>
 
   <Button id="alll" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
@@ -1251,7 +1278,8 @@ borderRadius:"16px",}} id="no" className="tost">
   style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Delivery Taxi</b></Button>
 </div>
-<CardGroup id="cards" style={{border:"none",marginTop:"35px",width:"100%",marginLeft:"22px",
+<CardGroup id="cards" style={{border:"none",marginTop:"35px",
+width:"100%",marginLeft:"22px",
   paddingBottom:"10px",
 
 border:"none"}}>

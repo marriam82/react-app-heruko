@@ -1171,16 +1171,16 @@ onHide={handleClose120}>
      {/* ========================================================== */}
 
                  <Container  fluid>
-  <Row className="grid">
+  <Row id="grid">
     <Col sm={2} >
-        <Navbar.Brand href="/" className=" pt-2" style={{width:"100%"}}>
-          <img src={logo} id="imgg" style={{height:"10vh"}} />
+        <Navbar.Brand href="/" className=" pt-2 logo" style={{width:"100%"}}>
+          <img src={logo} className="logo-img"  style={{height:"10vh"}} />
           </Navbar.Brand>      
         <Nav defaultActiveKey="" className="flex-column" >
 <Link to="/" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-3 color" href="/" 
+  <Nav.Link className="mt-3 hs" href="/" 
   style={{color:"black",background:"transparent"}}>
-<i class="fas fa-home house" style={{fontSize:"20px"}}></i>
+<i class="fas fa-home house-s" style={{fontSize:"20px"}}></i>
 &nbsp; &nbsp; <span className="home">Home</span></Nav.Link></Link>
 <Link to="/exploring" 
 style={{textDecoration:"none"}}>
@@ -1195,13 +1195,13 @@ style={{textDecoration:"none"}}>
   <Link to="/favorite" style={{textDecoration:"none"}}>
   <Nav.Link className="mt-2  font"  href="/favorite"
    style={{color:"black"}}>
-  <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; &nbsp;
+  <img  style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; &nbsp;
    &nbsp; <span className="home"> Favorite</span></Nav.Link></Link>
 
-  <Nav.Link className="mt-2 p-3 font"  href="#orders" 
+  <Nav.Link className="mt-2 p-3 coloro"  href="/orders" 
    style={{background:"#E3424B",borderRadius:"10px",
    color:"white",fontWeight:"bold",width:"112%"}}>
-  <img style={{height:"3vh",}} src={order}/>&nbsp; 
+  <img style={{height:"3vh",}} className="colorimg" src={order}/>&nbsp; 
   &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link>
 <Link to="/messages" style={{textDecoration:"none"}}>
   <Nav.Link className="mt-2 font" href="/messages" style={{color:"black"}}>
@@ -1281,7 +1281,7 @@ borderRadius:"16px",}} id="no" className="tost">
   style={{background:"#E3424B",border:"none",borderRadius:"7px",position:"relative"
   ,height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge variant="light" className="badge1" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 
@@ -1289,16 +1289,8 @@ borderRadius:"16px",}} id="no" className="tost">
 
 
 
-
-
-
-
-
-
-
-
-<div style={{background:"#F6F6F6",width:"101%",height:"80vh"}}>
-<h4 style={{paddingTop:"60px",
+<div className="upcoming" style={{background:"#F6F6F6",width:"101%",height:"80vh"}}>
+<h4 className="upcomingheading" style={{paddingTop:"60px",
 fontWeight:"bold",fontSize:"25px"}} 
 className=" pl-4 ml-3">Upcoming Orders</h4> 
 {/* ----------------CARD NUMBER ONE--------------------- */}
@@ -1306,7 +1298,7 @@ className=" pl-4 ml-3">Upcoming Orders</h4>
 
 {
              show6?
-<Card className="" style={{marginLeft:"3%",marginTop:"4%",
+<Card className="ordercard1" style={{marginLeft:"3%",marginTop:"4%",
 width:"35%",height:"42vh",border:"none",borderRadius:"12px"}}>
 
 
@@ -1314,16 +1306,16 @@ width:"35%",height:"42vh",border:"none",borderRadius:"12px"}}>
   style={{border:"none",background:"white",borderRadius:"15px"}} >
 <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
  <h6 style={{fontWeight:"bold",color:"#223142"}}>Ramez Shopping</h6>
-<Button style={{color:"silver",background:"white",fontSize:"12px",fontWeight:"bold",border:"none"}}>#1DF90E</Button></div>
+<Button style={{color:"silver",background:"white",
+fontSize:"12px",fontWeight:"bold",border:"none"}}>#1DF90E</Button></div>
 <div style={{display:"flex"}}>
 <i class="far fa-clock ml-2 mt-4" style={{color:"yellow",fontSize:"28px"}}></i>
-
 <Button style={{border:"none", background:"none",
 marginLeft:"1%",marginTop:"-3%", fontSize:"12px"}}>
 <b style={{color:"grey",fontWeight:"normal"}}> 
 Estimated Arrival</b> </Button>
 </div>
-<h3  style={{fontWeight:"bold",marginLeft:"15%",marginTop:"-5%"}}>35 min</h3>
+<h3 className="ordertime" style={{fontWeight:"bold",marginLeft:"15%",marginTop:"-5%"}}>35 min</h3>
   </Card.Header>
   <div style={{width:"100%",display:"flex",justifyContent:"space-evenly"}}>
   <ProgressBar variant="danger" now={100} style={{width:"12%",height:"0.9vh"}}/>
@@ -1345,7 +1337,7 @@ Estimated Arrival</b> </Button>
 }
 {
   show7?
-<Card className="" style={{marginLeft:"3%",marginTop:"4%",
+<Card  className="ordercard1" style={{marginLeft:"3%",marginTop:"4%",
 width:"35%",height:"42vh",border:"none",borderRadius:"12px"}}>
 
 
@@ -1362,7 +1354,7 @@ marginLeft:"1%",marginTop:"-3%", fontSize:"12px"}}>
 <b style={{color:"grey",fontWeight:"normal"}}> 
 Estimated Arrival</b> </Button>
 </div>
-<h3  style={{fontWeight:"bold"
+<h3  className="ordertime" style={{fontWeight:"bold"
 ,marginLeft:"15%",marginTop:"-5%"}}>60 min</h3>
 
   </Card.Header>
@@ -1397,10 +1389,10 @@ Estimated Arrival</b> </Button>
 fontWeight:"bold",fontSize:"25px"}} 
 className=" pl-4 ml-3">Previous orders</h4> 
 {/* ----------------CARD NUMBER ONE--------------------- */}
-<CardDeck style={{width:"70%",marginLeft:"2%"}}>
+<CardDeck  style={{width:"70%",marginLeft:"2%"}}>
 
 
-<Card className="" style={{marginLeft:"3%",marginTop:"4%",
+<Card className="previous"style={{marginLeft:"3%",marginTop:"4%",
 width:"35%",background:"#F6F6F6",border:"none",borderRadius:"6px"}}>
 
 
@@ -1409,32 +1401,37 @@ width:"35%",background:"#F6F6F6",border:"none",borderRadius:"6px"}}>
 <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
  <h6 style={{fontWeight:"bold",color:"#223142"}}>Ramez Shopping</h6>
 <Button style={{color:"green",background:"#DDEEDC",fontSize:"12px",fontWeight:"bold",border:"none"}}>Completed</Button></div>
-<div style={{display:"flex"}}>
-<Button style={{border:"none", background:"none",marginLeft:"-5%", fontSize:"13px"}}>&nbsp;&nbsp;<i class="far fa-calendar"style={{color:"#B2B2B2"}}></i> &nbsp;<b style={{color:"#E0E0E0",fontWeight:"normal"}}> September 16,2020</b> </Button>
-    <Button style={{border:"none", background:"none", fontSize:"13px"}}> <i class="far fa-clock" style={{color:"#B2B2B2",}}></i> &nbsp; 
+<div  className="order1"  style={{display:"flex"}}>
+<Button className="orderm" style={{border:"none", background:"none",marginLeft:"-5%", fontSize:"13px"}}>&nbsp;&nbsp;
+<i class="far fa-calendar"style={{color:"#B2B2B2"}}></i> &nbsp;<b style={{color:"#E0E0E0",fontWeight:"normal"}}> 
+September 16,2020</b> </Button>
+    <Button className="ordert" style={{border:"none", background:"none", fontSize:"13px"}}> 
+    <i class="far fa-clock" style={{color:"#B2B2B2",}}></i> &nbsp; 
     <b style={{fontWeight:"normal",color:"#E0E0E0"}}> 11:54 PM</b></Button>
 </div>
   </Card.Header>
-
-
   <Card.Body>
-    <Card.Title style={{fontSize:"15px"}}>
-      <Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> &nbsp;ALMARAI DBLE CHOCOLATE MILK SH</Card.Title>
-    <Card.Title style={{fontSize:"15px"}}><Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> &nbsp; NIDO MILK POWDER POUCH 2.25KG</Card.Title>   
+    <Card.Title className="pall" style={{fontSize:"15px"}}>
+      <Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> 
+&nbsp;<b  className="pal pall" style={{fontWeight:"normal"}}>ALMARAI DBLE CHOCOLATE MILK SH</b></Card.Title>
+    <Card.Title style={{fontSize:"15px"}}><Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> &nbsp;<b  className="pal" style={{fontWeight:"normal"}} >NIDO MILK POWDER POUCH 2.25KG</b></Card.Title>   
     <Card.Text style={{visibility:"invisible",color:"#F6F6F6"}}>
       With supporting text below as a natural lead-in to additional content.
     </Card.Text>
     <Button onClick={handleShow120}   style={{width:"48%",border:"none",height:"7vh",
     borderRadius:"8px",background:"#223142"}} >Details</Button>
-    <Button onClick={handleShow2}  className="ml-2" style={{width:"48%",border:"none",height:"7vh",borderRadius:"8px",background:"#E3424B"}} >Repeat Order</Button>
+    <Button onClick={handleShow2}  className="ml-2 repeat" 
+    style={{width:"48%",border:"none",height:"7vh",borderRadius:
+    "8px",background:"#E3424B"}} >Repeat Order</Button>
   </Card.Body>
 
 
 </Card>
 
 
-<Card className="" style={{marginTop:"4%",
+<Card className="previous" style={{marginTop:"4%",
 width:"35%",background:"#F6F6F6",border:"none",borderRadius:"6px"}}>
+
 
 
   <Card.Header 
@@ -1453,15 +1450,15 @@ width:"35%",background:"#F6F6F6",border:"none",borderRadius:"6px"}}>
   <Card.Body>
     <Card.Title style={{fontSize:"15px"}}>
     <Button style={{background:"white",color:"#223142",border:"none",fontSize:"12px"}}>
-    <b>3</b></Button> &nbsp; OLIV ALOE SHOWER GEL 200 ML</Card.Title>
-    <Card.Title style={{fontSize:"15px"}}><Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button> &nbsp; OLIV ALOE CLEANSING MILK 200ML</Card.Title>
+    <b>3</b></Button> &nbsp;<b  className="pal" style={{fontWeight:"normal"}} > OLIV ALOE SHOWER GEL 200 ML</b></Card.Title>
+    <Card.Title style={{fontSize:"15px"}}><Button style={{background:"white",color:"black",border:"none",fontSize:"12px"}}><b>1</b></Button><b  className="pal" style={{fontWeight:"normal"}} > &nbsp; OLIV ALOE CLEANSING MILK 200ML</b></Card.Title>
     {/* <h6>1 More item</h6>    */}
     <Card.Text style={{visibility:"invisible",color:"#F6F6F6"}}>
       With supporting text below as a natural lead-in to additional content.
     </Card.Text>
     <Button onClick={handleShow120}   style={{width:"48%",border:"none",height:"7vh",
     borderRadius:"8px",background:"#223142"}} >Details</Button>
-    <Button onClick={handleShow2}  className="ml-2" style={{width:"48%",border:"none",height:"7vh",borderRadius:"8px",background:"#E3424B"}} >Repeat Order</Button>
+    <Button onClick={handleShow2}  className="ml-2 repeat" style={{width:"48%",border:"none",height:"7vh",borderRadius:"8px",background:"#E3424B"}} >Repeat Order</Button>
   </Card.Body>
 
 

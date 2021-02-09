@@ -13,8 +13,6 @@ import Favorite from "./Components/favorite";
 import Orders from "./Components/orders";
 import Messages from "./Components/messages";
 import Settings from "./Components/settings";
-
-
 import './App.css';
 import{BrowserRouter as Router,Route,Switch} from "react-router-dom"
 
@@ -26,29 +24,24 @@ export default class App extends Component {
     return (
       <div>
            <Router>
-    <Switch>
-      <Route path="/" exact component={Sidebar} />
-      <Route path="/supermarket" exact component={Supermarket} />
-      <Route path="/explore" exact component={Explore}/>
+   <Switch>
+     <Route path="/" exact component={Sidebar} />
+     <Route path="/supermarket" exact component={Supermarket} />
+     <Route path="/exploring" exact component={Exploring}/>
+     <Route path="/favorite" exact component={Favorite}/>
+     <Route path="/orders" exact component={Orders}/>
+     <Route path="/messages" exact component={Messages}/>
+     <Route path="/settings" exact component={Settings}/>
+     <Route path="/explore" exact component={Explore}/>
      <Route path="/offers" exact component={Offers}/>
      <Route path="/offersDark" exact component={OffersDark}/>
      <Route path="/dairy" exact component={Dairy}/>
      <Route path="/eggs" exact component={Eggs} />
      <Route path="/reoffer" exact component={Reoffer}/>
      <Route path="/weekendDayOffer" exact component={Weekend}/>
-     <Route path="/nationalDayOffer" exact component={National}/>
-     <Route path="/exploring" exact component={Exploring}/>
-     <Route path="/favorite" exact component={Favorite}/>
-     <Route path="/orders" exact component={Orders}/>
-     <Route path="/messages" exact component={Messages}/>
-     <Route path="/settings" exact component={Settings}/>
-
-
-
-
-     
-      </Switch>
-               </Router>  
+     <Route path="/nationalDayOffer" exact component={National}/>   
+    </Switch>
+            </Router>  
       </div>
     )
   }

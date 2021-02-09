@@ -1426,7 +1426,8 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   src={explore}/>&nbsp; &nbsp; &nbsp;<span className="home">Explore</span>
   </Nav.Link>
   <Link to="/favorite" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-2 font"  href="#favorite" style={{color:"black"}}>
+  <Nav.Link className="mt-2 font"  href="/favorite" 
+  style={{color:"black"}}>
   <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; &nbsp;
    &nbsp; <span className="home"> Favourite</span></Nav.Link></Link>
    <Link to="/orders" style={{textDecoration:"none"}}>
@@ -1505,20 +1506,21 @@ borderRadius:"16px",}} id="no" className="tost">
 
   <Button onClick={handleShow2} className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge className="badge1"  variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 {/* ============ */}
 <div className="bestdeal1" style={{background:"#F5F5F5",width:"100%",height:"80vh",
 paddingRight:"30px"}}>
-<div style={{display:"flex",justifyContent:"space-between"}}>
+<div  style={{display:"flex",justifyContent:"space-between"}}>
 <h4 style={{paddingTop:"60px",fontWeight:"bold",fontSize:"25px"}} 
 className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontWeight:"bold",fontSize:"13px"}}>See All > </span></h4> 
 </div>
 <CardDeck className="ml-3 mt-4 pt-4" >
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
 height:"47vh"}}>
-<Card.Img onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img onClick={() => setModalShow(true)}  
+ variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2 pprice" style={{color:"#E3424B",marginTop:"-20px",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>

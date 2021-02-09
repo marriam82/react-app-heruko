@@ -1026,16 +1026,16 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </Modal>
 
                 <Container  fluid>
-  <Row className="grid">
+  <Row id="grid">
     <Col sm={2} >
-        <Navbar.Brand href="/" className=" pt-2" style={{width:"100%"}}>
-          <img src={logo} id="imgg" style={{height:"10vh"}} />
+        <Navbar.Brand href="/" className=" pt-2 logo"  style={{width:"100%"}}>
+          <img src={logo} className="logo-img"style={{height:"10vh"}} />
           </Navbar.Brand>      
         <Nav defaultActiveKey="" className="flex-column" >
 <Link to="/" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-3 color" href="/" 
+  <Nav.Link className="mt-3 hs" href="/" 
   style={{color:"black",background:"transparent"}}>
-<i class="fas fa-home house" style={{fontSize:"20px"}}></i>
+<i class="fas fa-home house-s" style={{fontSize:"20px"}}></i>
 &nbsp; &nbsp; <span className="home">Home</span></Nav.Link></Link>
 <Link to="/exploring" 
 style={{textDecoration:"none"}}>
@@ -1058,7 +1058,7 @@ style={{textDecoration:"none"}}>
   <img style={{height:"3vh",}} src={order}/>&nbsp; 
   &nbsp; &nbsp;<span className="home">Orders</span></Nav.Link></Link>
 
-  <Nav.Link className="mt-2 p-3 font" href="/messages" 
+  <Nav.Link className="mt-2 p-3 color" href="/messages" 
   style={{background:"#E3424B",borderRadius:"10px",
   color:"white",fontWeight:"bold",width:"112%"}}>
   <img style={{height:"2.5vh"}} src={message}/>
@@ -1130,8 +1130,7 @@ borderRadius:"16px",}} id="no" className="tost">
 
   <Button onClick={handleShow2} className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
-
+<Badge variant="light" className="badge1" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 </Navbar> 
 
 {/* ----------------------------------------------------- */}
@@ -1139,7 +1138,7 @@ borderRadius:"16px",}} id="no" className="tost">
 
       <div class="container mt-4 pt-3" >
    
-<div class="messaging">
+<div className="messaging ">
 
       <div class="inbox_msg">
    

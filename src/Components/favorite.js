@@ -46,16 +46,16 @@ export default class Favorite extends Component {
     return (
         <>
             <Container  fluid>
-  <Row className="grid">
-    <Col sm={2} >
-        <Navbar.Brand href="/" className=" pt-2" style={{width:"100%"}}>
+  <Row id="grid">
+    <Col sm={2} className="sidebar">
+        <Navbar.Brand href="/" className=" pt-2 logo" style={{width:"100%"}}>
           <img src={logo} id="imgg" style={{height:"10vh"}} />
           </Navbar.Brand>      
         <Nav defaultActiveKey="" className="flex-column" >
 <Link to="/" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-3 color" href="/" 
+  <Nav.Link className="mt-3 hs" href="/" 
   style={{color:"black",background:"transparent"}}>
-<i class="fas fa-home house" style={{fontSize:"19px"}}></i>
+<i class="fas fa-home house-s" style={{fontSize:"19px"}}></i>
 &nbsp; &nbsp; <span className="home">Home</span></Nav.Link></Link>
 <Link to="/exploring" 
 style={{textDecoration:"none"}}>
@@ -68,10 +68,11 @@ style={{textDecoration:"none"}}>
   </Nav.Link>
   </Link>
   <Link to="/favorite" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-2 p-3 font"  href="#favorite"
+  <Nav.Link className="mt-2 p-3 fcolor"  href="/favorite"
    style={{background:"#E3424B",borderRadius:"10px",
   color:"white",fontWeight:"bold",width:"112%"}}>
-  <img style={{height:"3.2vh",marginLeft:"1px"}} src={fav}/>&nbsp; &nbsp;
+  <img style={{height:"3.2vh",marginLeft:"1px"}} 
+  src={fav}/>&nbsp; &nbsp;
    &nbsp; <span className="home"> Favorite</span></Nav.Link></Link>
    <Link to="/orders" style={{textDecoration:"none"}}>
   <Nav.Link className="mt-2 font"  href="/orders" style={{color:"black"}}>
@@ -128,33 +129,38 @@ borderRadius:"16px",}} id="no" className="tost">
       id="no"> &nbsp; EN  &nbsp; <i class="fas fa-angle-down"></i>
        &nbsp;</button> 
     </Nav>
-    <div className="input-container">
+    <div className="input-container inpu  inpuu" >
     <i class="fas fa-search icon"></i>
-    <input type="text" className="input-field inpu" placeholder="Search for anything... "   
+    <input type="text"  className="input-field input-u" 
+     placeholder="Search for anything... "   
     style={{fontSize:"14px",background:"#F6F6F6",border:"none",outline:"none",padding:"13px",
   boxSizing:"border-box"}}/>
     </div>
-<div id="fle" >
+<div className="fle" id="">
   <Button className="ml-3"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
   <Button className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",position:"relative"}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1.5%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge variant="light" className="badge1"  style={{borderRadius:"12px",position:"absolute",right:"1.5%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 {/* ----------------------------------Fav----------------- */}
 
-<div style={{background:"#F5F5F5",width:"100%",height:"125vh",
+<div className="favourite" style={{background:"#F5F5F5",width:"100%",height:"125vh",
 paddingRight:"30px"}}>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <div style={{display:"flex",position:"relative"}}>
 <h4 style={{paddingTop:"60px",fontWeight:"bold",fontSize:"25px"}} 
 className=" pl-4 ml-3">My Favourites</h4> 
 </div>
-<div style={{position:"absolute",right:"1%",top:"15%",
+<div className="favselect" 
+style={{position:"absolute",right:"1%",top:"15%",
 height:"8vh",width:"40%",}} >
   {this.state.showMe?<div>
-<Button className=" p-2" style={{background:"#919FB9",border:"none",borderRadius:"7px"}} >&nbsp;<i class="fas fa-trash"></i>&nbsp; &nbsp; Delete Selected &nbsp; &nbsp;</Button>
-<Button className="ml-3 p-2" style={{border:"none",background:"#E3424B",borderRadius:"7px"}}>&nbsp;<i class="fas fa-shopping-cart">&nbsp; &nbsp;</i> Add Selected to Cart &nbsp; &nbsp;</Button></div>:null
+<Button className=" p-2 favselectb1" style={{background:"#919FB9",
+border:"none",borderRadius:"7px"}} >
+  &nbsp;<i class="fas fa-trash"></i>
+  &nbsp; &nbsp; Delete Selected &nbsp; &nbsp;</Button>
+<Button className="ml-3 p-2 favselectb2" style={{border:"none",background:"#E3424B",borderRadius:"7px"}}>&nbsp;<i class="fas fa-shopping-cart">&nbsp; &nbsp;</i> Add Selected to Cart &nbsp; &nbsp;</Button></div>:null
 
     }
 </div>
@@ -167,61 +173,65 @@ height:"8vh",width:"40%",}} >
     }
 </div>
 </div>
-<CardDeck className="ml-3 mt-4 pt-4" >
-<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<CardDeck className="ml-3 mt-4 pt-4 favdeck" >
+<Card className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
    
 <div id="circle" onClick={()=>this._onpress()} 
 style={{height:"20px",width:"20px",borderRadius:"100%",
 backgroundColor:buttonBg,
 position:"absolute",left:"11px",top:"11px"}}></div>
 
-<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img variant="top" src={img} className="favimg " style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p className="" style={{color:"#223142",fontSize:"13px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
-<Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+<Card.Footer style={{border:"0",borderBottomLeftRadius:
+"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card  className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle"onClick={()=>this._onpress1()} 
      style={{height:"20px",width:"20px",background:buttonBg1,borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
-<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img className="favimg "  variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4 className="" style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p className="" style={{color:"#223142",fontSize:"13px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card  className="favl"  style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle"onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
-<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img  className="favimg " variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p  style={{color:"#223142",fontSize:"12px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle" onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
-<Card.Img variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img  className="favimg " variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p className="" style={{color:"#223142",fontSize:"12px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}>
+    <i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle" onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
-<Card.Img variant="top" src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
+<Card.Img variant="top" className="favimg " src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4 className="" style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
  <p className="" style={{color:"#223142",fontSize:"12px",
  fontWeight:"bold",textAlign:"center"}}>DIGESTIVE CHOCO 200 G </p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 </CardDeck>

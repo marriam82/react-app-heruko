@@ -12,7 +12,6 @@ import profile from "../xadok/download.png";
 import master from "../xadok/master.png";
 import f1 from "../xadok/download (1).png";
 import f2 from "../xadok/download.png";
-// import master from "../xadok/master.png";
 import img from "../xadok/pexels-photo-102104.jpeg"
 import {Link} from 'react-router-dom';
 import {Navbar,Row,Col,Nav,Container,Modal,Badge,Toast,Button,Form,Card,Carousel,Accordion} from 'react-bootstrap'
@@ -1263,9 +1262,9 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
     borderRadius:"7px",border:"none"}}>
      <i class="far fa-envelope"></i>
       </Button>
-      <div style={{marginLeft:"5%"}}>
-        <h6 style={{fontSize:"12px"}}>LIVE CHAT</h6>
-        <p style={{fontSize:"12px"}}>Waiting time:<b>5 min</b></p>
+      <div className="support" style={{marginLeft:"5%"}}>
+        <h6 className="support" style={{fontSize:"12px"}}>LIVE CHAT</h6>
+        <p className="support"style={{fontSize:"12px"}}>Waiting time:<b>5 min</b></p>
       </div>
     <Button  style={{color:"#223142",background:"none",border:"none",marginLeft:"35%"}}>
       <i class="fas fa-chevron-right"></i></Button>
@@ -1282,7 +1281,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </Button>
       <div style={{marginLeft:"5%"}}>
         <h6 style={{fontSize:"12px"}}>FAQ</h6>
-        <p style={{fontSize:"12px",color:"silver"}}>182 Park Row Street,Suit 8 </p>
+        <p className="support" style={{fontSize:"12px",color:"silver"}}>182 Park Row Street,Suit 8 </p>
       </div>
     <Button  style={{color:"#223142",background:"none",border:"none",marginLeft:"24%"}}>
       <i class="fas fa-chevron-right"></i></Button>
@@ -1491,7 +1490,7 @@ borderRadius:"16px",}} id="no" className="tost">
   height:"7vh",}}>
     <i class="fas fa-shopping-cart"></i> </Button>
 </div>
-<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge variant="light" className="badge1"style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 </Navbar> 
 
 
@@ -1499,7 +1498,8 @@ borderRadius:"16px",}} id="no" className="tost">
 <div style={{marginLeft:"3%"}}>
     <h6 style={{color:"lightgray",marginTop:"3%",marginLeft:"%"}}>General</h6>
     <div onClick={handleShows} style={{display:"flex",justifyContent:"space-between",marginTop:"2%"}}>
-    <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-user"></i> &nbsp; <b>Personal information</b></Button>
+    <Button style={{color:"#223142",background:"none",border:"none",marginLeft:"-1%"}}><i class="far fa-user"></i> &nbsp;
+    <b>Personal information</b></Button>
     <Button  style={{color:"#223142",background:"none",border:"none"}}>
       <i class="fas fa-chevron-right"></i></Button>
     </div>
