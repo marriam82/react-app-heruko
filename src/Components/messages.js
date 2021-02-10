@@ -1141,13 +1141,12 @@ borderRadius:"16px",}} id="no" className="tost">
 <div className="messaging ">
 
       <div class="inbox_msg">
-   
         <div class="inbox_people">
         <div style={{marginTop:"5%",display:"flex",justifyContent:"space-between"}}>
-          <h3 className="ml-2 pl-3" 
+          <h3 className="ml-2 pl-3 mh" 
           style={{fontWeight:"bold",color:"#213043"}}>Messages</h3>
 
-          <Button style={{color:"#213141",height:"6vh",background:"#F7F5F6",border:"none",borderRadius:"10px"}}>
+          <Button className="recentbutton"style={{color:"#213141",height:"6vh",background:"#F7F5F6",border:"none",borderRadius:"10px"}}>
               <i class="fas fa-sort-amount-down"></i>
                <b style={{color:"#213141",fontWeight:"normal",}}>&nbsp; &nbsp;Recent</b>&nbsp; &nbsp; <i class="fas fa-angle-down"></i></Button>
       </div>
@@ -1159,12 +1158,12 @@ borderRadius:"16px",}} id="no" className="tost">
                 <div class="chat_ib">
                   <h6>john Smith, CEO 
                 <span class="chat_date">2 h ago</span></h6>
-                <h5 className="mt-2" style={{fontWeight:
+                <h5 className="mt-2 m-h" style={{fontWeight:
                     "bold",color:"#213141"}}>Special Offer Just for You!</h5>
-                <p>Hi,we are running a new promotion in your area.If you want to get a free delivery, then use code 
+                <p className="m-p">Hi,we are running a new promotion in your area.If you want to get a free delivery, then use code 
                  <span style={{color:"#213141",fontWeight:"bold"}} > "FREE"</span> at the checkout.</p>
-                 <Button className="mt-3" style={{fontWeight:"bold",background:"#FBFCFE",color:"#213141",border:"none"}}>Promotion</Button>
-                 <Button className="ml-2 mt-3" style={{fontWeight:"bold",background:"#FBFCFE",color:"#fcc6da",border:"none"}}>Expires soon</Button>
+                 <Button className="mt-3 m-p" style={{fontWeight:"bold",background:"#FBFCFE",color:"#213141",border:"none"}}>Promotion</Button>
+                 <Button className="ml-2 mt-3 m-p" style={{fontWeight:"bold",background:"#FBFCFE",color:"#fcc6da",border:"none"}}>Expires soon</Button>
                    <hr style={{width:"110%",marginTop:"5%"}}></hr>
                 </div>
               </div>
@@ -1179,10 +1178,10 @@ borderRadius:"16px",}} id="no" className="tost">
                 <div class="chat_ib">
                 <h6> Anna Support 
                 <span class="chat_date">Yesterday</span></h6>
-                <h5 className="mt-2" style={{fontWeight:
+                <h5 className="mt-2 m-h1" style={{fontWeight:
                     "bold",color:"#213141"}}>
                 RE: Late Delivery Refund Request</h5>
-                <p>Hi, I can conform that the delivery was late and you are entitlied for
+                <p className="m-p">Hi, I can conform that the delivery was late and you are entitlied for
                     a refund of 
                  <span style={{color:"#213141",fontWeight:"bold"}} > $3.99</span> Thank You.</p>
                    <hr style={{width:"110%",marginTop:"5%"}}></hr>
@@ -1196,11 +1195,11 @@ borderRadius:"16px",}} id="no" className="tost">
                 <div class="chat_img">
              <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"/> </div>
                 <div class="chat_ib">
-                <h6>Mark Spencer,Driver 
+                <h6 >Mark Spencer,Driver 
                 <span class="chat_date">3 days ago</span></h6>
-                <h5 className="mt-2" style={{fontWeight:
+                <h5 className="mt-2 m-h" style={{fontWeight:
                     "bold",color:"#213141"}}>Order is on the Way </h5>
-                <p>Hello!👋I would like to let you know that I am om my way and your
+                <p className="m-p"> Hello!👋I would like to let you know that I am om my way and your
                 food is comming soon!</p>
                    <hr style={{width:"110%",marginTop:"5%"}}></hr>
                 </div>
@@ -1212,10 +1211,10 @@ borderRadius:"16px",}} id="no" className="tost">
                 <div class="chat_ib">
                 <h6>Samantha, Marketing Manager
                 <span class="chat_date">8 Sep 2020</span></h6>
-                <h5 className="mt-2" style={{fontWeight:
+                <h5 className="mt-2 m-h1" style={{fontWeight:
                     "bold",color:"#213141"}}>
                         Monthly Newsetter: September</h5>
-                <p>Hi, here is everything that you need to know about deals,
+                <p className="m-p">Hi, here is everything that you need to know about deals,
             promotions, and other things in < span style={{color:"#213141",fontWeight:"bold"}} > September.
             </span>You can unsubscribe at any time</p>
             <Button className="mt-3" style={{fontWeight:"bold",background:"#FBFCFE",color:"#213141",border:"none"}}>Promotion</Button>
@@ -1231,9 +1230,9 @@ borderRadius:"16px",}} id="no" className="tost">
                 <div class="chat_ib">
                     <h6>James, Support 
                 <span class="chat_date">30 Aug 2020</span></h6>
-                <h5 className="mt-2" style={{fontWeight:
+                <h5 className="mt-2 m-h" style={{fontWeight:
                     "bold",color:"#213141"}}>Special Offer Just for You!</h5>
-                <p>This promotion is only available for delivery in San Francisco area.
+                <p  className=" m-p">This promotion is only available for delivery in San Francisco area.
                     We are really sorry for any inconvenience.
                  <span style={{color:"#213141",fontWeight:"bold"}} > "FREE"</span> at the checkout.</p>
                    <hr style={{width:"110%",marginTop:"5%"}}></hr>
@@ -1242,7 +1241,8 @@ borderRadius:"16px",}} id="no" className="tost">
             </div>
           </div>
         </div>
-        <div class="mesgs " style={{position:"relative",borderRadius:"14px"}}>
+        <div class="mesgs " 
+        style={{position:"relative",borderRadius:"14px"}}>
         <div class="chat_img"> 
                 <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"/> </div>
                 <div class="chat_ib">
@@ -1251,23 +1251,24 @@ borderRadius:"16px",}} id="no" className="tost">
                     <h6>john@nobble.com
                 <span class="chat_date"><i class="fas fa-chevron-right"></i></span></h6>
 
-                    <div style={{}}>
-                <hr style={{width:"35%",position:"absolute",left:"7%",top:"16%"}}></hr></div> 
-                <h6 style={{fontWeight:"bold",
-                marginLeft:"35%",marginTop:"7%"}}>18 Sep 2020 </h6>
-                <div>
-                <hr style={{width:"35%",
-                position:"absolute",right:"5%",top:"16%"}}></hr></div>
+              
+                <div style={{display:"flex",justifyContent:"center",marginTop:"70px"}}>
+              <div style={{width:"192px",height:"1px",background: "rgba(163, 163, 164, 0.32)"}}></div>
+                <div style={{fontWeight:"bold",whiteSpace:"nowrap"}}><h6 style={{marginTop:"-9px"}} >18 Sep 2020</ h6></div>
+                <div style={{width:"192px",height:"1px",background: "rgba(163, 163, 164, 0.32)"}}></div>
+
+                </div>
+              
                 </div>
                   
           <div class="msg_history">
             <div class="incoming_msg" >
               <div class="received_msg"style={{marginTop:"10%"}}>
-                <div class="received_withd_msg" >
+              
                   <p>Hi, I didn't get my order on time today. Could you please refund me for a delivery?
                       Thanks</p>
                   <span class="time_date"> 2:07 PM</span></div>
-              </div>
+            
             </div>
             <div class="outgoing_msg">
               <div class="sent_msg">
@@ -1276,11 +1277,11 @@ borderRadius:"16px",}} id="no" className="tost">
             </div>
             <div class="incoming_msg">
               <div class="received_msg">
-                <div class="received_withd_msg">
+             
                   <p> Hi thanks! I will check it out as soon as I can.</p>
                   <span class="time_date"> 12:33 AM</span></div>
               </div>
-            </div>
+        
             <div class="outgoing_msg">
               <div class="sent_msg">
                 <p>Hi, we are running a promotion in your area.If you want to get
@@ -1290,7 +1291,7 @@ borderRadius:"16px",}} id="no" className="tost">
           </div>
           <div class="type_msg">
             <div class="input_msg_write">
-              <input type="text" class="write_msg" placeholder="Type a message" />
+              <input type="text" class="write_msg" placeholder="Hi how |" />
               <button class="msg_send_btn" type="button"><i class="far fa-envelope"></i></button>
             </div>
           </div>

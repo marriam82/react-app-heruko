@@ -1172,7 +1172,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 </Nav>
     </Col>
     <Col sm={9}  >
-    <Container fluid style={{marginLeft:"-99px"}}>
+    <Container  className="ramez" fluid style={{marginLeft:"-99px"}}>
     <Navbar className="mt-2 " style={{width:"115%",marginLeft:"-2%"}}>
    <Nav className="mr-4">
    <Nav.Link onClick={handleShow} style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no" className="no" ><img src={delivery}style={{height:"3vh"}} />&nbsp; &nbsp; Sen Francisain California &nbsp;<i class="fas fa-angle-down"></i> </Nav.Link>
@@ -1180,71 +1180,76 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       <button className="mt-2 ml-4 p-0" style={{background:"#E3424B",border:"none",
       color:"white",fontSize:"13px",height:"3.1vh",borderRadius:"7px"}} id="no"> &nbsp; EN  &nbsp; <i class="fas fa-angle-down"></i> &nbsp;</button>
     </Nav>
-    <div className="input-container">
+    <div className="input-container inpu">
     <i class="fas fa-search icon"></i>
-    <input type="text" className="input-field inpu" placeholder="Search for anything... "   
+    <input type="text" className="input-field input-u" placeholder="Search for anything... "   
     style={{fontSize:"14px",background:"#F6F6F6",border:"none",outline:"none",padding:"13px",
   boxSizing:"border-box"}}/>
     </div>
-<div id="fle" >
+<div className="fle flee" >
   <Button onClick={handleShow1}  className="ml-3"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
   <Button onClick={handleShow2}  className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge variant="light" className="badge2"  style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 
-    <div
+    <div  className="ramezslide"
       style={{backgroundSize:"100% 100%",
       height:"38vh",width:"113%",
       backgroundImage:`url(${image})`,
       marginTop:"3.5%",display:"flex",justifyContent:"center",alignItems:"center"}}
     >
-    <img src={img6} style={{width:"80px",
+    <img src={img6} className="ramezcircle" style={{width:"80px",
       height:"80px",borderRadius:"100%"}}/>
       </div>
-      <h4 style={{color:"#223142",fontWeight:"bold", 
+      <h4 className=" suggestedh1" style={{color:"#223142",fontWeight:"bold", 
  marginTop:"25px",marginLeft:"25px",fontSize:"29px"}}>Weekend Offers</h4>
-<div style={{width:"107%",marginLeft:"25px",marginTop:"25px",height:"200vh",backgroundImage:`url(${weekend})`,backgroundSize:"100% 100%"}}>
+<div className="weekendoffers"
+ style={{width:"107%",marginLeft:"25px",marginTop:"25px",height:"200vh",backgroundImage:`url(${weekend})`,backgroundSize:"100% 100%"}}>
 
-    <div style={{width:"26%",display:"flex",justifyContent:"space-between",marginLeft:"8%",paddingTop:"7%"}}>
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73", border:"none"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
+    <div className="weekendoffer1" style={{width:"26%",display:"flex",justifyContent:"space-between",
+    marginLeft:"8%",paddingTop:"7%"}}>
+    <Button className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73", border:"none"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div style={{width:"70%",display:"flex",justifyContent:"space-between",marginLeft:"8%",paddingTop:"23.5%"}}>
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
-    <i class="fas fa-shopping-cart"></i> </Button>         
-    <Button style={{width:"40px",height:"40px",color:"transparent",background:"transparent",border:"none"}}>
-    <i class="fas fa-shopping-cart"></i></Button>  
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
-    <i class="fas fa-shopping-cart"></i> </Button>         
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73", border:"none"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
+    <div className="weekendoffer2" style={{width:"70%",display:"flex",
+    justifyContent:"space-between",marginLeft:"8%",paddingTop:"23.5%"}}>
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    <i class="fas fa-shopping-cart carti"></i> </Button>         
+    <Button  className="weekendcart" style={{width:"40px",height:"40px",color:"transparent",background:"transparent",border:"none"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>  
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    <i class="fas fa-shopping-cart carti" ></i> </Button>         
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73", border:"none"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div style={{width:"70%",display:"flex",justifyContent:"space-between",marginLeft:"8%",paddingTop:"22.7%"}}>
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73", border:"none"}}>
-    <i class="fas fa-shopping-cart"></i></Button>  
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73",border:"none"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
+    <div className="weekendoffer3" style={{width:"70%",display:"flex",
+    justifyContent:"space-between",marginLeft:"8%",paddingTop:"22.7%"}}>
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73", border:"none"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>  
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73",border:"none"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div style={{width:"70%",display:"flex",justifyContent:"space-between",marginLeft:"8%",paddingTop:"23%"}}>
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black", background:"#FFDD73", border:"none"}}>
-    <i class="fas fa-shopping-cart"></i></Button>  
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
-    <i class="fas fa-shopping-cart"></i></Button>         
-    <Button onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73",border:"none"}}>
-    <i class="fas fa-shopping-cart"></i></Button>     
+    <div className="weekendoffer4"style={{width:"70%",display:"flex",
+    justifyContent:"space-between",marginLeft:"8%",paddingTop:"23%"}}>
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black", background:"#FFDD73", border:"none"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>  
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    <i class="fas fa-shopping-cart carti"></i></Button>         
+    <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73",border:"none"}}>
+    <i class="fas fa-shopping-cart  carti"></i></Button>     
     <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}

@@ -1244,7 +1244,7 @@ fontSize:"12px"}}>2</Badge>
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
   borderRadius:"9px",width:"15%"}}><img src={botique} 
-  style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
+  style={{height:"3vh"}}/><b  className="allt1"style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Boutique</b></Button>
 
 <Button id="alll" style={{background:"#F6F6F6",
@@ -1252,7 +1252,7 @@ fontSize:"12px"}}>2</Badge>
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
   borderRadius:"9px",width:"15%"}}><img src={elec} 
-  style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
+  style={{height:"3vh"}}/><b className="allt1" style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Electronics</b></Button>
   
   <Button id="alll" style={{background:"#F6F6F6",
@@ -1260,22 +1260,22 @@ fontSize:"12px"}}>2</Badge>
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
   borderRadius:"9px",width:"15.2%"}}><img src={ restaurants } 
-  style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
+  style={{height:"3vh"}}/><b className="allt1" style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Restaurants</b></Button>
   <Link to='/supermarket' style={{textDecoration:"none"}}>
-  <Button id="alll" style={{background:"#F6F6F6",
+  <Button id="alllS" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
   borderRadius:"9px",width:"17%"}}><img src={sup} 
-  style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
+  style={{height:"3vh"}}/><b  className="allt1" style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Supermarket</b></Button> </Link>
-    <Button id="alll" style={{background:"#F6F6F6",
+    <Button id="alllD" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
   borderRadius:"9px",width:"17%"}}><img src={taxi} 
-  style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
+  style={{height:"3vh"}}/><b className="allt1" style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Delivery Taxi</b></Button>
 </div>
 <CardGroup id="cards" style={{border:"none",marginTop:"35px",

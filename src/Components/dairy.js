@@ -1244,10 +1244,10 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
        </Modal.Header>
        <Modal.Body style={{border:"none"}}>
        <div className="input2-container " style={{marginTop:"-30px",marginLeft:"10px"}} >
-    <i class="fas fa-search icon"></i>
-    <input type="text" className="input-field input-u" 
-    placeholder="Search for state "   
-    style={{fontSize:"14px",background:"#F6F6F6",border:"none",
+       <i class="fas fa-search icon"></i>
+       <input type="text" className="input-field input-u" 
+      placeholder="Search for state "   
+       style={{fontSize:"14px",background:"#F6F6F6",border:"none",
     outline:"none",padding:"13px",
   boxSizing:"border-box"}}/>
     </div>
@@ -1507,12 +1507,13 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
 </Navbar> 
 
-<div className="ramezslide"
+<div  className="ramezslide"
       style={{backgroundSize:"100% 100%",
       height:"41vh",width:"113%",
       backgroundImage:`url(${image})`,
-      marginTop:"3%",display:"flex",justifyContent:"center",alignItems:"center"}}
-    >
+      marginTop:"3%",display:"flex",justifyContent:"center",
+      alignItems:"center"}}
+      >
     <img src={img6} className="ramezcircle"  style={{width:"80px",
       height:"80px",borderRadius:"100%"}}/>
       </div>

@@ -14,6 +14,7 @@ import Orders from "./Components/orders";
 import Messages from "./Components/messages";
 import Settings from "./Components/settings";
 import './App.css';
+import SideDrawer from './Components/SideDrawer/SideDrawer'
 import{BrowserRouter as Router,Route,Switch} from "react-router-dom"
 
 
@@ -41,7 +42,11 @@ export default class App extends Component {
      <Route path="/weekendDayOffer" exact component={Weekend}/>
      <Route path="/nationalDayOffer" exact component={National}/>   
     </Switch>
+    {/* <SideDrawer /> */}
+
             </Router>  
+
+
       </div>
     )
   }
