@@ -125,7 +125,7 @@ export default function Sidebar() {
 
         <>
 {/* -----------------Cart modal 1---------------------- */}
-<Modal className="cart" style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}} show={show2} 
+<Modal className="cart  art" style={{border:"none",marginLeft:"63.9%",width:"510px",marginTop:"-2.5%",height:"110vh"}} show={show2} 
 onHide={handleClose2}>
         <Modal.Header style={{border:"none"}} closeButton>
           <Modal.Title style={{border:"none",fontWeight:"bold",paddingLeft:"22px"}}>My cart 
@@ -1338,7 +1338,7 @@ fontSize:"12px"}}>2</Badge>
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
   borderRadius:"9px",width:"17%"}}><img src={taxi} 
-  style={{height:"3vh"}}/><b style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
+  style={{height:"3vh"}}/><b className="allt1"style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Delivery Taxi</b></Button>
 </div>
 <Card id="scard" 
