@@ -21,7 +21,9 @@ import{BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import React, { Component } from 'react'
 
 export default class App extends Component {
+
   render() {
+ 
     return (
       <div>
            <Router>
@@ -42,7 +44,7 @@ export default class App extends Component {
      <Route path="/weekendDayOffer" exact component={Weekend}/>
      <Route path="/nationalDayOffer" exact component={National}/>   
     </Switch>
-    {/* <SideDrawer /> */}
+
 
             </Router>  
 

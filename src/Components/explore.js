@@ -1421,9 +1421,15 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
                 <Container fluid>
   <Row >
     <Col lg={3} >
+      <Navbar  
+      style={{display:"flex",flexDirection:"column",alignItems:"end",
+      marginLeft:"-3%"}} expand="lg">
   <Link to="/">
-  <Navbar.Brand  className="ml-2 pt-2" ><img src={logo} style={{height:"10vh"}} /></Navbar.Brand>
+  <Navbar.Brand  className="pt-2" ><img src={logo} 
+  style={{height:"10vh"}} /></Navbar.Brand>
   </Link>
+  <Navbar.Toggle aria-controls="basic-navbar-nav"  className="topbar1"/>
+  <Navbar.Collapse id="basic-navbar-nav "className="topbar2" >
   <Nav className="flex-column"  style={{width:"100%",padding:"0",margin:"0"}} >
 <Link to="/offers"style={{outline:"none",listStyle:"none",textDecoration:"none"}}>
 <Nav.Link href="/offers" className="mt-3"
@@ -1453,6 +1459,8 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={hair}/> &nbsp; &nbsp;&nbsp;Hair Care</Nav.Link>
 
 </Nav>
+</Navbar.Collapse>
+</Navbar>
     </Col>
     <Col lg={9}>
     <Container className="ramez" fluid style={{marginLeft:"-99px"}} >

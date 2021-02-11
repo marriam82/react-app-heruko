@@ -1418,16 +1418,21 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
             <Container fluid>
 <Row >
 <Col sm={3} >
+<Navbar  
+      style={{display:"flex",flexDirection:"column",alignItems:"end",
+      marginLeft:"-3%"}} expand="lg">
 <Link to="/">
-<Navbar.Brand  className="ml-2 pt-2" ><img src={logo} style={{height:"10vh"}} /></Navbar.Brand>
+<Navbar.Brand  className="pt-2" ><img src={logo} style={{height:"10vh"}} /></Navbar.Brand>
 </Link>
+<Navbar.Toggle aria-controls="basic-navbar-nav"  className="topbar1"/>
+  <Navbar.Collapse id="basic-navbar-nav "className="topbar2" >
 <Nav className="flex-column"  style={{width:"100%",padding:"0",margin:"0"}}>
-<Nav.Link className="mt-2">
+<Nav.Link className="mt-2 offerwidth">
       <Accordion defaultActiveKey="0" style={{marginLeft:"-10px"}}>
       <Accordion.Toggle className="p-3" variant="link" eventKey="0"
        style={{textAlign:"start",outline:"none",border:"none",
        fontWeight:"bold",color:"white",background:"#E3424B",
-       borderRadius:"9px",width:"85%"}}>
+       borderRadius:"9px",width:"99%"}}>
       <img style={{height:"3vh"}} src={offe}/>&nbsp; &nbsp; Offers
       </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">
@@ -1446,7 +1451,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </Card.Body>
     </Accordion.Collapse >
     <Nav.Link  style={{color:"#223142",textDecoration:"none"}}>
-      <Accordion.Toggle as={Button} variant="link" eventKey="1" style={{textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
+      <Accordion.Toggle as={Button} variant="link" eventKey="1" style={{textDecoration:"none",color:"#223142",marginLeft:"-10px",textAlign:"start",outline:"none",border:"none"}}>
       <img style={{height:"3vh"}} src={fruit}/>&nbsp; &nbsp;&nbsp;&nbsp;Fruits & Vegetables
       </Accordion.Toggle>
       </Nav.Link>
@@ -1473,12 +1478,12 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={decoration}/>&nbsp; &nbsp;&nbsp;&nbsp;Home Decor Furniture</Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={hair}/> &nbsp; &nbsp;&nbsp;Hair Care</Nav.Link>
 
-
-
-
 </Nav>
+</Navbar.Collapse>
+</Navbar>
 </Col>
 <Col sm={9}  >
+
 <Container className="ramez"  fluid style={{marginLeft:"-95px"}}>
 <Navbar  className="mt-2 " style={{width:"115%",marginLeft:"-2%"}}>
    <Nav className="mr-4">

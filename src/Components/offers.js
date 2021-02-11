@@ -1419,15 +1419,22 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
                 <Container fluid>
   <Row >
     <Col sm={3} >
+    <Navbar  
+      style={{display:"flex",flexDirection:"column",alignItems:"end",
+      marginLeft:"-3%"}} expand="lg">
   <Link to="/">
-  <Navbar.Brand  className="ml-2 pt-2" ><img src={logo} style={{height:"10vh"}} /></Navbar.Brand>
+  <Navbar.Brand  className=" pt-2" ><img src={logo} style={{height:"10vh"}} /></Navbar.Brand>
   </Link>
+  <Navbar.Toggle aria-controls="basic-navbar-nav"  className="topbar1"/>
+  <Navbar.Collapse id="basic-navbar-nav "className="topbar2" >
   <Nav className="flex-column"  style={{width:"100%"}} >
  <Link to="/offersDark" style={{textDecoration:"none"}} >
- <Nav.Link href="/offersDark" className="mt-3 p-3"  
- style={{color:"#223142",background:"#F5F5F5",borderRadius:"9px",width:"80%"}}>
-  <img style={{height:"3vh"}} src={offe}/>&nbsp; &nbsp; Offers</Nav.Link></Link>
- <Nav.Link  style={{color:"#223142",marginTop:"-5%"}}><img style={{height:"3vh"}} src={fruit}/><b className="ml-3" style={{fontWeight:"normal"}}> Fruits & Vegetables</b></Nav.Link>
+ <Nav.Link href="/offersDark" className="mt-3 p-3 offerwidth"  
+ style={{color:"#223142",background:"#F5F5F5",borderRadius:"9px",marginLeft:"-3%",
+ width:"96%"}}>
+  <img style={{height:"3vh"}} 
+  src={offe}/>&nbsp; &nbsp; Offers</Nav.Link></Link>
+ <Nav.Link  style={{color:"#223142"}}><img style={{height:"3vh"}} src={fruit}/><b className="ml-3" style={{fontWeight:"normal"}}> Fruits & Vegetables</b></Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={diary}/><b className="ml-3" style={{fontWeight:"normal"}}> Dairy & Eggs</b></Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={drink}/><b className="ml-3" style={{fontWeight:"normal"}}>&nbsp;Drinks</b></Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={meat}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp;&nbsp;Meat, Fish & Chicken</b></Nav.Link>
@@ -1449,6 +1456,8 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={hair}/> &nbsp; &nbsp;&nbsp;Hair Care</Nav.Link>
 
 </Nav>
+</Navbar.Collapse>
+</Navbar>
     </Col>
     <Col sm={9}  >
     <Container className="ramez" fluid style={{marginLeft:"-99px"}}>
