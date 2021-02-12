@@ -39,106 +39,114 @@ function MyVerticallyCenteredModal(props) {
     setNum(num - 1);
   };
   return (
-    <Modal className="hidescroll"
-    {...props}
-    size="xl" 
-    aria-labelledby="contained-modal-title-vcenter"
-    centered
-    style ={{height:"90vh",width:"70%",marginLeft:"15%",overflow:"auto"}}
-  >
-    <Modal.Header closeButton>
-      <Modal.Title id="contained-modal-title-vcenter">
-        <div style={{display:"flex"}}>
+    <Modal className="hidescroll productpopup "
+      {...props}
+      size="xl" 
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
 
-          <div>
-        <div style={{width:"297px",height:"300px",borderTopRightRadius:"15px",
-        borderTopLeftRadius:"15px"
-        ,border:"1px solid silver",marginLeft:"5%",marginTop:"3%"}}>
-          <img src={img} style={{width:"100%",height:"100%",borderTopRightRadius:"15px",borderTopLeftRadius:"15px"}}/>
-        </div>
+      style ={{height:"90vh",width:"70%",marginLeft:"15%",overflow:"auto"}}
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          <div className="topbody" style={{display:"flex"}}>
+            <div>
+          <div style={{
+          width:"297px",
+          height:"300px",
+          borderTopRightRadius:"15px",
+          borderTopLeftRadius:"15px"
+          ,border:"1px solid silver",marginLeft:"5%",marginTop:"3%"}}>
+            <img src={img} style={{width:"100%",height:"100%",
+            borderTopRightRadius:"15px",borderTopLeftRadius:"15px"}}/>
+          </div>
 
-        <div style={{marginLeft:"5%",display:"flex"}}>
-        <div style={{width:"78px",height:"67px",border:"1px solid silver",borderBottomLeftRadius:"10px"}}>
-          <img src={img}  style={{width:"100%",height:"100%",borderBottomLeftRadius:"10px"}}/>
-        </div>
-        <div style={{width:"78px",height:"67px",border:"1px solid silver",}}>
-          <img src={img}  style={{width:"100%",height:"100%",}}/>
-        </div>
-        <div style={{width:"78px",height:"67px",border:"1px solid silver",}}>
-          <img src={img}  style={{width:"100%",height:"100%",}}/>
-        </div>
-        <div style={{width:"78px",height:"67px",border:"1px solid silver",borderBottomRightRadius:"10px"}}>
-          <img src={img}  style={{width:"100%",height:"100%",borderBottomRightRadius:"10px"}}/>
-        </div>
-        </div>
-        </div>
+          <div style={{marginLeft:"5%",display:"flex"}}>
+          <div style={{width:"78px",height:"67px",border:"1px solid silver",borderBottomLeftRadius:"10px"}}>
+            <img src={img}  style={{width:"100%",height:"100%",borderBottomLeftRadius:"10px"}}/>
+          </div>
+          <div style={{width:"78px",height:"67px",border:"1px solid silver",}}>
+            <img src={img}  style={{width:"100%",height:"100%",}}/>
+          </div>
+          <div style={{width:"78px",height:"67px",border:"1px solid silver",}}>
+            <img src={img}  style={{width:"100%",height:"100%",}}/>
+          </div>
+          <div style={{width:"78px",height:"67px",border:"1px solid silver",borderBottomRightRadius:"10px"}}>
+            <img src={img}  style={{width:"100%",height:"100%",borderBottomRightRadius:"10px"}}/>
+          </div>
+          </div>
+          </div>
 <div style={{marginLeft:"4%"}}>
-<h5 className="mt-1" style={{width:"85%",fontSize:"23px"}}>KRAFT CREAM CHEESE SPREAD ORIGINAL 230 GR</h5>
-<h6 className="mt-4 pt-3" style={{fontSize:"16px",fontWeight:"bold"}}>Categeory: <span style={{fontWeight:"lighter"}} > Supermarket</span></h6>
-<h6 style={{fontSize:"16px",fontWeight:"bold"}}>Description: <span style={{fontWeight:"lighter"}}>Kraft Cream Cheese Spread <br></br>Original 3 X 230 gr</span></h6>
-<del className="text-muted" style={{fontSize:"20px",fontWeight:"normal",marginTop:"-4%"}}>2.090</del>
-<div style={{display:"flex",justifyContent:"space-between",width:"107%"}}>
-<h3 style={{color:"#E3424B",fontWeight:"bold",fontSize:"27px"}}>1.050<span style={{fontSize:"14px",color:"silver"}}>BHD</span></h3>
-<div style={{width:"10%",marginLeft:"18%",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",
-clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-<p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
+  <h5 className="mt-1" style={{width:"85%",fontSize:"23px"}}>KRAFT CREAM CHEESE SPREAD ORIGINAL 230 GR</h5>
+  <h6 className="mt-4 pt-3" style={{fontSize:"16px",fontWeight:"bold"}}>Categeory: <span style={{fontWeight:"lighter"}} > Supermarket</span></h6>
+  <h6 style={{fontSize:"16px",fontWeight:"bold"}}>Description: <span style={{fontWeight:"lighter"}}>Kraft Cream Cheese Spread <br></br>Original 3 X 230 gr</span></h6>
+  <del className="text-muted" style={{fontSize:"20px",fontWeight:"normal",marginTop:"-4%"}}>2.090</del>
+  <div style={{display:"flex",justifyContent:"space-between",width:"107%"}}>
+  <h3 style={{color:"#E3424B",fontWeight:"bold",fontSize:"27px"}}>1.050<span style={{fontSize:"14px",color:"silver"}}>BHD</span></h3>
+  <div className="proucttag" 
+  style={{width:"10%",marginLeft:"18%",background:"#E3424B",
+  fontSize:"12px",textAlign:"center",height:"4vh",color:"white",
+  clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+  <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+  </div>
 
-<p style={{fontSize:"13px",color:"silver"}}>physical product for the most accurate information and warnings. For additional
-   information contact the retailer. Actual weight may based on 
-   seasonality and other factors.Estimated price is approimate and provided only for refrence</p>
-    <div style={{display:"flex",marginLeft:"30%",marginTop:"2%"}}>
-     <Button style={{background:"#F6F6F6",
-     color:"black",
-     fontWeight:"bold",width:"40px",
-     height:"40px",fontSize:"20px",
-     textAlign:"center", display:"flex",alignItems:"center",
-     border:"none",borderTopLeftRadius:"12px",marginLeft:"-3%",
-     borderBottomLeftRadius:"12px"}} onClick={minus}>-</Button>
-   <Button style={{border:"none",color:"black",background:"white",marginLeft:"2%"}}>{num}</Button>
-     <Button  style={{background:"#F6F6F6",color:"black",display:"flex",alignItems:"center",
-     fontWeight:"bold",width:"40px",height:"40px",fontSize:"20px",
-     textAlign:"center", 
-     border:"none",borderTopRightRadius:"12px",marginLeft:"2%",
-     borderBottomRightRadius:"12px"}} onClick={plus}>+</Button>
-      </div>
-   <Button style={{marginLeft:"60%",
-   position:"relative",marginTop:"-17%",
-   border:"none",background:"#FFDD73", color:"black"}}>
-     <i class="fas fa-shopping-cart"></i> &nbsp;
-      Add to Cart</Button>
-   <Button style={{border:"none",color:"#BDBDBD",
-   position:"absolute",marginTop:"-4.5%", marginLeft:"2%",
-   background:"#F6F6F6"}}>
-     <i class="fas fa-heart"></i></Button>
-</div>
-
-
+  <p style={{fontSize:"13px",color:"silver"}}>physical product for the most accurate information and warnings. For additional
+     information contact the retailer. Actual weight may based on 
+     seasonality and other factors.Estimated price is approimate and provided only for refrence</p>
+      <div className="button-add" style={{display:"flex",marginLeft:"30%",marginTop:"2%"}}>
+       <Button style={{background:"#F6F6F6",
+       color:"black",
+       fontWeight:"bold",width:"40px",
+       height:"40px",fontSize:"20px",
+       textAlign:"center", display:"flex",alignItems:"center",
+       border:"none",borderTopLeftRadius:"12px",marginLeft:"-3%",
+       borderBottomLeftRadius:"12px"}} onClick={minus}>-</Button>
+     <Button style={{border:"none",color:"black",background:"white",
+     marginLeft:"2%"}}>{num}</Button>
+       <Button  style={{background:"#F6F6F6",color:"black",display:"flex",
+       alignItems:"center",
+       fontWeight:"bold",width:"40px",height:"40px",fontSize:"20px",
+       textAlign:"center", 
+       border:"none",borderTopRightRadius:"12px",marginLeft:"2%",
+       borderBottomRightRadius:"12px"}} onClick={plus}>+</Button>
         </div>
-      </Modal.Title>
-    </Modal.Header > 
-    <Modal.Body style={{border:"none"}}>
-      <div  style={{background:"#F6F6F6",marginTop:"-2%"}}>
-    <h4 className="pl-4 pt-2 ml-2">Alternative Products</h4>
+     <Button className="button-cart" style={{marginLeft:"60%",
+     position:"relative",marginTop:"-17%",
+     border:"none",background:"#FFDD73", color:"black"}}>
+       <i class="fas fa-shopping-cart"></i> &nbsp;
+        Add to Cart</Button>
+     <Button className="button-heart" style={{border:"none",color:"#BDBDBD",
+     position:"absolute",marginTop:"-4.5%", marginLeft:"2%",
+     background:"#F6F6F6"}}>
+       <i class="fas fa-heart"></i></Button>
+</div>
 
-    <Carousel  style={{background:"#F6F6F6"}}>
-<Carousel.Item style={{background:"#F6F6F6"}}>
-<CardDeck className="ml-3 mt-3 pt-3" >
 
-<Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}>
+          </div>
+        </Modal.Title>
+      </Modal.Header > 
+      <Modal.Body style={{border:"none"}}>
+        <div  style={{background:"#F6F6F6",marginTop:"-2%"}}>
+      <h4 className="pl-4 pt-2 ml-2">Alternative Products</h4>
+
+      <Carousel  style={{background:"#F6F6F6"}}>
+  <Carousel.Item style={{background:"#F6F6F6"}}>
+  <CardDeck className="ml-3 mt-3 pt-3 alternative" >
+
+<Card  style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
@@ -146,14 +154,14 @@ Milk & Hazelnut</p>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
@@ -161,14 +169,14 @@ Milk & Hazelnut</p>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}>
@@ -176,33 +184,33 @@ Milk & Hazelnut</p>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 </CardDeck>
-</Carousel.Item>
-<Carousel.Item style={{background:"#F6F6F6"}}>
-<CardDeck className="ml-3 mt-3 pt-3" style={{background:"#F6F6F6"}} >
+  </Carousel.Item>
+  <Carousel.Item style={{background:"#F6F6F6"}}>
+  <CardDeck className="ml-3 mt-3 pt-3  alternative" style={{background:"#F6F6F6"}} >
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
@@ -210,14 +218,14 @@ Milk & Hazelnut</p>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
@@ -225,14 +233,14 @@ Milk & Hazelnut</p>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
@@ -240,32 +248,32 @@ Milk & Hazelnut</p>
 <p className="pl-2 text-muted"><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <h4 className="pl-2" style={{color:"#E3424B",marginTop:"-20px"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
-<div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-   <p className="pt-1 pl-2" style={{}}>25%</p>
-</div>
-</div>
-<p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
-Milk & Hazelnut</p>
+ <div style={{width:"30%",marginTop:"-20px",background:"#E3424B",fontSize:"12px",textAlign:"center",height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
+     <p className="pt-1 pl-2" style={{}}>25%</p>
+ </div>
+ </div>
+ <p className="pt-2" style={{color:"#223142",fontSize:"11px",fontWeight:"bold",textAlign:"center"}}>Digestive Choco 200g With<br></br>
+ Milk & Hazelnut</p>
 <Card.Footer style={{border:"0",borderBottomLeftRadius:"10px",background:"#FBDB73",borderBottomRightRadius:"10px"}}>
-<small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
+  <small style={{background:"#FBDB73",fontSize:"15px",color:"black"}}><i class="fas fa-shopping-cart"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
 </CardDeck>
-</Carousel.Item>
+  </Carousel.Item>
 
 </Carousel>
 </div>
 
 {/* =========================New ArivaL----------------------- */}
 
-    </Modal.Body>
-      <h4 className="pl-4">Similar Products</h4>
-    <Modal.Footer style={{border:"none"}}>
-  
+      </Modal.Body>
+        <h4 className="pl-4">Similar Products</h4>
+      <Modal.Footer style={{border:"none"}}>
+    
 
 <Carousel  style={{background:"#F6F6F6"}}>
 <Carousel.Item style={{background:"#F6F6F6"}}>
-<CardDeck className="ml-3 mt-4 pt-4" >
+<CardDeck className="ml-3 mt-4 pt-4  alternative" >
 
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -330,7 +338,7 @@ Milk & Hazelnut</p>
 </CardDeck>
 </Carousel.Item>
 <Carousel.Item style={{background:"#F6F6F6"}}>
-<CardDeck className="ml-3 mt-4 pt-4" style={{background:"#F6F6F6"}} >
+<CardDeck className="ml-3 mt-4 pt-4  alternative" style={{background:"#F6F6F6"}} >
 <Card style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}>
 <Card.Img variant="top" src={img} style={{height:"23vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted"><del>1.200</del></p>
@@ -395,8 +403,8 @@ Milk & Hazelnut</p>
 </Carousel.Item>
 
 </Carousel>
-    </Modal.Footer>
-  </Modal>
+      </Modal.Footer>
+    </Modal>
   );
 }
 
