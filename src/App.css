@@ -290,6 +290,12 @@ justify-content: space-evenly;
 @keyframes slide-open{
   100% {left:100% !important}
 }
+@media screen and (min-width: 1400px) {
+  .screensize{
+    width:1400px !important;
+
+  }
+}
 @media screen and (max-width:360px){
   .productpopup{
      width:104% !important;
