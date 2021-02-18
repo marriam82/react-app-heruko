@@ -1142,7 +1142,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
 
 
-                <Container fluid>
+                <Container className="screensize"fluid>
   <Row >
     <Col sm={3} >
   <Link to="/">
@@ -1194,10 +1194,10 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   boxSizing:"border-box"}}/>
     </div>
 <div className="fle flee" >
-  <Button onClick={handleShow1}  className="ml-3"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
-  <Button onClick={handleShow2}  className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
+  <Button onClick={handleShow1}  className="ml-3 userbutton"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
+  <Button onClick={handleShow2}  className="ml-2 userbutton"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge variant="light" className="badge2"  style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge variant="light" className="badge2"  style={{borderRadius:"12px",position:"absolute",right:"1.5%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 
@@ -1216,14 +1216,15 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
  style={{width:"107%",marginLeft:"25px",marginTop:"25px",height:"200vh",backgroundImage:`url(${weekend})`,backgroundSize:"100% 100%"}}>
 
     <div className="weekendoffer1" style={{width:"26%",display:"flex",justifyContent:"space-between",
-    marginLeft:"8%",paddingTop:"7%"}}>
-    <Button className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
+    marginLeft:"8%",paddingTop:"7.5%"}}>
+    <Button className="weekendcart" onClick={() => setModalShow(true)} 
+     style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
     <i class="fas fa-shopping-cart carti"></i></Button>         
     <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",background:"#FFDD73", border:"none"}}>
     <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div className="weekendoffer2" style={{width:"70%",display:"flex",
+    <div className="weekendoffer2 weekendshoppingcart2" style={{width:"70%",display:"flex",
     justifyContent:"space-between",marginLeft:"8%",paddingTop:"23.5%"}}>
     <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
     <i class="fas fa-shopping-cart carti"></i> </Button>         
@@ -1235,7 +1236,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
     <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div className="weekendoffer3" style={{width:"70%",display:"flex",
+    <div className="weekendoffer3 weekendshoppingcart3" style={{width:"70%",display:"flex",
     justifyContent:"space-between",marginLeft:"8%",paddingTop:"22.7%"}}>
     <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
     <i class="fas fa-shopping-cart carti"></i></Button>         
@@ -1247,7 +1248,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
     <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div className="weekendoffer4"style={{width:"70%",display:"flex",
+    <div className="weekendoffer4 weekendshoppingcart2"style={{width:"70%",display:"flex",
     justifyContent:"space-between",marginLeft:"8%",paddingTop:"23%"}}>
     <Button  className="weekendcart" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
     <i class="fas fa-shopping-cart carti"></i></Button>         

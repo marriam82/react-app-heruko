@@ -1108,7 +1108,7 @@ borderRadius:"16px",}} id="no" className="tost">
   <h1 className="mt-4" style={{textAlign:"center",fontWeight:"bold",fontSize:"15px"}}>Free delivery on <br></br>
   all orders over <span style={{color:"orange"}}>$25</span></h1>
   <p style={{color:"grey",textAlign:"center"}}>it is a limited offer that<br></br>will expire soon</p>
-<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"27px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
+<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"35px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 
@@ -1146,12 +1146,12 @@ borderRadius:"16px",}} id="no" className="tost">
   boxSizing:"border-box"}}/>
     </div>
 <div id="fle" className="ml-2">
-  <Button onClick={handleShow1} className="ml-3"  
+  <Button onClick={handleShow1} className="ml-3 userbutton"  
   style={{background:"#E3424B",paddingRight:"14px",
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
 
-  <Button onClick={handleShow2} className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
+  <Button onClick={handleShow2} className="ml-2 userbutton"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
 <Badge variant="light" className="badge1" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 </Navbar> 

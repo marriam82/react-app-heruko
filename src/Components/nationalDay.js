@@ -1139,7 +1139,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
    {/* ----------------------- user 2-------------------------- */}
   
-                <Container fluid>
+                <Container className="screensize" fluid>
   <Row >
     <Col sm={3} >
   <Link to="/">
@@ -1191,10 +1191,10 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   boxSizing:"border-box"}}/>
     </div>
 <div className="fle flee" >
-  <Button onClick={handleShow1}className="ml-3"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
-  <Button onClick={handleShow2}className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
+  <Button onClick={handleShow1}className="ml-3 userbutton"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
+  <Button onClick={handleShow2}className="ml-2 userbutton"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge variant="light" className="badge2"  style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge variant="light" className="badge2"  style={{borderRadius:"12px",position:"absolute",right:"1.5%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 
@@ -1209,9 +1209,9 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </div>
       <h4 className=" suggestedh1" style={{color:"#223142",fontWeight:"bold", 
  marginTop:"25px",marginLeft:"25px",fontSize:"29px"}}>National Day Offers</h4>
-<div  className="weekendoffers" style={{width:"109%",marginLeft:"25px",
+<div  className="weekendoffers " style={{width:"109%",marginLeft:"25px",
 marginTop:"25px",height:"150vh",backgroundImage:`url(${national})`,backgroundSize:"100% 100%"}}>
-  <div className="nationalcart1" style={{width:"5%",marginLeft:"15.5%",paddingTop:"9.9%"}}>
+  <div className="nationalcart1 nationalshoppingcart1" style={{width:"5%",marginLeft:"15.5%",paddingTop:"9.9%"}}>
     <Button className="nationalofffer1" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
     <i class="fas fa-shopping-cart carti"></i></Button>         
     
@@ -1220,7 +1220,7 @@ marginTop:"25px",height:"150vh",backgroundImage:`url(${national})`,backgroundSiz
         onHide={() => setModalShow(false)}
       />       
     </div>
-    <div className="nationalcart2" style={{width:"21%",display:"flex",
+    <div className="nationalcart2 nationalshoppingcart2" style={{width:"21%",display:"flex",
     justifyContent:"space-between",marginLeft:"66%",paddingTop:"4.3%"}}>
     <Button className="nationalofffer1" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
     <i class="fas fa-shopping-cart carti"></i></Button>         
@@ -1228,7 +1228,7 @@ marginTop:"25px",height:"150vh",backgroundImage:`url(${national})`,backgroundSiz
     <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div className="nationalcart3" 
+    <div className="nationalcart3 nationalshoppingcart3" 
     style={{width:"6%",display:"flex",justifyContent:"space-between",
     marginLeft:"10%",paddingTop:"7.4%"}}>
     <Button className=" fourcart" onClick={() => setModalShow(true)}  
@@ -1241,7 +1241,7 @@ marginTop:"25px",height:"150vh",backgroundImage:`url(${national})`,backgroundSiz
     <i class="fas fa-shopping-cart carti"></i></Button>         
     </div>
 
-    <div className="nationalcart4" style={{width:"55%",display:"flex",justifyContent:"space-between",
+    <div className="nationalcart4 nationalshoppingcart4" style={{width:"55%",display:"flex",justifyContent:"space-between",
     marginLeft:"19%",paddingTop:"26.5%"}}>
     <Button className="nationalofffer1" onClick={() => setModalShow(true)}  style={{width:"40px",height:"40px",color:"black",border:"none",background:"#FFDD73"}}>
     <i class="fas fa-shopping-cart carti"></i> </Button>         

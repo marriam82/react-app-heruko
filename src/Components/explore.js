@@ -1443,7 +1443,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
  
 
-                <Container fluid>
+                <Container className="screensize" fluid>
   <Row >
     <Col lg={3} >
       <Navbar  
@@ -1504,12 +1504,12 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   boxSizing:"border-box"}}/>
     </div>
 <div className="two-buttons">
-  <Button   onClick={handleShow1} className="ml-3"  
+  <Button   onClick={handleShow1} className="ml-3 userbutton"  
   style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
-  <Button  onClick={handleShow2} className="ml-2"  
+  <Button  onClick={handleShow2} className="ml-2 userbutton"  
   style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
-<Badge className="badge2"  variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
+<Badge className="badge2"  variant="light" style={{borderRadius:"12px",position:"absolute",right:"1.5%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar>
     <div className="ramezslide"
@@ -1526,7 +1526,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
  marginTop:"15px",marginLeft:"20px",fontSize:"29px"}}>Ramez Offers</h4>
   
   <CardGroup className="ramezoffers" style={{marginTop:"30px",border:"none",width:"109%",marginLeft:"30px"}}>
-  <Card style={{border:"0"}}>
+  <Card style={{border:"0",}}>
     <Link to="/weekendDayOffer" style={{textDecoration:"none"}}>
       <Card.Img variant="top" className="ramezimg" src={week} style={{height:"25vh",borderRadius:"10px",width:"96%"}}/>
     <p className="mt-2 pl-2 text-muted">Weekend Offers</p>
@@ -1567,7 +1567,7 @@ className="pl-4 ml-3 suggestedh1">Suggested Products</h4>
 </div>
 <CardDeck className="ml-3 mt-4 pt-4">
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1596,7 +1596,7 @@ height:"47vh"}}>
       />
 </Card>
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1620,7 +1620,7 @@ height:"47vh"}}>
 </Card>
 
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1643,7 +1643,7 @@ height:"47vh"}}>
 </Card.Footer>
 </Card>
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1666,7 +1666,7 @@ height:"47vh"}}>
 </Card.Footer>
 </Card>
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1689,9 +1689,9 @@ height:"47vh"}}>
 </Card.Footer>
 </Card>
 </CardDeck>
-<CardDeck className="ml-3 mt-3 pt-2" >
+<CardDeck className="ml-3 pt-2 carddeckmargin">
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1714,7 +1714,7 @@ height:"47vh"}}>
 </Card.Footer>
 </Card>
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1737,7 +1737,7 @@ height:"47vh"}}>
 </Card.Footer>
 </Card>
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1760,7 +1760,7 @@ height:"47vh"}}>
 </Card.Footer>
 </Card>
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1783,7 +1783,7 @@ height:"47vh"}}>
 </Card.Footer>
 </Card>
 <Card className="bestdealp suggestedp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"41vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
