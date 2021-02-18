@@ -1048,7 +1048,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
 
 
-                <Container  fluid>
+                <Container className="screensize"  fluid>
   <Row id="grid">
     <Col sm={2} >
         <Navbar.Brand href="/" className=" pt-2 logo"  style={{width:"100%"}}>

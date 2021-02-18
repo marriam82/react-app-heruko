@@ -293,7 +293,42 @@ justify-content: space-evenly;
 @media screen and (min-width: 1400px) {
   .screensize{
     width:1400px !important;
-
+  }
+  .messagebdg{
+    margin-left:25px !important
+  }
+  .messagebdg1{
+    margin-left:8px !important
+  }
+  .settingstop{
+    margin-top: -6% !important;
+  }
+  .input-container {
+    width:47.5% !important
+  }
+  .userbutton{
+    height:6.5vh !important
+  }
+  .over{
+    height:38.5vh !important
+  }
+  .mainbtns{
+  height:7vh !important
+  }
+  .ecc{
+    height:190px !important
+  }
+  .eccH{
+    margin-top: 14px !important;
+  }
+  .mainnavbartop{
+    margin-top:13px !important
+  }
+  .ptag{
+    font-size:14px
+  }
+  .orderupcomingcard{
+    height:38vh !important
   }
 }
 @media screen and (max-width:360px){

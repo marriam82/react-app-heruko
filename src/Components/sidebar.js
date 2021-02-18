@@ -1113,18 +1113,19 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   className="home">Orders</span></Nav.Link></Link>
 
   <Link to="/messages" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-2 font" href="/messages" 
+  <Nav.Link className="mt-2 font " href="/messages" 
   style={{color:"black"}}>
-  <img style={{height:"2.5vh"}} src={message} className="m-b"/>
+  <img style={{height:"2.5vh"}} src={message} className="m-b "/>
   &nbsp; &nbsp; &nbsp;<span className="home">Messages</span> 
-  &nbsp; &nbsp; &nbsp; &nbsp;<Badge  id="no" className="badge "
+  &nbsp; &nbsp; &nbsp; &nbsp; <Badge  id="no" className="badge messagebdg"
    style={{background:"#E3424B",
    borderRadius:'100%',color:"white"}}>
      2</Badge></Nav.Link>
      </Link>
-  <Link to="/settings" style={{textDecoration:"none"}}>
-     
-  <Nav.Link className="mt-2 set font" href="#settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+  <Link to="/settings" style={{textDecoration:"none"}}>   
+  <Nav.Link className=" set font settingstop" href="/settings" style={{color:"black"
+  ,marginTop:"3%"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;
+  <span className="home">Settings</span></Nav.Link>
 </Link>
 </Nav>
 <Toast style={{marginTop:"40px",background:"#F7F7F7",width:"105%",
@@ -1137,12 +1138,13 @@ borderRadius:"16px",}} id="no" className="tost">
     <Button className="ml-4 fire" style={{background:"#FFDD73",color:"#E3424B",width:"55px",
     fontSize:"30px",border:"none",marginTop:"20px",borderRadius:"12px"}}><i class="fas fa-fire"></i></Button>
     </div>
-  <h1 className="mt-4" style={{textAlign:"center",fontWeight:"bold",fontSize:"15px"}}>Free delivery on <br></br>
+  <h1 className="mt-4"
+  style={{textAlign:"center",fontWeight:"bold",fontSize:"15px"}}>Free delivery on <br></br>
   all orders over <span style={{color:"orange"}}>$25</span></h1>
   <p style={{color:"grey",textAlign:"center"}}>it is a limited offer that<br></br>will expire soon</p>
-<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"27px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
-<Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
-<Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
+  <Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"35px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
+  <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
+  <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 
 </Toast>
     </Col>
@@ -1150,7 +1152,7 @@ borderRadius:"16px",}} id="no" className="tost">
     {/* ---------------------- */}
     <Col sm={10} lg={10} className="col-2-l" fluid>
          {/* <hr style={{width:"100%",transform:"rotate(-90deg)"}}></hr> */}
-   <Navbar className="mt-1 b">
+   <Navbar className="mainnavbartop b" style={{marginTop:"7px"}}>
    <Nav className="mr-4">
    <Nav.Link  onClick={handleShow} 
    style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no"
@@ -1180,12 +1182,12 @@ borderRadius:"16px",}} id="no" className="tost">
   boxSizing:"border-box"}}/>
     </div>
 <div id="fle" className="ml-2">
-  <Button onClick={handleShow1} className="ml-3 bdg"  
+  <Button onClick={handleShow1} className="ml-3 bdg userbutton"  
   style={{background:"#E3424B",paddingRight:"14px",
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
 
-  <Button onClick={handleShow2} className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",
+  <Button onClick={handleShow2} className="ml-2 userbutton"  style={{background:"#E3424B",border:"none",borderRadius:"7px",
   height:"7vh",}}>
     <i class="fas fa-shopping-cart"></i> </Button>
 </div>
@@ -1214,7 +1216,7 @@ fontSize:"12px"}}>2</Badge>
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="d-block " id="carr" 
+      className="d-block over " id="carr" 
       src={slider2} style={{height:"45vh",width:"101%"}}
     />
      <Carousel.Caption style={{position:"absolute",top:"9%",left:"3%",color:"black",textAlign:"left"}}>
@@ -1229,7 +1231,8 @@ fontSize:"12px"}}>2</Badge>
 </Carousel>
 <h3 className="exp ml-4"style={{color:"black",fontWeight:"bold", marginTop:"25px"}}> Explore Catagories</h3>
 <div id="all" style={{marginTop:"30px",width:"100%",marginLeft:"22px"}}>
-  <Button id="alll" style={{textAlign:"center",
+  <Button id="alll " className="mainbtns"
+ style={{textAlign:"center",
   background:"#E3424B",
   color:"white",
   border:"none",
@@ -1239,7 +1242,7 @@ fontSize:"12px"}}>2</Badge>
   <img className="buttona" src={all} style={{color:"white",height:"3vh"}}/>
   &nbsp; <b className="allt"style={{paddingTop:"20px",marginTop:"10px"}}>All</b></Button>
 
-  <Button id="alll" style={{background:"#F6F6F6",
+  <Button id="alll" className="mainbtns" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
@@ -1247,7 +1250,7 @@ fontSize:"12px"}}>2</Badge>
   style={{height:"3vh"}}/><b  className="allt1"style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Boutique</b></Button>
 
-<Button id="alll" style={{background:"#F6F6F6",
+<Button id="alll"  className="mainbtns" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
@@ -1255,7 +1258,7 @@ fontSize:"12px"}}>2</Badge>
   style={{height:"3vh"}}/><b className="allt1" style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Electronics</b></Button>
   
-  <Button id="alll" style={{background:"#F6F6F6",
+  <Button id="alll"  className="mainbtns"style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
@@ -1263,14 +1266,14 @@ fontSize:"12px"}}>2</Badge>
   style={{height:"3vh"}}/><b className="allt1" style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Restaurants</b></Button>
   <Link to='/supermarket' style={{textDecoration:"none"}}>
-  <Button id="alllS" style={{background:"#F6F6F6",
+  <Button id="alllS"  className="mainbtns" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
   borderRadius:"9px",width:"17%"}}><img src={sup} 
   style={{height:"3vh"}}/><b  className="allt1" style={{marginLeft:"15px",paddingTop:"10px",marginTop:"10px",
   fontWeight:"normal"}}>Supermarket</b></Button> </Link>
-    <Button id="alllD" style={{background:"#F6F6F6",
+    <Button id="alllD" className="mainbtns" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
   ,marginLeft:"10px", paddingBottom:"5px",paddingTop:"5px",
   paddingRight:"30px",height:"7.3vh", 
@@ -1284,14 +1287,14 @@ width:"100%",marginLeft:"22px",
 
 border:"none"}}>
 <Card style={{border:"none"}}>
-    <div variant="top" id="card"
+    <div variant="top" id="card" className="ecc"
     style={{height:"30vh",borderRadius:"10px",width:"96%"
     ,background:`url(${img3})`,backgroundSize:"100% 100%"}}>
 <Link to="/explore"  style={{textDecoration:"none"}}>
 <div style={{color:"black",marginLeft:"6%",marginTop:"5%"}}>
       <img src={img6} style={{width:"80px",
       height:"80px",borderRadius:"100%"}}/>
-      <h5 style={{fontWeight:"bold",marginTop:"2px"}} >Ramez</h5>
+      <h5 className="eccH" style={{fontWeight:"bold",marginTop:"2px"}} >Ramez</h5>
       <p style={{fontSize:"15px",marginTop:"-10px"}}>SuperMarket</p>
     </div>
   </Link>
@@ -1300,25 +1303,25 @@ border:"none"}}>
 
   </Card>
   <Card style={{border:"none"}}>
-  <div variant="top" id="card"
+  <div variant="top" id="card"  className="ecc"
     style={{height:"30vh",borderRadius:"10px",width:"96%"
     ,background:`url(${img4})`,backgroundSize:"100% 100%"}}>
       <div style={{color:"black",marginLeft:"6%",marginTop:"5%"}}>
       <img src={img7} style={{width:"80px",
       height:"80px",borderRadius:"100%"}}/>
-      <h5 style={{fontWeight:"bold",marginTop:"2px"}} >Cosmatics</h5>
+      <h5 className="eccH" style={{fontWeight:"bold",marginTop:"2px"}} >Cosmatics</h5>
       <p style={{fontSize:"15px",marginTop:"-10px"}}>Beauty</p>
     </div>
     </div>
   </Card>
-  <Card style={{border:"none"}}>
-  <div variant="top" id="card"
+  <Card  style={{border:"none"}}>
+  <div variant="top" id="card"  className="ecc"
     style={{height:"30vh",borderRadius:"10px",width:"96%"
     ,background:`url(${img5})`,backgroundSize:"100% 100%"}}>
       <div style={{color:"black",marginLeft:"6%",marginTop:"5%"}}>
       <img src={img8} style={{width:"80px",
       height:"80px",borderRadius:"100%"}}/>
-      <h5 style={{fontWeight:"bold",marginTop:"2px"}} >Techno Store</h5>
+      <h5 className="eccH" style={{fontWeight:"bold",marginTop:"2px"}} >Techno Store</h5>
       <p style={{fontSize:"15px",marginTop:"-10px"}}>Electronics</p>
     </div>
     </div>

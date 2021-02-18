@@ -1678,7 +1678,7 @@ onHide={handleClose120}>
 
      {/* ========================================================== */}
 
-                 <Container  fluid>
+                 <Container className="screensize" fluid>
   <Row id="grid">
     <Col sm={2} >
         <Navbar.Brand href="/" className=" pt-2 logo" style={{width:"100%"}}>
@@ -1741,7 +1741,7 @@ borderRadius:"16px",}} id="no" className="tost">
   <h1 className="mt-4" style={{textAlign:"center",fontWeight:"bold",fontSize:"15px"}}>Free delivery on <br></br>
   all orders over <span style={{color:"orange"}}>$25</span></h1>
   <p style={{color:"grey",textAlign:"center"}}>it is a limited offer that<br></br>will expire soon</p>
-<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"27px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
+<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"35px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 
@@ -1751,7 +1751,7 @@ borderRadius:"16px",}} id="no" className="tost">
     {/* ---------------------- */}
     <Col sm={10} className="up" fluid>
          {/* <hr style={{width:"100%",transform:"rotate(-90deg)"}}></hr> */}
-         <Navbar className="mt-1 b">
+         <Navbar className="mainnavbartop b" style={{marginTop:"7px"}}>
    <Nav className="mr-4">
    <Nav.Link  onClick={handleShow} 
    style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no"
@@ -1780,12 +1780,12 @@ borderRadius:"16px",}} id="no" className="tost">
   boxSizing:"border-box"}}/>
     </div>
 <div id="fle" className="ml-2">
-  <Button onClick={handleShow1} className="ml-3"  
+  <Button onClick={handleShow1} className="ml-3 userbutton"  
   style={{background:"#E3424B",paddingRight:"14px",
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
 
-  <Button onClick={handleShow2} className="ml-2"  
+  <Button onClick={handleShow2} className="ml-2 userbutton"  
   style={{background:"#E3424B",border:"none",borderRadius:"7px",position:"relative"
   ,height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
@@ -1797,7 +1797,7 @@ borderRadius:"16px",}} id="no" className="tost">
 
 
 
-<div className="upcoming" style={{background:"#F6F6F6",width:"101%",height:"80vh"}}>
+<div className="upcoming mt-4" style={{background:"#F6F6F6",width:"101%",height:"80vh"}}>
 <h4 className="upcomingheading" style={{paddingTop:"60px",
 fontWeight:"bold",fontSize:"25px"}} 
 className=" pl-4 ml-3">Upcoming Orders</h4> 
@@ -1806,7 +1806,7 @@ className=" pl-4 ml-3">Upcoming Orders</h4>
 
 {
              show6?
-<Card className="ordercard1" style={{marginLeft:"3%",marginTop:"4%",
+<Card className="ordercard1 orderupcomingcard" style={{marginLeft:"3%",marginTop:"4%",
 width:"35%",height:"42vh",border:"none",borderRadius:"12px"}}>
 
 
@@ -1845,7 +1845,7 @@ Estimated Arrival</b> </Button>
 }
 {
   show7?
-<Card  className="ordercard1" style={{marginLeft:"3%",marginTop:"4%",
+<Card  className="ordercard1 orderupcomingcard" style={{marginLeft:"3%",marginTop:"4%",
 width:"35%",height:"42vh",border:"none",borderRadius:"12px"}}>
 
 

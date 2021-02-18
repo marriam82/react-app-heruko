@@ -45,7 +45,7 @@ export default class Favorite extends Component {
 
     return (
         <>
-            <Container  fluid>
+            <Container className="screensize" fluid>
   <Row id="grid">
     <Col sm={2} className="sidebar">
         <Navbar.Brand href="/" className=" pt-2 logo" style={{width:"100%"}}>
@@ -81,17 +81,19 @@ style={{textDecoration:"none"}}>
   </Link>
   
   <Link to="/messages" style={{textDecoration:"none"}}>
-  <Nav.Link className="mt-2 font" href="/messages" style={{color:"black"}}>
-  <img style={{height:"2.5vh"}} src={message}/>&nbsp; &nbsp;
-   &nbsp;<span className="home">Messages</span> &nbsp; &nbsp; 
-   &nbsp; &nbsp;<Badge id="no" className="badge" style=
-   {{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge>
-   </Nav.Link>
-  
-   </Link>
-   <Link to="/settings" style={{textDecoration:"none"}}>
-
-  <Nav.Link className="mt-2 set font" href="/settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+  <Nav.Link className="mt-2 font " href="/messages" 
+  style={{color:"black"}}>
+  <img style={{height:"2.5vh"}} src={message} className="m-b "/>
+  &nbsp; &nbsp; &nbsp;<span className="home">Messages</span> 
+  &nbsp; &nbsp; &nbsp; &nbsp; <Badge  id="no" className="badge messagebdg1"
+   style={{background:"#E3424B",
+   borderRadius:'100%',color:"white"}}>
+     2</Badge></Nav.Link>
+     </Link>
+  <Link to="/settings" style={{textDecoration:"none"}}>   
+  <Nav.Link className=" set font" href="/settings" style={{color:"black"
+  ,marginTop:"3%"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;
+  <span className="home">Settings</span></Nav.Link>
 </Link>
 </Nav>
 <Toast style={{marginTop:"40px",background:"#F7F7F7",width:"105%",
@@ -107,7 +109,7 @@ borderRadius:"16px",}} id="no" className="tost">
   <h1 className="mt-4" style={{textAlign:"center",fontWeight:"bold",fontSize:"15px"}}>Free delivery on <br></br>
   all orders over <span style={{color:"orange"}}>$25</span></h1>
   <p style={{color:"grey",textAlign:"center"}}>it is a limited offer that<br></br>will expire soon</p>
-<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"27px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
+<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"35px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 
@@ -117,7 +119,7 @@ borderRadius:"16px",}} id="no" className="tost">
     {/* ---------------------- */}
     <Col sm={10} className="up" fluid>
          {/* <hr style={{width:"100%",transform:"rotate(-90deg)"}}></hr> */}
-   <Navbar className="mt-1 ">
+   <Navbar className="mainnavbartop ">
    <Nav className="mr-4">
    <Nav.Link style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no" className="no" ><img src={delivery}style={{height:"3vh"}} />&nbsp; &nbsp; Sen Francisain California &nbsp;<i class="fas fa-angle-down"></i> </Nav.Link>
       <Nav.Link className="ml-4 pl-3"
@@ -137,15 +139,15 @@ borderRadius:"16px",}} id="no" className="tost">
   boxSizing:"border-box"}}/>
     </div>
 <div className="fle" id="">
-  <Button className="ml-3"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
-  <Button className="ml-2"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",position:"relative"}}><i class="fas fa-shopping-cart"></i></Button>
+  <Button className="ml-3 userbutton"  style={{background:"#E3424B",paddingRight:"14px",textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}><i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
+  <Button className="ml-2 userbutton"  style={{background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",position:"relative"}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
 <Badge variant="light" className="badge1"  style={{borderRadius:"12px",position:"absolute",right:"1.5%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 {/* ----------------------------------Fav----------------- */}
 
-<div className="favourite" style={{background:"#F5F5F5",width:"100%",height:"125vh",
+<div className="favourite mt-4" style={{background:"#F5F5F5",width:"100%",height:"110vh",
 paddingRight:"30px"}}>
 <div style={{display:"flex",justifyContent:"space-between"}}>
 <div style={{display:"flex",position:"relative"}}>
@@ -174,7 +176,7 @@ height:"8vh",width:"40%",}} >
 </div>
 </div>
 <CardDeck className="ml-3 mt-4 pt-4 favdeck" >
-<Card className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card className="favl" style={{border:"0",height:"40vh",borderRadius:"10px",position:"relative"}}>
    
 <div id="circle" onClick={()=>this._onpress()} 
 style={{height:"20px",width:"20px",borderRadius:"100%",
@@ -191,7 +193,7 @@ position:"absolute",left:"11px",top:"11px"}}></div>
     <i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card  className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card  className="favl" style={{border:"0",height:"40vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle"onClick={()=>this._onpress1()} 
      style={{height:"20px",width:"20px",background:buttonBg1,borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
 <Card.Img className="favimg "  variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
@@ -203,7 +205,7 @@ position:"absolute",left:"11px",top:"11px"}}></div>
     <i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card  className="favl"  style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card  className="favl"  style={{border:"0",height:"40vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle"onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
 <Card.Img  className="favimg " variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -213,7 +215,7 @@ position:"absolute",left:"11px",top:"11px"}}></div>
   <small style={{background:"#FBDB73",fontSize:"15px"}}><i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card className="favl" style={{border:"0",height:"40vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle" onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
 <Card.Img  className="favimg " variant="top" src={img} style={{height:"25.5vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4  style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>
@@ -224,7 +226,7 @@ position:"absolute",left:"11px",top:"11px"}}></div>
     <i class="fas fa-shopping-cart favf"></i> &nbsp; &nbsp;Add to cart</small>
 </Card.Footer>
 </Card>
-<Card className="favl" style={{border:"0",height:"44vh",borderRadius:"10px",position:"relative"}}>
+<Card className="favl" style={{border:"0",height:"40vh",borderRadius:"10px",position:"relative"}}>
     <div id="circle" onClick={()=>this._onpress()}  style={{height:"20px",width:"20px",background:"whitesmoke",borderRadius:"100%",position:"absolute",left:"11px",top:"11px"}}></div>
 <Card.Img variant="top" className="favimg " src={img} style={{height:"26.2vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <h4 className="" style={{color:"#E3424B",textAlign:"center",fontWeight:"bold"}}>0.835<span className="text-muted" style={{fontSize:"11px"}}>&nbsp;BDH</span></h4>

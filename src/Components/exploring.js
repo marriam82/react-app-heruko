@@ -527,10 +527,7 @@ onHide={handleClose2}>
             BHD</span></h4>
           </div>
           <div>
-            {/* <div>{
-         num < 1 && (<Alert>this is alert</Alert>)
-            }
-</div> */}
+ 
           <Button onClick={plus1} style={{background:"#F6F6F6",
        color:"gray",
        fontWeight:"bold",width:"40px",
@@ -539,7 +536,7 @@ onHide={handleClose2}>
        border:"none",borderTopRightRadius:"12px",
        borderTopLeftRadius:"12px"}} >+</Button>
       <Button style={{border:"none",color:"black",marginTop:"9%",
-     background:"white"}}>{num1}</Button>
+       background:"white"}}>{num1}</Button>
        <Button onClick={minus1}  style={{background:"#F6F6F6",
        color:"gray",marginTop:"7%",
        fontWeight:"bold",width:"40px",
@@ -1434,7 +1431,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
       
 
-              <Container  fluid>
+              <Container className="screensize"  fluid>
   <Row id="grid">
     <Col sm={2} className="sidebar">
         <Navbar.Brand href="/" className=" pt-2 logo" style={{width:"100%"}}>
@@ -1465,14 +1462,14 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
    <Link to="/messages" style={{textDecoration:"none"}}>
 
   <Nav.Link className="mt-2 font" href="/messages" style={{color:"black"}}>
-  <img style={{height:"2.5vh"}} src={message}/>&nbsp; 
-  &nbsp; &nbsp;<span className="home">Messages</span> &nbsp;
-   &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge" style=
+  <img style={{height:"2.5vh"}} src={message}/>
+  &nbsp; &nbsp; &nbsp;<span className="home">Messages</span> &nbsp;
+   &nbsp; &nbsp; &nbsp;<Badge id="no" className="badge  messagebdg" style=
    {{background:"#E3424B",borderRadius:'100%',color:"white"}}>2</Badge>
    </Nav.Link></Link>
   <Link to="/settings" style={{textDecoration:"none"}}>
 
-  <Nav.Link className="mt-2 set font" href="/settings" style={{color:"black"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
+  <Nav.Link className="set font settingstop" href="/settings" style={{color:"black",marginTop:"3%"}}><img style={{height:"3vh"}} src={setting}/>&nbsp; &nbsp; &nbsp;<span className="home">Settings</span></Nav.Link>
 </Link>
 </Nav>
 <Toast style={{marginTop:"40px",background:"#F7F7F7",width:"105%",
@@ -1488,7 +1485,7 @@ borderRadius:"16px",}} id="no" className="tost">
   <h1 className="mt-4" style={{textAlign:"center",fontWeight:"bold",fontSize:"15px"}}>Free delivery on <br></br>
   all orders over <span style={{color:"orange"}}>$25</span></h1>
   <p style={{color:"grey",textAlign:"center"}}>it is a limited offer that<br></br>will expire soon</p>
-<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"27px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
+<Button className="mt-3" style={{background:"#223142",border:"none",marginLeft:"35px",borderRadius:"8px"}}>Order Now  &nbsp; &nbsp; &nbsp;<i class="fas fa-long-arrow-alt-right"></i></Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 <Button style={{background:"transparent",border:"none",color:"transparent"}}>i</Button>
 
@@ -1498,7 +1495,7 @@ borderRadius:"16px",}} id="no" className="tost">
     {/* ---------------------- */}
     <Col sm={10} className="up" fluid>
          {/* <hr style={{width:"100%",transform:"rotate(-90deg)"}}></hr> */}
-  <Navbar className="mt-1 b">
+  <Navbar className="mainnavbartop b" style={{marginTop:"7px"}}>
    <Nav className="mr-4">
    <Nav.Link  onClick={handleShow} 
    style={{color:"black",fontWeight:"normal",fontSize:"14px",marginRight:"-25px"}} id="no"
@@ -1526,19 +1523,19 @@ borderRadius:"16px",}} id="no" className="tost">
     outline:"none",padding:"13px",
   boxSizing:"border-box"}}/>
     </div>
-<div id="fle" className="ml-2">
-  <Button onClick={handleShow1} className="ml-3"  
+<div id="fle" className="ml-1">
+  <Button onClick={handleShow1} className="ml-3 userbutton"  
   style={{background:"#E3424B",paddingRight:"14px",
   textAlign:"center",border:"none",borderRadius:"7px",height:"7vh",paddingLeft:"14px"}}>
     <i class="fas fa-user" style={{textAlign:"center"}}></i> </Button>
 
-  <Button onClick={handleShow2} className="ml-2"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
+  <Button onClick={handleShow2} className="ml-2 userbutton"  style={{position:"relative",background:"#E3424B",border:"none",borderRadius:"7px",height:"7vh",}}><i class="fas fa-shopping-cart"></i></Button>
 </div>
 <Badge className="badge1"  variant="light" style={{borderRadius:"12px",position:"absolute",right:"1%",padding:"6px",background:"#FFDD73",color:"black",bottom:"65%",fontSize:"12px"}}>2</Badge>
 
 </Navbar> 
 {/* ============ */}
-<div className="bestdeal1" style={{background:"#F5F5F5",width:"100%",height:"80vh",
+<div className="bestdeal1 mt-4" style={{background:"#F5F5F5",width:"100%",height:"80vh",
 paddingRight:"30px"}}>
 <div  style={{display:"flex",justifyContent:"space-between"}}>
 <h4 style={{paddingTop:"60px",fontWeight:"bold",fontSize:"25px"}} 
@@ -1546,7 +1543,7 @@ className=" pl-4 ml-3">Best Deals&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
 </div>
 <CardDeck className="ml-3 mt-4 pt-4" >
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img onClick={() => setModalShow(true)}  
  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
@@ -1574,7 +1571,7 @@ height:"47vh"}}>
       />
 </Card>
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1599,7 +1596,7 @@ height:"47vh"}}>
 </Card>
 
 <Card   className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img onClick={() => setModalShow(true)} variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1624,7 +1621,7 @@ height:"47vh"}}>
 </Card>
 
 <Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1649,7 +1646,7 @@ height:"47vh"}}>
 </Card>
 
 <Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1657,7 +1654,7 @@ height:"47vh"}}>
  <div style={{width:"30%",marginTop:"-20px",
  background:"#E3424B",fontSize:"12px",textAlign:"center",
  height:"4vh",color:"white",clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
-     <p className="pt-1 pl-2 ptag" style={{}}>25%</p>
+     <p className="pt-1 pl-2 ptag ">25%</p>
  </div>
  </div>
  <p className=" pdec" style={{color:"#223142",fontSize:"14px"
@@ -1686,7 +1683,7 @@ className=" pl-4 ml-3">New Arrival&nbsp;&nbsp;<span style={{color:"#FBDB73",font
 </div>
 <CardDeck className="ml-3 mt-4 pt-4" >
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}   variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1710,7 +1707,7 @@ height:"47vh"}}>
 
 </Card>
 <Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1734,7 +1731,7 @@ height:"47vh"}}>
 
 </Card>
 <Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img onClick={() => setModalShow(true)} variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1758,7 +1755,7 @@ height:"47vh"}}>
 
 </Card>
 <Card  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1782,7 +1779,7 @@ height:"47vh"}}>
 
 </Card>
 <Card className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img  onClick={() => setModalShow(true)}  variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1817,7 +1814,7 @@ className=" pl-4 ml-3">Top Seller&nbsp;&nbsp;<span style={{color:"#E3424B",fontW
 <CardDeck className="ml-3 mt-4 pt-4" >
 
 <Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1841,7 +1838,7 @@ height:"47vh"}}>
 
 </Card>
 <Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1865,7 +1862,7 @@ height:"47vh"}}>
 
 </Card>
 <Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1889,7 +1886,7 @@ height:"47vh"}}>
 
 </Card>
 <Card onClick={() => setModalShow(true)} className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
@@ -1913,7 +1910,7 @@ height:"47vh"}}>
 
 </Card>
 <Card onClick={() => setModalShow(true)}  className="bestdealp" style={{border:"0",borderTopLeftRadius:"10px",borderTopRightRadius:"10px",
-height:"47vh"}}>
+height:"40vh"}}>
 <Card.Img variant="top" src={img} className="p1" style={{height:"27vh",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}/>
 <p className="pl-2 text-muted" style={{marginTop:"-20px"}}><del>1.200</del></p>
 <div style={{display:"flex",justifyContent:"space-between"}}>
