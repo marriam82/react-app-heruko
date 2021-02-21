@@ -1240,7 +1240,7 @@ fontSize:"12px"}}>2</Badge>
    fontSize:"17px",paddingTop:"5px",
    paddingBottom:"5px",height:"7.3vh",width:"15%"}}>
   <img className="buttona" src={all} style={{color:"white",height:"3vh"}}/>
-  &nbsp; <b className="allt"style={{paddingTop:"20px",marginTop:"10px"}}>All</b></Button>
+  &nbsp; <b className="allt" style={{paddingTop:"20px",marginTop:"10px"}}>All</b></Button>
 
   <Button id="alll" className="mainbtns" style={{background:"#F6F6F6",
   color:"black",border:"none",fontSize:"17px"
