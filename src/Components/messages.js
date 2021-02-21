@@ -585,7 +585,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
         
         {/* ------------------- User end-------------------- */}     
 {/* ------------------------location  ---------------------- */}
-<Modal show={show} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+<Modal show={show} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Delivery address</Modal.Title>
@@ -646,7 +646,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
        </Modal.Footer>
      </Modal>
 {/* --------------------Home loction---------------------- */}
-<Modal show={show9} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+<Modal show={show9} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose9} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Delivery address</Modal.Title>
@@ -712,7 +712,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
      {/* -----------------------Office location-------------------------- */}
 
 
-     <Modal show={show111} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+     <Modal show={show111} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose111} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Delivery address</Modal.Title>
@@ -777,7 +777,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
      </Modal>
      {/* -------------------------------edit location--------------------------- */}
  
-     <Modal show={show10} id="edit-address" style={{marginTop:"0.5%",
+     <Modal show={show10} id="edit-address" className="locationside" style={{marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose10} animation={false} >
        <Modal.Header style={{background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"12px"}}>Edit Address</Modal.Title>
@@ -882,7 +882,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
        </Modal.Footer>
      </Modal>
 
-     <Modal show={show112} id="edit-address" style={{marginTop:"0.5%",
+     <Modal show={show112} id="edit-address"  className="locationside" style={{marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose112} animation={false} >
        <Modal.Header style={{background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"12px"}}>New Address</Modal.Title>
@@ -986,7 +986,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
 
 
 
-     <Modal id="edit-address" show={show113} style={{marginTop:"0.5%",
+     <Modal id="edit-address" className="locationside"show={show113} style={{marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}}
       onHide={handleClose113} animation={false} >
        <Modal.Header style={{background:"transparent",border:"none"}} closeButton>
@@ -1020,7 +1020,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
      </Modal>
 
 {/* ------------------current location------------- */}
-<Modal show={show8} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+<Modal show={show8} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose8} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Current Location</Modal.Title>
@@ -1295,7 +1295,7 @@ borderRadius:"16px",}} id="no" className="tost">
             </div>
             <div class="outgoing_msg">
               <div class="sent_msg">
-                <p>Hello! The new dishes are avilable starting from today You can check them out here </p>
+                <p>Hello! The new dishes are available starting from today You can check them out here </p>
                 <span class="time_date"> 4: 41PM </span> </div>
             </div>
             <div class="incoming_msg">

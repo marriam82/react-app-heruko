@@ -111,12 +111,12 @@ clipPath: "polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%)"}}>
      border:"none",borderTopRightRadius:"12px",marginLeft:"2%",
      borderBottomRightRadius:"12px"}} onClick={plus}>+</Button>
       </div>
-   <Button className="button-cart" style={{marginLeft:"60%",
+   <Button className="button-cart addcartbutton" style={{marginLeft:"60%",
    position:"relative",marginTop:"-17%",
    border:"none",background:"#FFDD73", color:"black"}}>
      <i class="fas fa-shopping-cart"></i> &nbsp;
       Add to Cart</Button>
-   <Button className="button-heart" style={{border:"none",color:"#BDBDBD",
+   <Button className="button-heart addcartbutton-h" style={{border:"none",color:"#BDBDBD",
    position:"absolute",marginTop:"-4.5%", marginLeft:"2%",
    background:"#F6F6F6"}}>
      <i class="fas fa-heart"></i></Button>
@@ -976,7 +976,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
         
         {/* ------------------- User end-------------------- */}     
 {/* ------------------------location  ---------------------- */}
-<Modal show={show} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+<Modal show={show} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Delivery address</Modal.Title>
@@ -1037,7 +1037,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
        </Modal.Footer>
      </Modal>
 {/* --------------------Home loction---------------------- */}
-<Modal show={show9} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+<Modal show={show9} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose9} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Delivery address</Modal.Title>
@@ -1103,7 +1103,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
      {/* -----------------------Office location-------------------------- */}
 
 
-     <Modal show={show111} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+     <Modal show={show111} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose111} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Delivery address</Modal.Title>
@@ -1168,7 +1168,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
      </Modal>
      {/* -------------------------------edit location--------------------------- */}
  
-     <Modal show={show10} id="edit-address" style={{marginTop:"0.5%",
+     <Modal show={show10} id="edit-address"className="locationside" style={{marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose10} animation={false} >
        <Modal.Header style={{background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"12px"}}>Edit Address</Modal.Title>
@@ -1273,7 +1273,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
        </Modal.Footer>
      </Modal>
 
-     <Modal show={show112} id="edit-address" style={{marginTop:"0.5%",
+     <Modal show={show112} id="edit-address"className="locationside" style={{marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose112} animation={false} >
        <Modal.Header style={{background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"12px"}}>New Address</Modal.Title>
@@ -1377,7 +1377,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
 
 
 
-     <Modal id="edit-address" show={show113} style={{marginTop:"0.5%",
+     <Modal id="edit-address"className="locationside" show={show113} style={{marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}}
       onHide={handleClose113} animation={false} >
        <Modal.Header style={{background:"transparent",border:"none"}} closeButton>
@@ -1411,7 +1411,7 @@ height:"8vh",background:"#F6F6F6",borderRadius:"10px"}} />
      </Modal>
 
 {/* ------------------current location------------- */}
-<Modal show={show8} className="c" style={{borderRadius:"30px ",marginTop:"0.5%",
+<Modal show={show8} className="c locationside" style={{borderRadius:"30px ",marginTop:"0.5%",
      width:"390px",marginLeft:"32%",background:"transparent",border:"none"}} onHide={handleClose8} animation={false} >
        <Modal.Header style={{borderRadius:"1rem ",background:"transparent",border:"none"}} closeButton>
          <Modal.Title style={{border:"none",padding:"10px"}}>Current Location</Modal.Title>
@@ -1442,13 +1442,18 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
             <Container className="screensize" fluid>
 <Row >
 <Col sm={3} >
+<Navbar  
+      style={{display:"flex",flexDirection:"column",alignItems:"end",
+      marginLeft:"-3%"}} expand="lg">
 <Link to="/">
 <Navbar.Brand  className="ml-2 pt-2" ><img src={logo} style={{height:"10vh"}} /></Navbar.Brand>
 </Link>
+<Navbar.Toggle aria-controls="basic-navbar-nav"  className="topbar1"/>
+  <Navbar.Collapse id="basic-navbar-nav "className="topbar2" >
 <Nav className="flex-column"  style={{width:"100%",padding:"0",margin:"0"}}>
 <Nav.Link className="mt-2">
       <Accordion defaultActiveKey="0" style={{marginLeft:"-10px"}}>
-    <Link to="/reoffer"><Accordion.Toggle className="p-3" variant="link" eventKey="0"
+    <Link to="/reoffer"><Accordion.Toggle className="p-3 " variant="link" eventKey="0"
        style={{textAlign:"start",outline:"none",border:"none",
        fontWeight:"bold",color:"#E3424B",background:"#F6F6F6",
        borderRadius:"9px",width:"85%"}}>
@@ -1476,7 +1481,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </Card.Body>
     </Accordion.Collapse >
     <Nav.Link  style={{color:"#223142",textDecoration:"none"}}>
-      <Accordion.Toggle as={Button} variant="link" eventKey="1" style={{textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
+      <Accordion.Toggle as={Button} variant="link" eventKey="1" className="fv"  style={{textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
       <img style={{height:"3vh"}} src={fruit}/>&nbsp; &nbsp;&nbsp;&nbsp;Fruits & Vegetables
       </Accordion.Toggle>
       </Nav.Link>
@@ -1507,6 +1512,8 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
 
 </Nav>
+</Navbar.Collapse>
+</Navbar>
 </Col>
 <Col sm={9}  >
 <Container className="ramez" fluid style={{marginLeft:"-95px"}}>

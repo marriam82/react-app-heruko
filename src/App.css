@@ -182,7 +182,8 @@ img{ max-width:100%;}
   background:white
 }
 
-.type_msg {border-top: 1px solid #c4c4c4;
+.type_msg {
+  border-top: 1px solid #c4c4c4;
   top:5%;
   position: relative;}
 .msg_send_btn {
@@ -365,8 +366,23 @@ justify-content: space-evenly;
     padding-top:29% !important;
  
   }
+  .addcartbutton{
+    position: relative !important;
+    top:3% !important
+  }
+  .addcartbutton-h{
+    margin-top:-3.5% !important
+  }
 }
 @media screen and (max-width:360px){
+  .locationside{
+    margin-left:3% !important;
+    width:370px  !important
+  }
+.promo{
+  margin-left:15% !important;
+
+}
   .productpopup{
      width:104% !important;
       margin-left:-2% !important;
@@ -418,22 +434,21 @@ justify-content: space-evenly;
   .weekendoffer1{
     width:30% !important;
     margin-left:8.5% !important;
-    padding-top: 9.5% !important;
+    padding-top: 10% !important;
 }
 .weekendoffer2{
 width:74% !important;
-/* margin-left:8.5% !important; */
+
 padding-top: 30% !important;
 }
 .weekendoffer3{
 width:74% !important;
-/* margin-left:8.5% !important; */
+
 padding-top: 29.1% !important;
 }
 .weekendoffer4{
 width:74% !important;
-/* margin-left:8.5% !important; */
-padding-top: 28.7% !important;
+padding-top: 25% !important;
 }
 .two-buttons{
   margin-left:40% !important
@@ -447,7 +462,7 @@ padding-top: 28.7% !important;
   }
   .set-m-2{
    margin-left:5% !important;
-   margin-top:5% !important;
+   margin-top:15% !important;
  }
  .support{
   font-size: 11px !important;
@@ -512,7 +527,7 @@ padding-top: 28.7% !important;
   border-radius:100% !important ;
   position:absolute !important;
   top:-2.5% !important;
-  right:3% !important;
+  right:2.5% !important;
  }
 .ramezslide{
   width: 110% !important;
@@ -569,6 +584,14 @@ padding-top: 28.7% !important;
      margin-left:-2% !important;
     height:100vh !important
  }
+ .locationside{
+  margin-left:3% !important;
+  width:370px  !important
+}
+.promo{
+margin-left:15% !important;
+
+}
  .topbody{
    display:flex !important;
    flex-direction: column !important;
@@ -598,29 +621,29 @@ padding-top: 28.7% !important;
     color: black;
     font-size: 15px;
     min-height: 48px;
-    width: 135px !important;
+    width: 200px !important;
     padding-left:10px;
     background:white
   }
   .weekendoffer1{
     width:30% !important;
     margin-left:8.5% !important;
-    padding-top: 9.5% !important;
+    padding-top: 10% !important;
 }
 .weekendoffer2{
 width:74% !important;
 /* margin-left:8.5% !important; */
-padding-top: 29% !important;
+padding-top: 30% !important;
 }
 .weekendoffer3{
 width:74% !important;
 margin-left:8.5% !important;
-padding-top: 28.1% !important;
+padding-top: 29% !important;
 }
 .weekendoffer4{
 width:74% !important;
 /* margin-left:8.5% !important; */
-padding-top: 28% !important;
+/* padding-top: 28% !important; */
 }
   .set-m-1{
     margin-left:5% !important;
@@ -628,7 +651,7 @@ padding-top: 28% !important;
   }
   .set-m-2{
    margin-left:5% !important;
-   margin-top:5% !important;
+   margin-top:35% !important;
  }
  .support{
   
@@ -734,7 +757,7 @@ padding-top: 28% !important;
     border-radius:100% !important ;
     position:absolute !important;
     top:-2.5% !important;
-    right:3% !important;
+    right:2.5% !important;
    }
   .ramezslide{
     width: 110% !important;
@@ -780,6 +803,14 @@ padding-top: 28% !important;
      margin-left:-2% !important;
     height:100vh !important
  }
+ .locationside{
+  margin-left:3% !important;
+  width:370px  !important
+}
+.promo{
+margin-left:15% !important;
+
+}
  .topbody{
    display:flex !important;
    flex-direction: column !important;
@@ -806,22 +837,22 @@ padding-top: 28% !important;
   .weekendoffer1{
     width:30% !important;
     margin-left:8.5% !important;
-    padding-top: 8% !important;
+    padding-top: 10% !important;
 }
 .weekendoffer2{
 width:74% !important;
 /* margin-left:8.5% !important; */
-padding-top: 28.5% !important;
+padding-top: 29.5% !important;
 }
 .weekendoffer3{
 width:74% !important;
 margin-left:8.5% !important;
-padding-top: 27.5% !important;
+padding-top: 29% !important;
 }
 .weekendoffer4{
 width:74% !important;
 /* margin-left:8.5% !important; */
-padding-top: 27% !important;
+/* padding-top: 27% !important; */
 }
   .ramez{
     margin-left:0px !important
@@ -875,7 +906,7 @@ padding-top: 27% !important;
   }
   .set-m-2{
    margin-left:5% !important;
-   margin-top:5% !important;
+   margin-top:15% !important;
  }
  .support{
   
@@ -944,6 +975,11 @@ padding-top: 27% !important;
      margin-left:-2% !important;
     height:100vh !important
  }
+ .locationside{
+  margin-left:3% !important;
+  width:370px  !important
+}
+
  .topbody{
    display:flex !important;
    flex-direction: column !important;
@@ -967,33 +1003,24 @@ padding-top: 27% !important;
  .alternative{
    width:65% !important
  }  
-  .input_msg_write input {
-    background: rgba(0, 0, 0, 0) none  0 0;
-    border: medium none;
-    color: black;
-    font-size: 15px;
-    min-height: 48px;
-    width: 135px !important;
-    padding-left:10px;
-    background:white
-  }
+
 .weekendoffer1{
     width:30% !important;
     margin-left:8.5% !important;
-    padding-top: 8% !important;
+    padding-top: 10% !important;
 }
 .weekendoffer2{
 width:74% !important;
-padding-top: 28.5% !important;
+padding-top: 29% !important;
 }
 .weekendoffer3{
 width:74% !important;
 margin-left:8.5% !important;
-padding-top: 25% !important;
+padding-top: 29% !important;
 }
 .weekendoffer4{
 width:74% !important;
-padding-top: 2% !important;
+/* padding-top: 2% !important; */
 } 
   .set-m-1{
     margin-left:5% !important;
@@ -1001,7 +1028,7 @@ padding-top: 2% !important;
   }
   .set-m-2{
    margin-left:5% !important;
-   margin-top:5% !important;
+   margin-top:15% !important;
  }
  .support{
   
@@ -1135,6 +1162,10 @@ padding-top: 2% !important;
      margin-left:-2% !important;
     height:100vh !important
  }
+ .locationside{
+  margin-left:3% !important;
+  width:370px  !important
+}
  .topbody{
    display:flex !important;
    flex-direction: column !important;
@@ -1158,31 +1189,14 @@ padding-top: 2% !important;
  .alternative{
    width:65% !important
  }  
-  /* .weekendoffer1{
-    width:30% !important;
-    margin-left:8.5% !important;
-    padding-top: 8% !important;
-}
-.weekendoffer2{
-width:74% !important;
-padding-top: 27.5% !important;
-}
-.weekendoffer3{
-width:74% !important;
-margin-left:8.5% !important;
-padding-top: 25% !important;
-}
-.weekendoffer4{
-width:74% !important;
-padding-top: 26% !important;
-} */
+
   .set-m-1{
     margin-left:5% !important;
     margin-top:3% !important
   }
   .set-m-2{
    margin-left:5% !important;
-   margin-top:5% !important;
+   margin-top:15% !important;
  }
  .support{
   
@@ -1430,7 +1444,7 @@ border-radius:100% !important
 }
 .promo{
   margin-top:30% !important;
-  margin-left:25% !important
+  margin-left:20% !important
 }
 .checkoutde{
   padding-top:20px !important
@@ -1597,13 +1611,43 @@ font-size:12px !important
   font-size:12px
 }
 #tw{ margin-top: -14%;}
+.weekendoffer1{
+  width:30% !important;
+  margin-left:8.5% !important;
+  padding-top: 10% !important;
+}
+.weekendoffer2{
+  width:74% !important;
+  /* margin-left:8.5% !important; */
+  padding-top: 28% !important;
+  }
 }
 @media screen and (max-width:411px){
+  .mesgs{
+    height:135vh !important
+  }
+  .type_msg{
+    border:none
+  }
+
+  .orderhere{
+  margin-left:19px !important;
+  width:362px !important;
+  margin-top:27% !important
+}
+.outgoing_msg{
+  width:100% !important
+}
   .productpopup{
     width:104% !important;
      margin-left:-2% !important;
     height:100vh !important
  }
+ .locationside{
+  margin-left:3% !important;
+  width:370px  !important
+}
+
  .topbody{
    display:flex !important;
    flex-direction: column !important;
@@ -1633,7 +1677,7 @@ font-size:12px !important
     color: black;
     font-size: 15px;
     min-height: 48px;
-    width: 175px;
+    width: 220px;
     padding-left:10px;
     background:white
   }
@@ -1644,7 +1688,7 @@ font-size:12px !important
   }
   .set-m-2{
    margin-left:5% !important;
-   margin-top:5% !important;
+   margin-top:15% !important;
  }
  .support{
   font-size: 11px !important;
@@ -2159,10 +2203,11 @@ margin-left:9px !important
   margin-left: 1% !important;
   width:370px !important
 }
-.orderhere{
-  margin-left:1% !important;
-  width:370px !important
-}
+.weekendoffer2{
+  width:74% !important;
+  /* margin-left:8.5% !important; */
+  padding-top: 29% !important;
+  }
 .orderlast{
   width:200px !important;
 }
@@ -2185,14 +2230,18 @@ margin-left:9px !important
 {
   padding-right: 0px !important;
 }
-.mesgs{
- width:100% !important 
+.mesgs{width: 135%;
+  margin-left: -30%;
+
 }
 .topbar1{
  position: relative !important;
  left:270px !important;
  top:-55px !important;
 
+}
+.fv{
+  padding-left: 10.5% !important;
 }
 .topbar2{
 margin-top: -40px !important;
@@ -2205,4 +2254,22 @@ margin-left: 6% !important;
   .fruitleft{
     margin-left:3% !important
   }
+  .weekendoffer1{
+    width:30% !important;
+    margin-left:8.5% !important;
+    padding-top: 10% !important;
+}
+.wml{
+  width:120% !important;
+  margin-left:-5% !important;
+height:100vh !important
+
+}
+.topbody1{
+  display: flex !important;
+  flex-direction: column !important;
+}
+.ane{
+  float: right !important;
+}
 }
