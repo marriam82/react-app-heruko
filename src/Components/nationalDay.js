@@ -45,15 +45,15 @@ function MyVerticallyCenteredModal(props) {
       }
   };
   return (
-    <Modal 
+    <Modal id="no"
       {...props}
       size="xl" 
       aria-labelledby="contained-modal-title-vcenter"
  
       style ={{width:"70%",marginLeft:"15%",overflow:"auto"}}
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
+      <Modal.Header className="home" closeButton>
+        <Modal.Title className="home" id="contained-modal-title-vcenter">
           <div style={{display:"flex",width:"100%",height:"270px"}}>
             <div  style={{borderRight:"1px solid silver"}}>
           <div style={{width:"297px",height:"270px"
@@ -103,7 +103,7 @@ function MyVerticallyCenteredModal(props) {
 
           </div>
         </Modal.Title>
-      </Modal.Header > 
+      </Modal.Header  > 
    
     
     </Modal>
