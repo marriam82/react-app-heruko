@@ -1231,7 +1231,7 @@ fontSize:"12px"}}>2</Badge>
 </Carousel>
 <h3 className="exp ml-4"style={{color:"black",fontWeight:"bold", marginTop:"25px"}}> Explore Catagories</h3>
 <div id="all" style={{marginTop:"30px",width:"100%",marginLeft:"22px"}}>
-  <Button id="alll " className="mainbtns"
+  <Button id="alllA" className="mainbtns"
  style={{textAlign:"center",
   background:"#E3424B",
   color:"white",

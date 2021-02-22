@@ -1467,7 +1467,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </Link>
     <Accordion.Collapse eventKey="0">
       <Card.Body className="ml-4" style={{marginTop:"-10px"}}>
-      <div className="p-2 pl-4" 
+      <div className="p-2 pl-4 dairy dairyy" 
           style={{background:"#FBDB73",borderRadius:"9px",
           width:"105%",marginLeft:"-40px",marginTop:"-3%"}} >
         <h6 className="pl-4 pt-1" style={{color:"black",
@@ -1485,8 +1485,8 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
       </Card.Body>
     </Accordion.Collapse >
-    <Nav.Link   style={{color:"#223142",textDecoration:"none"}}>
-      <Accordion.Toggle as={Button} variant="link" eventKey="1" className="fv" style={{textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
+    <Nav.Link   style={{color:"#223142",textDecoration:"none",}}>
+      <Accordion.Toggle as={Button} variant="link" eventKey="1" className="fv" style={{marginLeft:"10px",textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
       <img style={{height:"3vh"}} src={fruit}/>&nbsp; &nbsp;&nbsp;&nbsp;Fruits & Vegetables
       </Accordion.Toggle>
       </Nav.Link>

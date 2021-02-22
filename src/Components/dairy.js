@@ -1483,14 +1483,14 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
       </Card.Body>
     </Accordion.Collapse >
     <Nav.Link  style={{color:"#223142",textDecoration:"none"}}>
-      <Accordion.Toggle as={Button} className="fruitleft" variant="link" eventKey="1" style={{textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
+      <Accordion.Toggle as={Button} className="fv" variant="link" eventKey="1" style={{textDecoration:"none",color:"#223142",marginLeft:"-19px",textAlign:"start",outline:"none",border:"none"}}>
       <img style={{height:"3vh"}} src={fruit}/>&nbsp; &nbsp;&nbsp;&nbsp;Fruits & Vegetables
       </Accordion.Toggle>
       </Nav.Link>
      
 </Accordion>
 </Nav.Link>
-  <Nav.Link  style={{color:"#223142",marginTop:"-3%"}}><img style={{height:"3vh"}} 
+  <Nav.Link style={{color:"#223142",marginTop:"-3%"}}><img style={{height:"3vh"}} 
   src={diary}/><b className="ml-3" style={{fontWeight:"normal"}}> 
   Dairy & Eggs</b></Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={drink}/><b className="ml-3" style={{fontWeight:"normal"}}>&nbsp;Drinks</b></Nav.Link>

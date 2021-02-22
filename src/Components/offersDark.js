@@ -1439,7 +1439,7 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
 
     {/* ------------------------- location end ------------------------ */}
 
-
+    
             <Container className="screensize" fluid>
 <Row >
 <Col sm={3} >
@@ -1453,12 +1453,12 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
   <Navbar.Collapse id="basic-navbar-nav "className="topbar2" >
 <Nav className="flex-column"  style={{width:"100%",
 padding:"0",margin:"0"}}>
-<Nav.Link className="mt-2 offerwidth">
+<Nav.Link className="mt-2 ">
       <Accordion defaultActiveKey="0" style={{marginLeft:"-10px"}}>
       <Accordion.Toggle className="p-3" variant="link" eventKey="0"
        style={{textAlign:"start",outline:"none",border:"none",
        fontWeight:"bold",color:"white",background:"#E3424B",
-       borderRadius:"9px",width:"99%"}}>
+       borderRadius:"9px",width:"96%"}}>
       <img style={{height:"3vh"}} src={offe}/>&nbsp; &nbsp; Offers
       </Accordion.Toggle>
     <Accordion.Collapse eventKey="0">

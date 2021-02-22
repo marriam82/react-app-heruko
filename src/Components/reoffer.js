@@ -1456,13 +1456,13 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
     <Link to="/reoffer"><Accordion.Toggle className="p-3 " variant="link" eventKey="0"
        style={{textAlign:"start",outline:"none",border:"none",
        fontWeight:"bold",color:"#E3424B",background:"#F6F6F6",
-       borderRadius:"9px",width:"85%"}}>
+       borderRadius:"9px",width:"97%"}}>
       <img style={{height:"3vh",marginLeft:"-2%"}} src={offe}/>&nbsp;&nbsp; Offers
       </Accordion.Toggle>
       </Link>
     <Accordion.Collapse eventKey="0">
-      <Card.Body className="ml-4" style={{marginTop:"-10px"}}>
-      <div className="p-2 pl-4" 
+      <Card.Body className="ml-4 offerwidth" style={{marginTop:"-10px"}}>
+      <div className="p-2 pl-4 dairy dairyy" 
           style={{background:"#FBDB73",borderRadius:"9px",
           width:"105%",marginLeft:"-40px",marginTop:"-3%"}} >
         <h6 className="pl-4 pt-1" style={{color:"black",
@@ -1488,7 +1488,8 @@ fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1611979046409!5m
      
 </Accordion>
 </Nav.Link>
-  <Nav.Link  style={{color:"#223142",marginTop:"-3%"}}><img style={{height:"3vh"}} src={diary}/><b className="ml-3" style={{fontWeight:"normal"}}> Dairy & Eggs</b></Nav.Link>
+  <Nav.Link  style={{color:"#223142",marginTop:"-3%"}}>
+    <img style={{height:"3vh"}} src={diary}/><b className="ml-3" style={{fontWeight:"normal"}}> Dairy & Eggs</b></Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"3vh"}} src={drink}/><b className="ml-3" style={{fontWeight:"normal"}}>&nbsp;Drinks</b></Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={meat}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp;&nbsp;Meat, Fish & Chicken</b></Nav.Link>
   <Nav.Link className="mt-1"  style={{color:"#223142"}}><img style={{height:"2.8vh"}} src={frozen}/><b className="ml-2" style={{fontWeight:"normal"}}>&nbsp;&nbsp;Frozen</b></Nav.Link>
